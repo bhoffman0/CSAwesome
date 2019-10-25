@@ -33,7 +33,7 @@ For Loops
 
 Another type of loop in Java is a **for loop**. This is usually used when you know how many times you want the loop to execute. It is often a simple **counter-controlled loop** to do the loop body a set number of times.
 
-If you took AP CSP with a block programming language like App Inventor, you probably used a for loop block like below that looks very similar to Java for loops. In fact, almost every programming language has a for loop.
+If you took AP CSP with a block programming language like App Inventor, you probably used a for loop block like below that looks very similar to Java for loops. If you have used a language like Scratch or Snap!, you may remember the repeat(n) block where you type in a number of times you want the code to be repeated, just like the AP pseudocode REPEAT block. In fact, almost every programming language has a for or repeat loop.
 
 
 .. figure:: Figures/loopAppInv.png
@@ -43,7 +43,7 @@ If you took AP CSP with a block programming language like App Inventor, you prob
     
     Figure 1: Comparing App Inventor and Java for loops
 
-A for loop has 3 parts: initialization, condition, and change.  The parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.  Note that these 3 parts correspond to the the 3 steps of writing a loop mentioned in the last lesson: initialize, test, and change the loop variable. In for loops, the loop variable is usually a counter variable.
+A for-loop has 3 parts: initialization, condition, and change.  The parts are separated by semicolons (``;``).  Each of the three parts of a ``for`` loop declaration is optional (initialization, condition, and change), but the semicolons are not optional.  Note that these 3 parts correspond to the the 3 steps of writing a loop mentioned in the last lesson: initialize, test, and change the loop variable. In for loops, the loop variable is usually a counter variable.
 
 .. code-block:: java
 
@@ -73,11 +73,13 @@ You can compare a ``while`` loop to a ``for`` loop to understand that a ``for`` 
     
 |CodingEx| **Coding Exercise**
 
-Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10? Can you make it count by 2s? Can you make it count backwards?
+
 
 .. activecode:: forloop
    :language: java
    
+   Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to 10? Can you make it count by 2s? Can you make it count backwards?
+   ~~~~
    public class ForLoopTest
    {
       public static void main(String[] args)
@@ -92,11 +94,13 @@ Here is a for loop that counts from 1 to 5. Can you change it to count from 2 to
 
 |CodingEx| **Coding Exercise**
 
-Here is a while loop that counts from 5 to 10. Run it and see what it does. Can you change it to a for-loop? Run your for-loop. Does it do the same thing?
+
 
 .. activecode:: forloopfromwhile
    :language: java
    
+   Here is a while loop that counts from 5 to 10. Run it and see what it does. Can you change it to a for-loop? Run your for-loop. Does it do the same thing?
+   ~~~~
    public class ForLoopFromWhile
    {
       public static void main(String[] args)
@@ -206,11 +210,13 @@ Here is a while loop that counts from 5 to 10. Run it and see what it does. Can 
 
 |CodingEx| **Coding Exercise**
 
-What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3?
+
 
 .. activecode:: lcfcp1
    :language: java
    
+   What do you think will happen when you run the code below?  How would it change if you changed line 11 to initialize i's value to 3?
+   ~~~~
    public class SongTest
    {
 
@@ -301,6 +307,8 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
     :language: java
     :datafile: turtleClassesLoop
 
+    Can you change the code below to remove the repeated lines of code and use a loop to draw 4 sides of the square?
+    ~~~~
     import java.util.*;
     import java.awt.*;
 
@@ -332,7 +340,7 @@ Do you remember when we used the turtle objects to draw shapes? To create a squa
 
    <a href="https://repl.it/@BerylHoffman/Java-Swing-Turtle" target="_blank">repl.it link</a>
 
-In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops.
+In the last exercise, you used a for-loop to have the turtle draw a square. Use the Active Code window below or this |repl link| to have yertle draw the following shapes using loops. We encourage you to work in pairs.
 
 1. Have yertle draw an equilateral triangle using a loop. How many times should the loop run? Remember that it ran 4 times for a square, so how many for a triangle? What angle should you use for the turns? One way to figure this out is to notice that to complete a shape, all the exterior angles should add up to 360 degrees. So, for a square 4x90 = 360. 
 

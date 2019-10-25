@@ -198,7 +198,7 @@ Compiler Errors
 
    <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>
    
-A **syntax error** is an error in the program.  An example of a syntax error is if the code has a open curly brace ``{``, but no close curly brace ``}``. Informally, it is called a **bug** and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
+**Syntax errors** are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon ``;`` missing or if the code has a open curly brace ``{``, but no close curly brace ``}``. Informally, it is called a **bug** and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
 
 .. figure:: https://upload.wikimedia.org/wikipedia/commons/8/8a/H96566k.jpg
     :width: 300px
@@ -221,6 +221,8 @@ What is wrong?  Can you fix it?  The error message will tell you the line number
 .. activecode:: sc2error1
    :language: java
 
+   Fix the code below.
+   ~~~~
    public class SecondClass
    {
       public static void main(String[] args)
@@ -239,6 +241,8 @@ Click on the |runbutton| button below to try and run the following code.  Look f
 .. activecode:: sc2error2
    :language: java
 
+   Fix the code below.
+   ~~~~
    public class SecondClass
    {
       public static void main(String[] args)
@@ -257,6 +261,8 @@ Click on the |runbutton| button below to try and run the following code.  What i
 .. activecode:: sc2error3
    :language: java
 
+   Fix the code below.
+   ~~~~    
    public class SecondClass
    {
       public static void main(String[] args)

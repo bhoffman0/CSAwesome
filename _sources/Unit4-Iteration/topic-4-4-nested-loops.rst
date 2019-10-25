@@ -28,8 +28,15 @@ Nested For Loops
 	single: nested for loop
 	pair: loop; nested
 
-A **nested loop** has one loop inside of another.  These are typically used for working with two dimensions such as printing stars in rows and columns as shown below.   When a loop is nested inside another loop, the inner loop is started and runs many times inside the outer loop. The inner loop must start and finish all of its iterations before the outer loop can continue to its next iteration.
+A **nested loop** has one loop inside of another.  These are typically used for working with two dimensions such as printing stars in rows and columns as shown below.   When a loop is nested inside another loop, the inner loop is runs many times inside the outer loop. In each iteration of the outer loop, the inner loop will be re-started. The inner loop must finish all of its iterations before the outer loop can continue to its next iteration. 
 
+.. figure:: Figures/nestedloops.png
+    :width: 350px
+    :align: center
+    :figclass: align-center
+    
+    Figure 1: Nested Loops
+    
 .. |Java visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%200%3B%20row%20%3C%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%200%3B%20col%20%3C%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&cumulative=false&curInstr=64&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
@@ -37,11 +44,14 @@ A **nested loop** has one loop inside of another.  These are typically used for 
 
 |CodingEx| **Coding Exercises**
 
-What does the following code print out? Watch the code run in this |Java visualizer| by clicking forward. Notice how the inner loop is started over for each row. How many rows and columns are there? Can you change it to be a 5x5 square? Can you change it to be a 10x8 rectangle? 
+What does the following code print out? Watch the code run in this |Java visualizer| by clicking forward. Notice how the inner loop is started over for each row. Can you predict how many rows and columns of stars there will be?
 
 .. activecode:: lcfcnl1
    :language: java
    
+   
+   Can you change the code to be a 5x5 square of stars? Can you change it to be a 10x8 rectangle? Try swapping in this print statement for line 9 to see the rows and columns: System.out.print(row + "-" + col + " ");  
+   ~~~~
    public class NestedLoops
    {
 
@@ -141,18 +151,22 @@ What does the following code print out? Watch the code run in this |Java visuali
 
 |CodingEx| **Coding Exercise**
 
-Our turtles can use nested loops to repeat drawing a shape over and over. The turtle below is trying to draw a square many times to create a snowflake pattern. Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15. 
+
 
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
    
-(If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+
 
 .. activecode:: TurtleNestedLoop
     :language: java
     :datafile: turtleClassesNestedLoop
 
+    Our turtles can use nested loops to repeat drawing a shape over and over. The turtle below is trying to draw a square many times to create a snowflake pattern. Can you change the outer loop so that the pattern completes all the way around? Try different ending values for the counter i to find the smallest number that works between 5 and 15. 
+    
+    (If the code below does not work for you, you can copy the code into  this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
+    ~~~~
     import java.util.*;
     import java.awt.*;
 

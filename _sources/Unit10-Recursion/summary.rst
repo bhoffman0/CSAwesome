@@ -17,8 +17,8 @@ Concept Summary
 - **call stack** - A class defines what all objects of that class know (fields) and can do (methods).  You can also have data and behavior in the object that represents the class (class fields and methods).  All objects of a class have access to class fields and class methods, but these can also be accessed using ``className.field`` or ``className.method()``.
 - **recursive method** - A method that contains at least one call to itself inside the method.
 
-Practice
-===========
+Vocabulary Practice
+======================
 
 .. dragndrop:: ch12rec_match_1
     :feedback: Review the summaries above.

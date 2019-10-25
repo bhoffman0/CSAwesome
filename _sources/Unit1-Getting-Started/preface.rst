@@ -69,6 +69,14 @@ Several students at Georgia Tech have helped review the eBook:
 * Bhavika Devnani
 * Stephanie Remy
 
+Several students at the University of California, San Diego have been involved in creating multiple choice questions for the EBook.
+
+* Matthew Crooks
+* Miranda Go
+* Valerie Hon
+* Sophia Krause-Levy
+* Shauna Sapper
+
 Many others have been involved in the creation of content for the eBook (including high school students).
 
 * Atiba Nkosi Kee

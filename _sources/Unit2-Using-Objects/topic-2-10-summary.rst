@@ -13,25 +13,29 @@ In this unit, you learned to use objects (variables of a class type)  that have 
 Concept Summary
 ---------------
 
-- A **class** defines a new data type (classify something). It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
+- **class** - defines a new data type. It is the formal implementation, or blueprint, of the *attributes* and *behaviors* of the objects of that class.
 
-- An **object** is a specific instance of a class with defined attributes. Objects are declared as variables of a class type.
+- **object** - a specific instance of a class with defined attributes. Objects are declared as variables of a class type.
 
-- Every object is created using the keyword **new** followed by a call to one of the class’s **constructors** that initializes the object's attributes.
+- **constructors** - code that is used to create new objects and initialize the object's attributes.
 
-- **Methods** define the behaviors or functions for objects. 
+- **new** -  keyword used to create objects with a call to one of the class’s constructors.
 
-- To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example **object.method();** 
+- **instance variables** - define the attributes for objects.
 
-- Some methods take parameters/arguments that are placed inside the parentheses **object.method(arguments)**, and some methods return values.
+- **methods** - define the behaviors or functions for objects. 
 
-- A String object has index values from 0 to length – 1. Attempting to access indices outside this range will result in an IndexOutOfBoundsException.
+- **dot (.) operator** - used to acces an object's methods.  
 
-- String objects are **immutable**, meaning that String methods do not change the String object. Any method that seems to change a string actually creates a new string. 
+- **parameters (arguments)** - the values or data passed to an object's method inside the parentheses in the method call to help the method do its job.
 
-- The Integer class and Double class are **wrapper classes** that create objects from primitive types.
+- **return values** - values returned by methods to the calling method.
 
-- Static Math methods can be called using **Math**.method(); for each method. For example, **(int)(Math.random()*range) + min** to create a random integer between min and up to range.
+
+- **immutable** - String methods do not change the String object. Any method that seems to change a string actually creates a new string. 
+
+- **wrapper classes** - classes that create objects from primitive types, for example the Integer class and Double class.
+
 
 Java Keyword Summary
 -----------------------
@@ -82,15 +86,39 @@ Java Keyword Summary
 - **(int)(Math.random()*range) + min** moves the random number into a range starting from a minimum number. The range is the **(max number - min number + 1)**. For example, to get a number in the range of 5 to 10, use the range 10-5+1 = 6 and the min number 5: (int)(Math.random()*6) + 5).
 
 
+Vocabulary Practice
+-----------------------
 
-  
+.. dragndrop:: unit2_vocab
+    :feedback: Review the summaries above.
+    :match_1: a specific instance of a class with defined attributes|||object
+    :match_2: defines a new data type with instance variables and methods|||class
+    :match_3: define the behaviors or functions for objects|||methods
+    :match_4: code that is used to create new objects and initialize the object's attributes|||constructors
+    :match_5: the values or data passed to an object's method|||parameters
     
+    Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.
+
+
+.. |Quizlet| raw:: html
+
+   <a href="https://quizlet.com/434063730/cs-awesome-unit-2-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
     
-Common Mistakes with Strings
+Common Mistakes 
 ----------------------------
 
+  - Forgetting to declare an object to call a method from main or from outside of the class, for example object.method();
+  
+  - Forgetting () after method names when calling methods, for example object.method();
+  
+  - Forgetting to give the right parameters in the right order to a method that requires them.
+  
+  - Forgetting to save, print, or use the return value from a method that returns a value, for example int result = Math.pow(2,3);
 
-  -  Using ``==`` to test if two strings are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals`` or ``compareTo`` instead.    
+  -  Using ``==`` to test if two strings or objects are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals`` or ``compareTo`` instead.    
   
   -  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.  
   

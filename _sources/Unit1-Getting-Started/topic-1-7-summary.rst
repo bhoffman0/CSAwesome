@@ -16,7 +16,6 @@ In this unit you learned about the three primitive data types on the exam: ``int
 	single: camel case
 	single: declaring
 	single: initializing
-	single: random number
 	single: shortcut operator
 	single: modulo operator
 	single: casting
@@ -38,8 +37,7 @@ Concept Summary
 - **Initializing a Variable** - The first time you set the value of a variable.
 - **Integer** - A whole number like -32 or 6323.
 - **modulo** - The ``%`` operator which returns the remainder from one number divide by another.
-- **Operator** - Common mathematical symbols such as ``+`` for addition and ``*`` for multiplication.  
-- **Random Number** - A random number picked from a range of numbers.  Used in games to make the game more interesting.  
+- **Operator** - Common mathematical symbols such as ``+`` for addition and ``*`` for multiplication.    
 - **Shortcut Operators** - Operators like ``x++`` which means ``x = x + 1`` or ``x *=y`` which means ``x = x * y``.
 - **Variable** -  A name associated with a memory location in the computer.
 
@@ -74,8 +72,14 @@ Vocabulary Practice
     :match_4: changing the type of a variable|||casting
     
     Drag the definition from the left and drop it on the correct concept on the right.  Click the "Check Me" button to see if you are correct.
-    
-    
+
+.. |Quizlet| raw:: html
+
+   <a href="https://quizlet.com/433933862/cs-awesome-unit-1-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
+
 Common Mistakes
 ---------------
 

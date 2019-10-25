@@ -33,31 +33,23 @@ In this lesson, you will practice tracing through code with loops and analyzing 
 Tracing Loops
 ----------------------------
 
-A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.  
 
-You can create a tracing table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
-
-.. figure:: Figures/traceTable.png
-    :width: 150px
-    :align: center
-    :figclass: align-center
-
-    Figure 1: A trace table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
     
 .. |Java visualizer| raw:: html
 
    <a href="https://goo.gl/qEHnpg" target="_blank"  style="text-decoration:underline">Java visualizer</a>
    
-
+Let's practice tracing through loops with many variables. Remember to make a tracing table to keep track of all the variables, the iterations, and the output.
 
 |CodingEx| **Coding Exercise**
 
-Here is a complex loop.  See if you can trace the code on paper by making a tracing table like above to predict what the code will do when you run it. Click on the this |Java visualizer| link to help you step through the code. Then, add in output statements like 
-``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop to keep track of the variables and run.
+Here is a complex loop.  See if you can trace the code on paper by making a tracing table to predict what the code will do when you run it. Click on the this |Java visualizer| link to help you step through the code. 
 
 .. activecode:: example_trace_loop
    :language: java
    
+   Can you trace through this code? Add in output statements like ``System.out.println("var1: " + var1 + " var2: " + var2);`` before the loop and inside the loop to keep track of the variables and run.
+   ~~~~
    public class Test
    {
        public static void main(String[] args)
@@ -82,7 +74,7 @@ Did you trace table look like the following?
     :align: center
     :figclass: align-center
 
-    Figure 2: A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
+    Figure 1: A table showing the values of all of the variables each time through the loop.  The 0 means before the first loop.
     
 .. You can also add ``System.out.println(variable)`` to print the value of a variable.  In the code below the values of all of the variables are printed before the loop and at the end of the loop body.
 
@@ -175,11 +167,13 @@ Loops can be also analyzed to determine how many times they run.  This is called
 
 |CodingEx| **Coding Exercise**
 
-How many stars are printed out in this loop? How many times does the loop run? Figure it out on paper before you run the code.
+
 
 .. activecode::  countstars1
    :language: java
    
+   How many stars are printed out in this loop? How many times does the loop run? Figure it out on paper before you run the code.
+   ~~~~
    public class CountLoop
    {
 
@@ -194,15 +188,22 @@ If you made a trace table, you would know that the loop runs when i = 3, 4, 5, 6
 
 .. note::
    
-   The number of times a loop executes can be calculated by (largestValue - smallestValue + 1).  By the largest value I mean the largest value that allows the loop to execute and by the smallest value I mean the smallest value that allows the loop to execute.  So in the code above the largest value is 6 (which is the largest value < 7) and the smallest value that allows the loop to execute is 3 so this loop executes (6 - 3 + 1 = 4 times).  
+   The number of times a loop executes can be calculated by *(largestValue - smallestValue + 1)*.  
+   
+   - If the loop uses counter <= limit, limit is the largest value. 
+   - If the loop uses counter < limit, limit-1 is the largest value that allows the loop to run. 
+   
+In the code above the largest value that allows the loop to run is 6 (which is the largest value < 7) and the smallest value that allows the loop to execute is 3 so this loop executes (6 - 3 + 1 = 4 times).  
    
 |CodingEx| **Coding Exercise**
 
-How many stars are printed out by the following loops? How many times do the loops run? Calculate on paper before you run the code.
+
 
 .. activecode::  countstars
    :language: java
    
+   How many stars are printed out by the following loops? How many times do the loops run? Calculate on paper before you run the code.
+   ~~~~
    public class NestedLoops
    {
 
@@ -221,7 +222,7 @@ How many stars are printed out by the following loops? How many times do the loo
    
 .. note::
 
-   The number of times a nested for loop body is executed is the number of times the outer loop runs times the number of times the inner loop runs.  
+   The number of times a nested for loop body is executed is the number of times the outer loop runs multiplied by the number of times the inner loop runs (outer loop runs * inner loop runs).  
    
 For the example above, the outer loop executes 4-0+1= 5 times and the inner 9-0+1=10 times so the total is 5 * 10 = 50.  
 
@@ -320,7 +321,33 @@ Do the following exercises in your group. Make sure you draw the trace tables ke
      }
      
 
- 
+.. mchoice:: qln4
+   :practice: T
+   :answer_a: 15
+   :answer_b: 12
+   :answer_c: 10
+   :answer_d: 8
+   :correct: a
+   :feedback_a: The outer loop executes 4-0+1=5 times and the inner loop 2-0+1=3, so hi is printed 5*3 = 15 times  
+   :feedback_b: The outer loop runs 5 times for i = 0, 1, 2, 3, 4.  
+   :feedback_c: The inner loop runs 3 times for j = 0, 1, 2.
+   :feedback_d: The outer loop runs 5 times for i = 0, 1, 2, 3, 4.
+
+   Consider the following code segment. How many times is the string "Hi!" printed as a result of executing the code segment?
+   
+   .. code-block:: java 
+
+       int i = 0;
+       while (i <= 4)
+       {
+         for (int j = 0; j < 3; j++)
+         {
+           System.out.println("Hi!");
+         }
+         i++;
+       }
+
+
 
 
 

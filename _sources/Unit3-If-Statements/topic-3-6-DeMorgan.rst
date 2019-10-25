@@ -30,7 +30,7 @@ Equivalent Boolean Expressions (DeMorgan's Laws)
 	single: DeMorgan's Laws
 	single: negation
 	
-DeMorgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an and (&&) or or (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state the following equivalencies. Here's an easy way to remember De Morgan's Laws: **move the NOT inside, AND becomes OR** and **move the NOT inside, OR becomes AND**.
+DeMorgan's Laws were developed by Augustus De Morgan in the 1800s.  They show how to simplify the negation of a complex boolean expression, which is when there are multiple expressions joined by an AND (&&) or OR (||), such as ``(x < 3) && (y > 2)``. When you negate one of these complex expressions, you can simplify it by flipping the operators and end up with an equivalent expression. De Morgan's Laws state the following equivalencies. Here's an easy way to remember De Morgan's Laws: **move the NOT inside, AND becomes OR** and **move the NOT inside, OR becomes AND**.
 
 .. figure:: Figures/demorgan.png
     :width: 400px
@@ -84,11 +84,13 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 
 |CodingEx| **Coding Exercise**
 
-For what values of x and y will the code below print true?  Try out different values of x and y to check your answer.
+
 
 .. activecode:: lcdmtest
    :language: java
    
+   For what values of x and y will the code below print true?  Try out different values of x and y to check your answer.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -115,8 +117,14 @@ For what values of x and y will the code below print true?  Try out different va
    .. code-block:: java 
 
      int x = 4, y = 3;         
-     if (!(x < 3 || y > 2)) System.out.println("first case");
-     else System.out.println("second case");
+     if (!(x < 3 || y > 2)) 
+     {
+        System.out.println("first case");
+     }
+     else
+     {
+        System.out.println("second case");
+     }
      
 .. mchoice:: qcbdm2_9
    :practice: T
@@ -131,9 +139,14 @@ For what values of x and y will the code below print true?  Try out different va
    .. code-block:: java 
 
      int x = 4, y = 3; 
-     if (!(x < 3 && y > 2)) System.out.println("first case");
-     else System.out.println("second case");
-     
+     if (!(x < 3 && y > 2)) 
+     {
+        System.out.println("first case");
+     }
+     else
+     {
+        System.out.println("second case");
+     }
 
      
 |Groupwork| Programming Challenge : Truth Tables POGIL
@@ -166,7 +179,7 @@ Explore the following problems with your group. You may use |this worksheet| to 
 
 5. Test your answers using the active code window below.
 
-6. Complete the following exercises 3-6-3 through 3-6-6 in your POGIL groups.
+6. Complete the following exercises 3-6-3 through 3-6-7 in your POGIL groups.
 
 .. activecode:: challenge3-6-booleanExpr
    :language: java

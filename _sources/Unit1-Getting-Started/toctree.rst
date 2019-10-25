@@ -1,5 +1,5 @@
 .. image:: ../../_static/CSAwesomeLogo.png
-    :width: 300
+    :width: 350
     :align: center
     
 

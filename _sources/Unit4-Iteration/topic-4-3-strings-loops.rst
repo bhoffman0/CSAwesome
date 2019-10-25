@@ -72,11 +72,13 @@ Google has been scanning old books and then using software to read the scanned t
 
 |CodingEx| **Coding Exercise**
 
-The following code loops through a string replacing all 1's with l's.  Trace through the code below with a partner and explain how it works on the given message.  You can run it line by line in the |Java visualizer|. Note that indexOf here can work repeatedly to find the next occurrence of a 1 because they are replaced as soon as they are found. Change the code to add code for a counter variable to count the number of 1's replaced in the message and print it out. Change the message to have more mistakes with 1's to test it.
+The following code loops through a string replacing all 1's with l's.  Trace through the code below with a partner and explain how it works on the given message.  You can run it line by line in the |Java visualizer|. Note that indexOf here can work repeatedly to find the next occurrence of a 1 because they are replaced as soon as they are found. 
 
 .. activecode:: lclw1
    :language: java
    
+   Change the code to add code for a counter variable to count the number of 1's replaced in the message and print it out. Change the message to have more mistakes with 1's to test it.
+   ~~~~
    public class Test
    {
       public static void main(String[] args)
@@ -95,6 +97,7 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
            String lastpart = message.substring(index+1);
            message = firstpart + "l" + lastpart;
            System.out.println("Replaced 1 with l at index " + index);
+           System.out.println("The message is currently " + message + " but we aren't done looping yet!";
         }
         System.out.println("Cleaned text: " + message);
       }
@@ -140,12 +143,20 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
    } // end method
 
 
-While loops are often used with strings when you are looking for a certain character or substring in a string and do not know how many times the loop needs to run.
 
 For Loops: Reverse String
 --------------------------
 
-For-loops can also be used to process strings in situations where you know you will visit every character. Here is a for-loop that creates a new string that reverses the string. Remember to start the loop at 0 and use length() for the ending condition.
+
+For-loops can also be used to process strings, especially in situations where you know you will visit every character. 
+
+.. note::
+
+    While loops are often used with strings when you are looking for a certain character or substring in a string and do not know how many times the loop needs to run. For loops are used when you know you want to visit every character.
+
+For loops with strings usually start at 0 and use the string's length() for the ending condition to step through the string character by character. Here is a for-loop that creates a new string that reverses the string s.  We start with a blank string sReversed and build up our reversed string in that variable by copying in characters from the string s. You can also run this code in this |Java visualizer link|. 
+
+
 
 .. |Java visualizer link| raw:: html
 
@@ -153,11 +164,12 @@ For-loops can also be used to process strings in situations where you know you w
    
 |CodingEx| **Coding Exercise**
 
-Here is a for-loop from 0 to length() that reverses a string. You can also run this in this |Java visualizer link|. What would happen if you started the loop at 1 instead? What would happen if you used <= instead of <? What would happen if you changed the order in which you added the ithLetter in line 12?
 
 .. activecode:: reverseString
    :language: java
    
+   What would happen if you started the loop at 1 instead? What would happen if you used <= instead of <? What would happen if you changed the order in which you added the ithLetter in line 12?
+   ~~~~
    public class ReverseString
    {
       public static void main(String[] args)

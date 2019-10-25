@@ -10,7 +10,7 @@
 Activity 3: Better Keyword Detection
 =======================================
 
-This activity introduces you to some new String methods including some that are not on the exam, but are useful.  
+This activity introduces you to some new String methods including some that are not on the exam, but are useful.  Your teacher will tell you whether your class is doing this activity or not.
 
 More String Methods
 ---------------------
@@ -81,7 +81,7 @@ Better Keyword Detection
 --------------------------
    
 In activity 2, you discovered that simply searching for collections of letters in a string does
-not always work as intended. For example, the word “cat” is in the string “Let’s play catch!,” but the
+not always work as intended. For example, the word "cat" is in the string "Let’s play catch!", but the
 string has nothing to do with the animal. In this activity, you will trace a method that searches for a full
 word in the string. It will check the substring before and after the string to ensure that the keyword is
 actually found.

@@ -30,15 +30,17 @@ Enhanced For Each Loop
 ..	index::
 	pair: list; for-each loop
 
-You can use a enhanced for-each loop to loop through all of the items in a list, just like you do with an array as shown in the main method below.  
+You can use a enhanced for-each loop to traverse through all of the items in a list, just like you do with an array as shown in the main method below.  
 
 |CodingEx| **Coding Exercise**
 
-What does the following code do? Guess before you run it. Then, add another enhanced for each loop that computes the product of all the elements in myList by multiplying them and prints it out.
+
 
 .. activecode:: listForEachLoop
    :language: java
-   
+
+   What does the following code do? Guess before you run it. Then, add another enhanced for each loop that computes the product of all the elements in myList by multiplying them and prints it out.
+   ~~~~
    import java.util.*;  // import all classes in this package.
    public class Test
    {  
@@ -65,11 +67,13 @@ If you try to use an index that is outside of the range of 0 to the number of el
 
 |CodingEx| **Coding Exercise**
 
-The following code will throw an ArrayIndexOutOfBoundsException. Can you fix it?
+
 
 .. activecode:: listForLoop
    :language: java
    
+   The following code will throw an ArrayIndexOutOfBoundsException. Can you fix it?
+   ~~~~
    import java.util.*;  
    public class TestForLoop
    {  
@@ -96,12 +100,13 @@ The example below demonstrates a while loop and an object-oriented approach wher
    
 |CodingEx| **Coding Exercise**
 
-What does the following code do? Guess what it does before running it.
-Can you change the code so that it only removes the first name it finds in the list that matches? (Hint: use the found variable).
+
 
 .. activecode:: listForEachLoopObj
    :language: java
    
+   What does the following code do? Guess what it does before running it. Can you change the code so that it only removes the first name it finds in the list that matches? (Hint: use the found variable).
+   ~~~~
    import java.util.*;  
    public class ListWorker
    {

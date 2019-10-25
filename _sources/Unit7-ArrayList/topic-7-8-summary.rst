@@ -41,8 +41,8 @@ Concept Summary
 - **Unboxing** - Automatically converting a wrapper object like an ``Integer`` into a primitive type such as an ``int``.  
 
 
-Practice
-===========
+Vocabulary Practice
+===================
 
 .. dragndrop:: ch10_17_match_1
     :feedback: Review the summaries above.
@@ -62,6 +62,13 @@ Practice
     :match_5: Get the last object in a list named list1|||list1.get(list1.size() - 1);
    
     Drag the description from the left and drop it on the correct code on the right.  Click the "Check Me" button to see if you are correct.
+
+.. |Quizlet| raw:: html
+
+   <a href="https://quizlet.com/434082008/cs-awesome-unit-7-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
 
 Common Mistakes
 ===============

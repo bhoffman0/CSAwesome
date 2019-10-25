@@ -20,16 +20,21 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
    if (guess < answer)
    =====
+   {   
        System.out.println("Your guess is too low");
+   }
    =====
    else if (guess == answer)
    =====
+   {       
        System.out.println("You are right!");
+   }
    =====
    else 
    =====
-       System.out.println("Your guess is too high");
-                   
+   {
+        System.out.println("Your guess is too high");
+   }
       
 .. parsonsprob:: ch5ex2muc
    :numbered: left

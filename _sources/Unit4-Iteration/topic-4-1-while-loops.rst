@@ -33,6 +33,10 @@ While Loops
 	pair: loop; while
 	
 
+.. image:: Figures/loops.png
+    :width: 125
+    :align: left
+    
 When you play a song, you can set it to loop, which means that when it reaches the end it starts over at the beginning.  A **loop** in programming, also called **iteration** or **repetition**,  is a way to repeat one or more statements. If you didn't have loops to allow you to repeat code, your programs would get very long very quickly! Using a sequence of code, selection (ifs), and repetition (loops), the **control structures** in programming, you can construct an algorithm to solve almost any programming problem! 
 
 A ``while`` loop executes the body of the loop as long as (or while) a Boolean condition is true.  When the condition is false, we exit the loop and continue with the statements that are after the body of the ``while`` loop.  If the condition is false the first time you check it, the body of the loop will not execute.  
@@ -63,36 +67,53 @@ If you took AP CSP with a block programming language like App Inventor, you may 
     Figure 1: Comparing App Inventor and Java for while loops
 
  
+If you're used to a language like Snap! or Scratch, you may be familiar with the Repeat Until loop. However, you have to be very careful comparing repeat until to while loops. The while test is the opposite of the repeat until test. For example, if you are repeatedly moving until reaching x position 100, you must create a Java while loop that repeatedly moves while it has *not* yet reached x position 100 or is less than 100 as below. 
 
 
-
-Here's what the flow of control looks like in a while loop:
-
-.. figure:: Figures/WhileLoopFlow.png
-    :width: 300px
+.. figure:: Figures/ScratchRepeatUntilLoop.png
+    :width: 100%
     :align: center
     :figclass: align-center
 
-    Figure 2: Flow in a while loop
+    Figure 2: Comparing Snap! or Scratch Repeat Until Loop to Java while loop 
+
+Here's what the flow of control looks like in a Java while loop. Notice that while the condition is true, the loop body is repeated.
+
+.. figure:: Figures/WhileLoopFlow.png
+    :width: 250px
+    :align: center
+    :figclass: align-center
+
+    Figure 3: Control Flow in a while Loop
     
- 
+The loop condition usually involves a **loop control variable** that controls when to stop the loop. The simplest loops are **counter-controlled loops** like below, where the loop variable is a counter that controls how many times to repeat the loop. There are 3 steps to writing a loop using this loop control variable as seen below in a loop that counts from 1 to 10.
+
+.. figure:: Figures/loop3steps.png
+    :width: 400px
+    :align: center
+    :figclass: align-center
+
+    Figure 4: Three Steps of Writing a Loop
+
 
 .. note:: 
 
-    The loop condition usually involves a **loop control variable** that controls when to stop the loop. To make sure you set up your loops correctly, remember these 3 steps to writing a loop:
+    Remember these 3 steps to writing a loop:
 
-    1. Initialize the loop variable
-    2. Test the loop variable
-    3. Change the loop variable
+    1. Initialize the loop variable (before the while loop)
+    2. Test the loop variable (in the loop header)
+    3. Change the loop variable (in the while loop body at the end)
+
 
 
 |CodingEx| **Coding Exercise**
 
-Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of writing a loop. Can you change it to count from 2 to 10? Can you make it count by 2s? Can you make it count backwards?
 
 .. activecode:: whileloop
    :language: java
    
+   Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of writing a loop. Can you change it to count from 2 to 10? Can you make it count by 2s? Can you make it count backwards?
+   ~~~~
    public class LoopTest1
    {
       public static void main(String[] args)
@@ -111,7 +132,97 @@ Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of wr
       }
    }
 
+Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is standard practice to do so.  
+
+.. note::
+
+    On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.
+
 |Exercise| **Check your understanding**
+
+.. mchoice:: while1
+   :practice: T
+   :answer_a: while (count == 10)
+   :answer_b: while (count < 10)
+   :answer_c: while (count <= 10)
+   :answer_d: while (count > 10)
+   :correct: c
+   :feedback_a: This would not print out anything because count = 0 at the start of the loop, so it never equals 10.
+   :feedback_b: This would print out 0 2 4 6 8. Try it in the Active Code window above.
+   :feedback_c: Yes, try it in the Active Code window above.
+   :feedback_d: This would not print out anything because count = 0 at the start of the loop, so it is not greater than 10.
+  
+   Consider the following code segment. Which of the following can be used as a replacement for the missing loop header so that the loop prints out "0 2 4 6 8 10"? 
+   
+   .. code-block:: java 
+
+        int count = 0;
+        /* missing loop header */
+        {
+            System.out.print(count + " ");
+            count += 2;
+        }
+
+
+
+
+
+Tracing Loops
+-------------
+    
+.. |video| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=TZss5ukwN8s" target="_blank">video</a>
+
+A really important skill to develop is the ability to trace the values of variables and how they change during each iteration of a loop.  
+
+You can create a tracing table that keeps track of the variable values each time through the loop as shown below.  This is very helpful on the exam. Studies have shown that students who create tables like this do much better on code tracing problems on multiple choice exams.
+
+.. figure:: Figures/traceTable.png
+    :width: 150px
+    :align: center
+    :figclass: align-center
+
+    Figure 5: A trace table showing the values of all of the variables each time through the loop.  Iteration 0 means before the loop.
+    
+Watch the following |video| for a tracing demo. When you are tracing through code, pretend to be the computer running the code line by line, repeating the code in the loop, and keeping track of the variable values and output. 
+   
+.. youtube:: TZss5ukwN8s
+    :width: 600
+    :align: center
+    
+    
+.. |visualizer| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20TraceLoop%20%7B%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%7B%0A%20%20%20%20%20%20int%20count%20%3D%201%3B%0A%20%20%20%20%20%20while%20%28count%20%3C%3D%2010%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20count%20*%3D%202%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20count%20%3D%20count%20-%2010%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=16&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank">visualizer</a>    
+    
+    
+|Exercise| **Check your understanding**
+
+.. mchoice:: while2
+   :practice: T
+   :answer_a: 0
+   :answer_b: 1
+   :answer_c: 16
+   :answer_d: 6
+   :correct: d
+   :feedback_a: Count is changed inside the loop and after the loop. 
+   :feedback_b: Count is changed inside the loop and after the loop. 
+   :feedback_c: Don't forget to subtract 10 from count after the loop.
+   :feedback_d: Yes, the loop will keep multiplying count by 2 to get 2, 4, 8, 16 and then it subtracts 10 from 16 after the loop. 
+  
+   Consider the following code segment. What is count's value after running this code segment? (To trace through the code, keep track of the variable count and its value through each iteration of the loop.)
+   
+   .. code-block:: java 
+
+     int count = 1;
+     while (count <= 10)
+     {
+         count *= 2;
+     }
+     count = count - 10;
+
+Step through the code above with the |visualizer|.
 
 .. mchoice:: qlb_2_1
    :practice: T
@@ -123,7 +234,7 @@ Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of wr
    :feedback_b: x is incremented (x++) before the print statement executes.
    :feedback_c: x is set to -5 to start but then incremented by 1 so it first prints -4.
 
-   What does the following code print? To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.  
+   What does the following code print? (To trace through the code, keep track of the variable x and its value, the iteration of the loop, and the output every time through the loop.)  
    
    .. code-block:: java 
 
@@ -134,13 +245,17 @@ Here is a while loop that counts from 1 to 5 that demonstrates the 3 steps of wr
         System.out.print(x + " ");
      }
 
-Java doesn't require your code to be correctly indented (code moved to the right a few spaces) to make it clear what statements are part of the body of the loop, but it is good practice.  On the free response part of the exam, the reader will use the indention when determining the meaning of your code, even if you forget the open or close curly brace.
+
+
+
+Common Errors with Loops
+------------------------
 
 ..	index::
 	single: infinite loop
 	pair: loop; infinite
 
-One thing to be careful about with while loops is making sure that you don't end up with an **infinite loop**.  An infinite loop is one that never stops (the condition is always true). 
+One common error with loops is **infinite loops**.  An infinite loop is one that never stops (the condition is always true). 
 
 .. code-block:: java 
   
@@ -150,9 +265,32 @@ One thing to be careful about with while loops is making sure that you don't end
       System.out.println("This is a loop that never ends");
    }
    
-The infinite loop above is pretty obvious.  But, most infinite loops are accidental.  They usually occur because you forget to change the thing you are checking in the condition (step 3 of a loop).
+The infinite loop above is pretty obvious.  But, most infinite loops are accidental.  They usually occur because you forget to change the loop variable in the loop (step 3 of a loop).
 
 Another common error with loops is an **off-by-one error** where the loop runs one too many or one too few times. This is usually a problem with step 2 the test condition and using the incorrect relational operator < or <=.
+
+|CodingEx| **Coding Exercise**
+
+
+.. activecode:: whileloopbugs
+   :language: java
+   
+   The while loop should print out the numbers 1 to 8, but it has 2 errors that cause an infinite loop and an off-by-one error. Can you fix the errors? If you run an infinite loop, you may need to refresh the page to stop it (so make sure all active code windows on the page are saved).
+   ~~~~
+   public class LoopTest2
+   {
+      public static void main(String[] args)
+      {
+        int count = 1;
+        while (count < 8)
+        {
+           System.out.println(count);
+        }
+      }
+   }
+   
+Input-Controlled Loops
+----------------------
 
 .. |Magpie chatbot lab on repl.it| raw:: html
 
@@ -183,7 +321,11 @@ There are standard algorithms that use loops to compute the sum or average like 
 |Groupwork| Programming Challenge : Guessing Game
 -------------------------------------------------
 
-We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like "Too high" or "Too low". Here's the pseudocode for the guessing game. What's the loop variable? Can you identify the 3 steps of writing this loop with respect to the loop variable?
+.. image:: Figures/questionmark.jpg
+    :width: 100
+    :align: left
+    
+We encourage you to work in pairs on this guessing game. In the guessing game, the computer picks a random number from 0-100 and you have to guess it. After each guess, the computer will give you clues like "Too high" or "Too low". Here's the pseudocode for the guessing game. **Pseudocode** is an English description or plan of what your code will do step by step. What's the loop variable for this program? Can you identify the 3 steps of writing this loop with respect to the loop variable?
 
 1. Choose a random number from 0-100
 2. Get the first guess

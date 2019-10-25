@@ -83,7 +83,9 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 
     Figure 1: The order that statements execute in a conditional with 3 options: if, else if, and else
     
-.. note:: Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
+.. note:: 
+
+    Another way to handle 3 or more conditional cases is to use the ``switch`` and ``break`` keywords, but these will not be on the exam.  For a tutorial on using switch see https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html.
 
 
 |Exercise| **Check your understanding**

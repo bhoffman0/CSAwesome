@@ -113,7 +113,7 @@ Exercises
 
 Alter the code above or in your own IDE (see section below) to do the following. We encourage you to work in pairs.
 
-* Have it respond “Tell me more about your pets” when the statement contains the word “dog” or “cat.” For example, a possible statement and response would be:
+* Have it respond "Tell me more about your pets" when the statement contains the word "dog" or "cat". For example, a possible statement and response would be:
 
   * Statement: I like my cat Mittens.
   * Response: Tell me more about your pets.
@@ -132,12 +132,12 @@ Alter the code above or in your own IDE (see section below) to do the following.
 
 * Pick three more keywords, such as “no” and “brother” and edit the ``getResponse`` method to respond to each of these.
 
-* What happens when more than one keyword appears in a string? Consider the string “My mother has a dog but no cat.” Explain how to prioritize responses in the reply method.
+* What happens when more than one keyword appears in a string? Try the input “My **mother** has a **dog** but **no** cat.” Which response did you get -- was it the one about family or the one about pets or the negative one for no?  Change the order of your if-else-if statements to make it so that one of the other responses is selected and try running it again.
 
 .. shortanswer:: short-lab1b1
    :optional:
 
-   What happens when a keyword is included in another word? Consider statements like “I know all the state capitals” and “I like vegetables smothered in cheese.” Explain the problem with the responses to these statements.
+   What happens when a keyword is included in another word? Consider statements like “I know all the state capitals” which contains no and “I like vegetables smothered in cheese” which contains mother. Explain the problem with the responses to these statements.
 
 Activity 2: Actual Code - (Optional)
 -------------------------------------

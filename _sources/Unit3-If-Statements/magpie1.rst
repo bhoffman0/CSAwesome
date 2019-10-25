@@ -16,16 +16,18 @@ Lab Requirement
 
    <a href="http://secure-media.collegeboard.org/digitalServices/pdf/ap/ap-compscia-magpie-lab-student-guide.pdf" target="_blank">Magpie Chatbot Lab</a>
    
-As of 2014-2015 the Advanced Placement Computer Science A course must include at least 20 hours of hands-on labs.  In 2014, 3 recommended labs were created, Magpie, Picture, and Elevens, and in 2019-20, 4 more labs were created, Consumer Review, Steganography (an extension of PictureLab), Celebrity, and Data. Teachers can choose to do any of these labs or their own labs to complete at least 20 hours of labs. See https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/course-details/lab-requirements for the student guides for each of these labs.  Here is the College Board guide for the |Magpie Chatbot Lab| as a pdf. Your teacher will provide the lab for you. The particular code in each of these labs will not be on the exam, but the concepts covered by the labs will be on the exam.
+As of 2014-2015 the Advanced Placement Computer Science A course must include at least 20 hours of hands-on labs.  In 2014, 3 recommended labs were created, Magpie, Picture, and Elevens, and in 2019-20, 4 more labs were created, Consumer Review, Steganography (an extension of PictureLab), Celebrity, and Data. Your teacher may choose to do any of these labs or their own labs to complete at least 20 hours of labs. See https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/course-details/lab-requirements for the student guides for each of these labs.  
+
+If your class does all or part of the Magpie Lab, here is the College Board student guide for the |Magpie Chatbot Lab| as a pdf. Your teacher will provide the lab code for you which is also in the next pages. The particular code in each of these labs will not be on the exam, but the concepts covered by the labs will be on the exam.
 
 Magpie Lab Description
 ----------------------
 
 
    
-The Magpie lab allows the student to work with the ``String`` class and conditionals with a **chatbot**.  A **chatbot** is a computer program that tries to hold a conversation with a user.  This chapter will walk you through the activities in the Magpie chatbot lab.  
+The Magpie lab allows you to work with the ``String`` class and conditionals with a **chatbot**.  A **chatbot** is a computer program that tries to hold a conversation with a user.  This chapter will walk you through the activities in the Magpie chatbot lab.  
 
-The first activity in Magpie is to explore some existing chatbots.  We encourage students to work in pairs or groups on this activity.
+The first activity in Magpie is to explore some existing chatbots.  We encourage you to work in pairs or groups on this activity.
 
 Activity 1: Exploring Chatbots
 ------------------------------

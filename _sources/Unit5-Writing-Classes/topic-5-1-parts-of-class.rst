@@ -62,7 +62,15 @@ To write your own class, you typically start a class declaration with ``public``
 
 Remember that objects have attributes and behaviors. These correspond to **instance variables** and **methods** in the class definition.   Instance variables hold the data for objects where as the methods code the behaviors or the actions the object can do.   A class also has **constructors** which initialize the instance variables when the object is created, for example new House() above.  And a class can also have a **main method** which can be used to test the class.  
 
-Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email.
+Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email. Here's a possible Person class with instance variables, constructor, and methods.
+
+.. figure:: Figures/PersonClassDefn.png
+    :width: 450px
+    :align: center
+    :alt: Person 
+    :figclass: align-center
+
+    Figure 1: Person class
 
 Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in that method for that object. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
 
@@ -131,18 +139,17 @@ All instance variables in general and on the AP CS A exam should be declared **p
  
    Instance variables are declared right after the class declaration.  They start with ``private`` then the *type* of the variable and then a *name* for the variable. Private means only the code in this class has access to it.
 
-The ``Person`` class above declares 3 instance variables: name, email, and phoneNumber. These are things that you might need to know about
-a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
+The ``Person`` class above declares 3 instance variables: name, email, and phoneNumber. These are things that you might need to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
 
 **Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables. Each time you create a Person object, a new object like the following is created with its own copy of the data and methods. 
 
 .. figure:: Figures/PersonClass.png
-    :width: 250px
+    :width: 450px
     :align: center
     :alt: Person data encapsulation
     :figclass: align-center
 
-    Figure 1: Data encapsulation in Person 
+    Figure 2: Data encapsulation in Person 
 
 
 When designing a class, programmers make decisions about what data to make accessible and/or modifiable from an external class. The private access modifier is used to encapsulate and protect the data from external access. Private instance variables can only be accessed by methods within the class in which they are defined.
@@ -184,13 +191,15 @@ Methods
 ..	index::
 	pair: class; method
 	
-**Methods** define what an object can do or the behavior of the object.   Most methods are ``public``.  
+**Methods** define what an object can do or the behavior of the object.   Most methods are ``public`` which means they can be accessed from outside the class. Some methods can be marked as``private`` if they are helper methods that are just used internally by other methods inside the same class. They will not be accessible outside of the class. The private and public keywords determine the external access and visibility of classes, data, constructors, and methods.
 
 .. note::
 
    Methods define what the object can do.  They typically start with ``public`` then a type, then the name of the method followed by parentheses for optional parameters. Methods defined for an object can access and use its instance variables!  
 
-The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
+The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  
+
+Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
 The **void** return type is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber. The instance variables are shared by all the methods of the class.
 
 .. code-block:: java
@@ -202,7 +211,7 @@ The **void** return type is used to indicate that the method does not return any
        System.out.println("Phone Number: " + phoneNumber);
      }
      
-To call a method to do its job, we create an object of the class and then use the dot (.) operator to call its public methods. Remember that the . is like an 's -- call p1's print method.
+To call a method to do its job, we create an object of the class and then use the dot (.) operator to call its public methods, for example p1.print() means call p1's print method.
 
 .. code-block:: java
 
@@ -215,7 +224,7 @@ To call a method to do its job, we create an object of the class and then use th
 |Exercise| Check Your Understanding
 
 .. clickablearea:: name_methods
-    :question: Click on all the parts of the methods in the following class
+    :question: Click on all the lines of code that are part of a method in the following class.
     :iscode:
     :feedback: Methods follow the constructor.  They include a return type in case they returns something from the method.
 
@@ -262,7 +271,7 @@ In **Object-Oriented Design** (OOD), programmers first spend time to decide whic
 
     Figure 2: Turtle Class Diagram
     
-When you are given a problem specification, look for the **nouns** to identify what classes you need to create. For example, say you were hired to create a program that keeps track of "students at your school and the courses they are taking", what classes would you create? 
+When you are given a problem specification, look for the **nouns** to identify what classes you need to create. For an example, try the problem below.
 
 |Exercise| **Check Your Understanding**
 
@@ -299,7 +308,7 @@ In this project, you will create a class that can tell riddles like the followin
 
 1. First, brainstorm in pairs to do the **Object-Oriented Design** for a riddle asking program. What should we call this class? What data does it need to keep track of in instance variables? What is the data type for the instance variables? What methods do we need? (You could draw a Class Diagram for this class using |Creately.com|, although it is not required). 
 
-2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
+2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Hint:  Don't name your instance variables initQuestion and initAnswer -- we'll explain why shortly. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
 3. Add a main method that constructs at least 3 Riddle objects and calls their methods to ask and answer the riddle. You can look up some good riddles online.
 
@@ -361,6 +370,132 @@ Summary
 
 - Methods can be public or private, but they are usually public.
 
+AP Practice
+------------
 
+
+.. mchoice:: AP5-1-1
+        :practice: T
+        :random:
+
+        Consider the Cat class which will contain a String and an int attribute for a cat’s name and age and a constructor.
+
+        .. code-block:: java
+ 
+            public class Cat
+            {
+              /* missing code */
+            }
+    
+            Which of the following replacements for /* missing code */ is the most appropriate 
+            implementation of the class?
+
+        - .. code-block:: java
+
+            public String name;
+            private int age;
+            private Cat(String name, int age)
+            { /* implementation not shown */ }
+
+          - Instance variables should be private.
+
+        - .. code-block:: java
+
+            public String name;
+            private int age;
+            private Cat(String name, int age)
+            { /* implementation not shown */ }
+
+          - Instance variables should be private.
+
+        - .. code-block:: java
+
+            private String name;
+            private int age;
+            public Cat(String name, int age)
+            { /* implementation not shown */ }
+
+          + Correct! The instance variables are private and the constructor is public.
+
+        - .. code-block:: java
+
+            public String name;
+            public int age;
+            public Cat(String name, int age)
+            { /* implementation not shown */ }
+
+          - Instance variables should be private.
+
+        - .. code-block:: java
+	
+            private String name;
+            private int age;
+            private Cat(String name, int age)
+            { /* implementation not shown */ }
+
+          - Constructor should be public.          
+
+.. mchoice:: AP5-1-2
+    :practice: T
+
+    Consider the Party class below which will contain three int attributes for numOfPeople, volumeOfMusic, and numOfBoxesOfPizza, a constructor, and a startParty method. The startParty method is intended to be accessed outside the class.
+    
+    .. code-block:: java
+
+        public class Party
+        {
+        /* missing code */
+        }
+
+        Which of the following replacements for /* missing code */ is the most appropriate 
+        implementation of the class?
+
+    - .. code-block:: java
+    
+        private int numOfPeople;
+        private int volumeOfMusic;
+        private int numOfBoxesOfPizza;
+        public Party()
+        { /* implementation not shown */ }
+        private void startParty()
+        { /* implementation not shown */ }
+
+      - Method startParty() should be public.
+        
+    - .. code-block:: java
+    
+        private int numOfPeople;
+        private int volumeOfMusic;
+        private int numOfBoxesOfPizza;
+        public Party()
+        { /* implementation not shown */ }
+        public void startParty()
+        { /* implementation not shown */ }
+
+      + Correct, instance variables should be private and the methods should be public.
+      
+    - .. code-block:: java
+    
+        public int numOfPeople;
+        public int volumeOfMusic;
+        public int numOfBoxesOfPizza;
+        public Party()
+        { /* implementation not shown */ }
+        public void startParty()
+        { /* implementation not shown */ }
+
+      - Instance variables should be private.
+        
+    - .. code-block:: java
+    
+        private int numOfPeople;
+        private int volumeOfMusic;
+        private int numOfBoxesOfPizza;
+        private Party()
+        { /* implementation not shown */ }
+        private void startParty()
+        { /* implementation not shown */ }
+
+      - Methods should be public.
 
 

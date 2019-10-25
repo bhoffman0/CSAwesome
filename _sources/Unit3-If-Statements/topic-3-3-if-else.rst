@@ -312,7 +312,7 @@ The |Animal Guessing program| below uses the following decision tree:
 Summary
 -------
 
--If statements can be followed by an associated **else** part to form a 2-way branch:
+- If statements can be followed by an associated **else** part to form a 2-way branch:
 
 .. code-block:: java
 

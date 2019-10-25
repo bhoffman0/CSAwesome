@@ -1,5 +1,5 @@
 .. image:: ../../_static/CSAwesomeLogo.png
-    :width: 300
+    :width: 350
     :align: center
     
 
@@ -28,6 +28,7 @@ AP CS A Exam Weighting: 5-7.5%
    topic-2-10-summary.rst
    topic-2-11-practice-mixed-code.rst
    topic-2-12-practice-coding.rst
+   practice-test-objects.rst
    Exercises.rst
    JavaSwingGUIs.rst
    

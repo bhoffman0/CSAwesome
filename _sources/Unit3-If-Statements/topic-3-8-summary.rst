@@ -38,8 +38,8 @@ Java Keyword Summary
 - **else** - used to execute a statement or block of statements if the Boolean expression on the if part was false.  
 - **else if (Boolean expression)** - used to have 3 or more possible outcomes such as if x is equal, x is greater than, or x is less than some value.  It will only execute if the condition in the 'if' was false and the condition in the else if is true.
 
-Vocabulary Check
-----------------
+Vocabulary Practice
+--------------------
 
 .. dragndrop:: ch5_cond1
     :feedback: Review the summaries above.
@@ -58,13 +58,26 @@ Vocabulary Check
     :match_4: used to distribute a negation on a complex conditional|||DeMorgan's Laws
     
     Drag the definition from the left and drop it on the correct method on the right.  Click the "Check Me" button to see if you are correct.
-    
+
+.. |Quizlet| raw:: html
+
+   <a href="https://quizlet.com/434070386/cs-awesome-unit-3-vocabulary-flash-cards/" target="_blank" style="text-decoration:underline">Quizlet</a>
+
+
+For more practice, see this |Quizlet|.
+
 Common Mistakes
 ---------------
 
+  -  Using = instead of == in ``if``'s. Remember that = is used to assign values and == is used to test. Ifs always use ==. 
+  
+  - Putting a ; at the end of ``if (test);``. Remember that the if statement ends after ``if (test) statement;`` or use curly brackets ``if (test) { statements; }``.
+  
   -  Using two ``if``'s one after the other instead of an ``if`` and ``else``.    
   
   -  Trouble with complex conditionals which are two or more Boolean expressions joined by ``&&`` or ``||``.  
+  
+  - Not understanding that `||` is an inclusive-or where one or *both* conditions must be true.
 
   -  Trouble with understanding or applying negation (``!``).  See the section on DeMorgan's Laws.   
   

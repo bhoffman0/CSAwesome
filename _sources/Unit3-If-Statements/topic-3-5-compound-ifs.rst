@@ -45,11 +45,13 @@ What if you want two things to be true before the body of the conditional is exe
 
 |CodingEx| **Coding Exercise**
 
-For example, what if you want to go out and your parents say you could if you clean your room and do your homework?  Run the code below and try different values for ``cleanedRoom`` and ``didHomework`` and see what they have to be for it to print ``You can go out``.
+
 
 .. activecode:: lccc1
    :language: java
-   
+
+   For example, what if you want to go out and your parents say you could if you clean your room and do your homework?  Run the code below and try different values for ``cleanedRoom`` and ``didHomework`` and see what they have to be for it to print ``You can go out``.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -57,9 +59,13 @@ For example, what if you want to go out and your parents say you could if you cl
         boolean cleanedRoom = true;
         boolean didHomework = false;
         if (cleanedRoom && didHomework) 
+        {
             System.out.println("You can go out");
+        }
         else 
+        {
             System.out.println("No, you can't go out");
+        }
       }
    }
 
@@ -67,11 +73,12 @@ What if it is okay if only one of two things is true? Use ``||`` as a logical **
 
 |CodingEx| **Coding Exercise**
 
-For example, your parents might say you can go out if you can walk or they don't need the car.  Try different values for ``walking`` and ``carIsAvailable`` and see what the values have to be to print ``You can go out``.
 
 .. activecode:: lccc2
    :language: java
    
+   For example, your parents might say you can go out if you can walk or they don't need the car.  Try different values for ``walking`` and ``carIsAvailable`` and see what the values have to be to print ``You can go out``.
+   ~~~~
    public class Test2
    {
       public static void main(String[] args)
@@ -79,29 +86,44 @@ For example, your parents might say you can go out if you can walk or they don't
         boolean walking = true;
         boolean carIsAvailable = false;
         if (walking || carIsAvailable) 
+        {
            System.out.println("You can go out");
-        else System.out.println("No, you can't go out");
+        }
+        else 
+        {
+          System.out.println("No, you can't go out");
+        }
       }
    }
 
-With numerical values, the or operator is often used to check for error conditions on different ends of the number line, while the and operator is often used to see if a number is in an range. 
+.. note::
+
+    In English, we often use an exclusive-or like in the sentence "do you want to be player 1 *or* player 2?" where you can't be both player 1 and player 2. In programming, the or-operator is an inclusive-or which means that the whole expression is true if either one or the other or *both* conditions are true. 
+    
+With numerical values, the or-operator is often used to check for error conditions on different ends of the number line, while the and-operator is often used to see if a number is in an range. 
 
 |CodingEx| **Coding Exercise**
 
-Explore how && and || are used with numbers below. Try different values for score like -10 and 110 in the code below.
+
 
 .. activecode:: lcccnum
    :language: java
    
+   Explore how && and || are used with numbers below. Try different values for score like -10 and 110 in the code below.
+   ~~~~
    public class TestNum
    {
       public static void main(String[] args)
       {
         int score = 10; // Try -10 and 110
         if (score < 0 || score > 100) 
+        {
             System.out.println("Score has an illegal value.");
+        }
         if (score >= 0 && score <= 100) 
+        {
             System.out.println("Score is in the range 0-100");
+        }
  
       }
    }
@@ -112,22 +134,27 @@ The **not** (!) operator can be used to negate a boolean value. We've seen ! bef
 
 |CodingEx| **Coding Exercise**
 
-The code below says if homework is not done, you can't go out. Try different values for ``homeworkDone``.
+
 
 .. activecode:: lcccnot
    :language: java
    
+   The code below says if homework is not done, you can't go out. Try different values for ``homeworkDone``.
+   ~~~~
    public class TestNot
    {
       public static void main(String[] args)
       {
         boolean homeworkDone = false;
         if (!homeworkDone) 
+        {
             System.out.println("Sorry, you can't go out!");
+        }
       }
    }
 
 .. note::
+
     In Java, ! will be executed before &&, and && will be executed before ||, unless there are parentheses. Anything inside parentheses is executed first.
 
 Truth Tables
@@ -197,8 +224,14 @@ The following table shows the result for P || Q when P and Q are both expression
    .. code-block:: java 
 
      if (x > 0 && (y / x) == 3) 
+     {
         System.out.println("first case");
-     else System.out.println("second case");
+     }
+     else
+     {
+        System.out.println("second case");
+     }
+     
      
 .. mchoice:: qcbc_8
    :practice: T
@@ -213,8 +246,13 @@ The following table shows the result for P || Q when P and Q are both expression
    .. code-block:: java 
 
      if (x > 0 && (y / x) == 3) 
+     {
         System.out.println("first case");
-     else System.out.println("second case");
+     }
+     else
+     {
+        System.out.println("second case");
+     }
      
 .. mchoice:: qcbc_or
    :practice: T
@@ -229,9 +267,14 @@ The following table shows the result for P || Q when P and Q are both expression
    .. code-block:: java 
 
      if (x > 0 || (y / x) == 3) 
+     {
         System.out.println("first case");
-     else System.out.println("second case");
-  
+     }
+     else
+     {
+        System.out.println("second case");
+     }
+     
 Short Circuit Evaluation
 ------------------------
 
@@ -262,8 +305,13 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    .. code-block:: java
 
      if (x > 0 && (y / x) == 3) 
+     {
         System.out.println("first case");
-     else System.out.println("second case");
+     }
+     else
+     {
+        System.out.println("second case");
+     }
      
 .. mchoice:: qcb_7sc
    :practice: T
@@ -279,8 +327,14 @@ Both ``&&`` and ``||`` use **short circuit evaluation**.  That means that the se
    
    .. code-block:: java 
 
-     if (x == 0 || (y / x) == 3) System.out.println("first case");
-     else System.out.println("second case");
+     if (x == 0 || (y / x) == 3)
+     {
+        System.out.println("first case");
+     }
+     else
+     {
+        System.out.println("second case");
+     }
      
 .. .. mchoice:: qcb_8sc
    :practice: T
@@ -339,9 +393,9 @@ Explore the following problems with your group:
 
 2. Write the sentence "If it's sunny, OR if the temperature is greater than 80 and it's not raining, I will go to the beach." as a Java if statement using an int variable ``temperature`` and boolean variables ``sunny`` and ``raining``.  If the conditional is true, print out "Go to the beach!". So, you will go to beach on days that it is sunny in any temperature, or you will go to the beach on days when the temperature is over 80 degrees and it's not raining.
 
-3. Complete a truth table for the if statement that you wrote in #2 with columns for temperature > 80, sunny, raining, and go to the beach.
+3. Complete a truth table for the if statement that you wrote in #2 with columns for sunny, temperature > 80, raining, and go to the beach.
 
-4. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly.
+4. Write Java code below to test your if statement and try all the values in your truth table to see if you filled it out correctly. You will need test case for each of the 8 rows in your truth table, for example when sunny is true and false, when raining is true or false, and for a value of temperature greater than 80, for example 90, and less than 80, for example 60.
 
 .. activecode:: challenge3-5-truthtables
    :language: java
@@ -350,8 +404,14 @@ Explore the following problems with your group:
    {
       public static void main(String[] args)
       {
-        
-        
+         boolean sunny =
+         int temperature =
+         boolean raining = 
+         // Write an if statement for "If it's sunny, 
+         //   OR if the temperature is greater than 80 
+         //   and it's not raining, (print) I will go to the beach."
+         // Test multiple values for variables.
+         
       }
    }
 

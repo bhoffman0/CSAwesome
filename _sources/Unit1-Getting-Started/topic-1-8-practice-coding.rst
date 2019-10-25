@@ -468,7 +468,7 @@ Code Practice with Variables
         .. tab:: Question
 
            
-           The following code should calculate the number of hours in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+           The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.  
            
            .. activecode::  ch3Ex5q
               :language: java
@@ -480,7 +480,7 @@ Code Practice with Variables
                       int numSecs = 320893;
                       int numHours = numSecs   3600;
                       int numDays = numHours   24;
-                      System.out.println numHours);
+                      System.out.println numDays);
                       
               }
 
