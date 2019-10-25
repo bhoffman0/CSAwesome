@@ -39,7 +39,7 @@ serving_dir = "./build/csawesome"
 
 #new 7/2019 changes
 # Change to False when running localhost
-dynamic_pages = True
+dynamic_pages = False
 
 if dynamic_pages:
     dest = './published'
@@ -84,3 +84,5 @@ if 'DBHOST' in environ and  'DBPASS' in environ and 'DBUSER' in environ and 'DBN
     options.build.template_args['dburl'] = 'postgresql://{DBUSER}:{DBPASS}@{DBHOST}/{DBNAME}'.format(**environ)
 
 from runestone import build  # build is called implicitly by the paver driver.
+version = pkg_resources.require("runestone")[0].version
+options.build.template_args['runestone_version'] = version
