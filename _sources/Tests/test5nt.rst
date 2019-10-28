@@ -490,7 +490,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
     values. Which of the following code segments correctly appends all the strings in arr to the end of list?
 
     .. code-block:: java
-    
+
         I. for(String s : arr)
             list.add(s)
         II. for(String s : arr)
