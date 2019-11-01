@@ -10,4 +10,5 @@ Preparing for the Exam
    test3nt.rst
    test4nt.rst
    Exercises.rst
-
+   MidTerm1.rst
+   MidTerm2.rst
