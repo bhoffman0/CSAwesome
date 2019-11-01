@@ -9,7 +9,7 @@ Free Response - Horse Barn B
 	single: horse barn
     single: free response
     
-The following is part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.  
+The following is part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
 **Question 3.**  Consider a software system that models a horse barn. Classes that represent horses implement the following interface.
 (Note that interfaces are no longer covered on the CS A exam, but here the Horse interface just describes the methods that a Horse class must have.)

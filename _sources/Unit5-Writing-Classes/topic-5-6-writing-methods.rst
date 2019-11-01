@@ -64,16 +64,29 @@ Did you find some repeated lines of the This Old Man song? You may have noticed 
 
 There are three steps to creating and calling a method:
 
-1. **Object of the Class**: Declare an Object of your class in the main method.
-2. **Method Call**: whenever you want to use the method, say objectName.methodName(); 
+1. **Object of the Class**: Declare an object of your class in the main method or from outside the class.
+
+    .. code-block:: java
+
+       // Step 1: declare an object in main or from outside the class
+       Classname objectName = new Classname(); 
+
+2. **Method Call**: whenever you want to use the method, call objectName.methodName(); 
+
+    .. code-block:: java
+
+       // Step 2: call the object's method
+       objectName.methodName(); //Step 2
+
 3. **Method Definition**:  write the method's **header** and **body** code like below: 
 
-.. code-block:: java
+    .. code-block:: java
 
+        // Step 3: Define the method in the class
         // method header
-        public void method() 
+        public void methodName() 
         { 
-              // code - method body 
+              // method body for the code
         }
 
 For example, here is a chorus() method definition that we could write for the "This Old Man Song":
@@ -93,11 +106,12 @@ For example, here is a chorus() method definition that we could write for the "T
    
 |CodingEx| **Coding Exercise**
 
-Run the following code to see the song This Old Man print out. Can you change the last two lines in the second verse to call the chorus() method instead? You can also see this code run in the |Java visualizer|.
 
 .. activecode:: Song1
   :language: java
 
+  Run the following code to see the song This Old Man print out. Can you change the last two lines in the second verse to call the chorus() method instead? You can also see this code run in the |Java visualizer|.
+  ~~~~
   public class Song 
   { 
     // The chorus method
@@ -152,11 +166,13 @@ We can make methods even more powerful and more abstract by giving them paramete
    
 |CodingEx| **Coding Exercise**
 
-Run the following code to see the song This Old Man print out using the verse and chorus methods.  You can also see this code run in the |visualizer|. Can you add verse three with the rhyme "knee"? Can you add verse four with the rhyme "door"? How many verses do you know?
+
 
 .. activecode:: Song2
   :language: java
 
+  Run the following code to see the song This Old Man print out using the verse and chorus methods.  You can also see this code run in the |visualizer|. Can you add verse three with the rhyme "knee"? Can you add verse four with the rhyme "door"? How many verses do you know?
+  ~~~~
   public class Song 
   { 
     
@@ -200,19 +216,29 @@ When you create your own method, the variables you define for it in the method h
 
 Java uses **Call by Value** when it passes arguments to methods. This means that a copy of the value in the argument is saved in the parameter variable. If the parameter variable changes its value inside the method, the original value outside the method is not changed.
 
-If you pass in an argument that holds a reference to an object, like a String object, a copy of this reference is passed in and saved in the parameter variable. The formal parameter and the actual parameter (argument) are then **aliases**, both refering to the same object. Java was designed this way to avoid copying large objects. If the reference parameter was for a mutable object, the method could change the actual object, but it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification. Methods can even access the private data and methods of a parameter that is a reference to an object if the parameter is the same type as the method’s enclosing class. Note that Strings are immutable objects, so they cannot be changed by the method; only a new changed copy of them can be made.
+If you pass in an argument that holds a reference to an object, like a String or Person or Turtle object, a copy of this reference is passed in and saved in the parameter variable. The formal parameter and the actual parameter (argument) are then **aliases**, both refering to the same object. Java was designed this way to avoid copying large objects from method to method. Remember when we discussed reference aliases with turtle objects who are set equal to one another.
+
+.. figure:: Figures/turtleEquality.png
+    :width: 500px
+    :align: center
+    :figclass: align-center
+    
+    Figure 2: Turtle Reference Equality
+    
+Although String objects are not mutable, the classes that you create will have mutable objects. If the reference parameter is for a mutable object, the method could change the actual object, but it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification. Methods can even access the private data and methods of a parameter that is a reference to an object if the parameter is the same type as the method’s enclosing class. Note that Strings are immutable objects, so they cannot be changed by the method; only a new changed copy of them can be made.
 
 
 Methods can also return values of any type back to the calling method. The calling method should do something with this return value, like printing it out or saving it in a variable. Try the problems below to practice with a String method that takes a parameter and returns a boolean value.
 
 |CodingEx| **Coding Exercise**
 
-Run the following program which contains a method called findLetter that takes a letter and a text as parameters and uses a loop to see if that letter is in the text. It returns a boolean true or false value. 
-Give letter and the text new values in the main method and run it again to try finding a different letter. Then, change the code of the method to count how many letters it finds and return the count as an int. 
+
 
 .. activecode:: StringFind
   :language: java
 
+  Run the following program which contains a method called findLetter that takes a letter and a text as parameters and uses a loop to see if that letter is in the text. It returns a boolean true or false value.  Give letter and the text new values in the main method and run it again to try finding a different letter. Then, change the code of the method to count how many letters it finds and return the count as an int. 
+  ~~~~
   public class StringFind 
   { 
     /** findLetter looks for a letter in a String
@@ -319,4 +345,136 @@ Summary
 - When an actual parameter is a reference to an object, the formal parameter is initialized with a copy of that reference, not a copy of the object. The formal parameter and the actual parameter are then aliases, both refering to the same object.
 
 -  When an actual parameter is a reference to an object, the method or constructor could use this reference to alter the state of the original object. However, it is good programming practice to not modify mutable objects that are passed as parameters unless required in the specification.
+
+AP Practice
+-----------
+
+.. mchoice:: AP5-6-1
+    :practice: T
+
+    Consider the following class, which uses the instance variable dollars to represent the money in a wallet in dollars.
+        
+    .. code-block:: java
+
+        public class Wallet
+        {
+            private double dollars;
+
+            public double putMoneyInWallet(int amount)
+            {
+                /* missing code */
+            }
+        }
+
+    The putMoneyInWallet method is intended to increase the dollars in the wallet by the parameter amount and then return the updated dollars in the wallet. Which of the following code segments should replace  *missing code* so that the putMoneyInWallet method will work as intended?
+    
+    - .. code-block:: java
+
+        amount += dollars;
+        return dollars;
+
+      - dollars should be incremented by amount.
+        
+    - .. code-block:: java
+
+        dollars = amount;
+        return amount;
+        
+      - dollars should be incremented by amount.
+        
+    - .. code-block:: java
+
+        dollars += amount;
+        return dollars;
+        
+      + Correct.
+
+    - .. code-block:: java
+
+        dollars = dollars + amount;
+        return amount;
+       
+      - amount is returned instead of dollars.
+        
+    - .. code-block:: java
+
+        amount = dollars + amount;
+        return dollars;
+        
+      - dollars should be incremented by amount.
+        
+
+
+.. mchoice:: AP5-6-2
+    :practice: T
+
+    Consider the Liquid class below.
+    
+    .. code-block:: java
+
+        public class Liquid
+        {
+            private int currentTemp;
+            private int boilingPoint;
+
+            public Liquid(int ct, int bp)
+            {
+                currentTemp = ct;
+                boilingPoint = bp;
+            }
+
+            public boolean isBoiling(int amount)
+            {
+                /* missing code */
+            }
+        }
+
+    The isBoiling method is intended to return true if increasing the currentTemp by the parameter amount is greater than or equal to the boilingPoint, or otherwise return false. Which of the following code segments can replace *missing code* to ensure that the isBoiling method works as intended? 
+    
+    .. code-block:: java
+
+       I.   if (currentTemp + amount < boilingPoint)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+       II.  if (amount > currentTemp)
+            {
+                return false;
+            }
+            else
+            {
+                return currentTemp;
+            }
+       III. if (amount + currentTemp >= boilingPoint)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+    - I only
+          
+      - I would work but it is not the only code that would work.
+
+    - II only
+    
+      - II does not check against the boilingPoint and does not return only boolean values.
+  
+    - III only
+    
+      - III would work but it is not the only code that would work.
+
+    - I and III only.
+  
+      + Correct! 
+      
+    - I, II, III
+    
+      - II does not check against the boilingPoint and does not return only boolean values.
 

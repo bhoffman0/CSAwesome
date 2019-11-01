@@ -9,7 +9,7 @@ StringCoder - Part A
 	single: StringPart
     single: free response
 
-The following is a free response question from 2008.  It was question 2 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+The following is a free response question from 2008.  It was question 2 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 2.** Consider a method of encoding and decoding words that is based on a *master string*. This master string
 will contain all the letters of the alphabet, some possibly more than once. An example of a master string is

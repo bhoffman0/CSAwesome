@@ -87,8 +87,12 @@ Here is the Turtle class diagram again that shows some of the variables and meth
 .. |Color| raw:: html
 
    <a href= "https://docs.oracle.com/javase/7/docs/api/java/awt/Color.html" target="_blank">Color</a>
+   
+.. |javadoc (documentation) file| raw:: html
 
-Try some of the methods above in the turtle code below.
+   <a href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html" target="_blank">javadoc (documentation) file</a>   
+
+Try some of the methods above in the turtle code below. You can see all the methods that are inherited in Turtle in this |javadoc (documentation) file|.
 
 
 |CodingEx| **Coding Exercises:**
@@ -2902,7 +2906,7 @@ Try the following mixed up code to draw a simple house made of a square and a tr
 
 Methods are said to be **overloaded** when there
 are multiple methods with the same name but a
-different **method signature**, where it requires a different number or type of parameters. For example, we have two different forward methods, forward() with no parameters and forward(100) which has a parameter that tells it how much to move forward. If there are more than one parameter, then the values given to the method need to correspond to the order and types in the method signature.
+different **method signature**, where it requires a different number or type of parameters. For example, we have two different forward methods, forward() with no parameters and forward(100) which has a parameter that tells it how much to move forward. If there are more than one parameter, then the values given to the method need to correspond to the order and types in the method signature. 
 
 You will not write your own methods until Unit 5, but you should be able to trace through method calls like below. 
 
@@ -3019,6 +3023,89 @@ Summary
 - Values provided in the parameter list need to correspond to the order and type in the method signature.
 
 
+AP Practice
+-------------
+
+.. mchoice:: AP2-4-1
+    :practice: T
+
+    Consider the following methods:
+    
+    .. code-block:: java
+
+        public void inchesToCentimeters(double i)
+        {
+            double c = i * 2.54;
+            printInCentimeters(i, c);
+        }
+
+        public void printInCentimeters(double inches, double centimeters)
+        {
+            System.out.print(inches + "-->" + centimeters);
+        }
+
+    Assume that the method call ``inchesToCentimeters(10)`` appears in a method in the same class. What is printed as a result of the method call?
+    
+    - inches --> centimeters
+    
+      - The values of the variables inches and centimeters should be printed out, not the words.
+      
+    - 10 -->  25
+      
+      - Two doubles should be printed, not two ints, and the centimeters should be 25.4
+    
+    - 25.4 --> 10
+    
+      - Inches should be printed before centimeters.
+    
+    - 10 --> 12.54
+    
+      - c = 10 * 2.54 = 25.4, not 12.54.
+    
+    - 10.0 --> 25.4
+    
+      + Correct! centimeters = 10 * 2.54 = 25.4. 
 
 
+
+
+.. mchoice:: AP2-4-2
+    :practice: T
+    
+    Consider the following methods, which appear in the same class.
+
+    .. code-block:: java
+    
+        public void splitPizza(int numOfPeople)
+        {
+            int slicesPerPerson = 8/numOfPeople;
+            /* INSERT CODE HERE */
+        }
+
+        public void printSlices(int slices)
+        {
+            System.out.println("Each person gets " + slices + " slices each");
+        }
+
+    What of the following lines would go into ``/* INSERT CODE HERE */`` in the method splitPizza in order to call the ``printSlices`` method to print the number of slices per person correctly? 
+    
+    - printSlices(slicesPerPerson);
+    
+      + Correct! If you had 4 people, slicesPerPerson would be 8/4=2 and printSlices would print out "Each person gets 2 slices each".
+      
+    - printSlices(numOfPeople);
+    
+      - If you had 4 people, this would print out that they get 4 slices each of an 8 slice pizza.
+      
+    - printSlices(8);
+    
+      - This would always print out 8 slices each.
+      
+    - splitPizza(8);
+    
+      - This would not call the printSlices method.
+      
+    - splitPizza(slicesPerPerson);
+    
+      - This would not call the printSlices method.
 

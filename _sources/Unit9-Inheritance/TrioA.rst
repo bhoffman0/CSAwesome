@@ -9,7 +9,7 @@ Free Response - Trio A
 	single: trio
     single: free response
     
-The following is a free response question from 2014.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.  
+The following is a free response question from 2014.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
 **Question 4.**  The menu at a lunch counter includes a variety of sandwiches, salads, and drinks. The menu also allows a
 customer to create a "trio," which consists of three menu items: a sandwich, a salad, and a drink. The price

@@ -242,7 +242,7 @@ Inherited Get/Set Methods
 ..	index::
     pair: inheritance; access to private fields
 
-Inheritance means that an object of the child class automatically includes the object instance variables and methods defined in the parent class.  But, if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called **getters**) which are methods that get instance variable values and public **modifiers** (also called **mutators** and **setters**) which set their values.  
+Inheritance means that an object of the child class automatically includes the object instance variables and methods defined in the parent class.  But, if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called getters or get methods) which are methods that get instance variable values and public **mutators**  (also called modifier methods or setters or set methods) which set their values.  
 
 For example, if a parent has a private instance variables, ``name``, then the parent typically provides a public ``getName`` method and a public ``setName`` method as shown below.  In the ``setName`` method below, the code checks if the passed string is null before it sets it and returns true if the set was successful or false otherwise.  The ``Employee`` class inherits the ``name`` field but must use the public method ``getName`` and ``setName`` to access it.
 

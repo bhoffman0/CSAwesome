@@ -9,7 +9,7 @@ Hidden Word - Write Class
 	  single: Hidden Word
     single: free response
 
-The following is a free response question from 2015.  It was question 2 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+The following is a free response question from 2015.  It was question 2 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 2.** Consider a guessing game in which a player tries to guess a hidden word. The hidden word contains only capital
 letters and has a length known to the player. A guess contains only capital letters and has the same length as the

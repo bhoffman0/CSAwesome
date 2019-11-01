@@ -10,9 +10,11 @@
 Activity 4: Responses that Transform Statements
 =================================================
 
+If your class has time, your teacher may have you do Activity 4 below.
+
 As stated previously, single keywords are interesting, but better chatbots look for groups of words.
-Statements like “I like cats,” “I like math class,” and “I like Spain” all have the form “I like something.”
-The response could be “What do you like about something?” This activity will respond to groupings
+Statements like "I like cats", "I like math class", and "I like Spain" all have the form "I like something".
+The response could be "What do you like about something?" This activity will respond to groupings
 of words.
 
 Try each of the following as the value for the ``statement`` in the main method and see what they print.  Or you can try it on |repl.it version 4|.
@@ -130,7 +132,7 @@ You can also step through the code in the |Java Visualizer|. It may take a minut
          return "What would it mean to " + restOfStatement + "?";
       }
  
-      /**  ADD COD HERE!
+      /**  ADD CODE HERE!
        * Take a statement with "I want <something>." and transform it into 
        * Would you really be happy if you had <something>?
        * @param statement the user statement, assumed to contain "I want"
@@ -308,7 +310,7 @@ Then add two new methods, transformIWantStatement and transformIYouStatement, an
   * Statement: I want fried chicken.
   * Response: Would you really be happy if you had fried chicken?
   
-* In a method transformIYouStatement, have it respond to statements of the form “I something you” with the restructuring “Why do you something me?”. You can use the transformYouMeStatement method as a guide. Test with the following:
+* In a method transformIYouStatement, have it respond to statements of the form "I something you" with the restructuring "Why do you something me?". You can use the transformYouMeStatement method as a guide. Test with the following:
 
   * Statement: I like you.
   * Response: Why do you like me?

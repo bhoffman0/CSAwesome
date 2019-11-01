@@ -9,7 +9,7 @@ ArrayTester - Part A
 	  single: ArrayTester
     single: free response
 
-The following is a free response question from 2018.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+The following is a free response question from 2018.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 4.** This question involves reasoning about arrays of integers. You will write two static methods, both of which are in a class named ``ArrayTester``.
 

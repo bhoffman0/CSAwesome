@@ -6,19 +6,19 @@
     :width: 30px
     :align: middle
     :alt: coding exercise
-    
-    
+
+
 .. |Exercise| image:: ../../_static/exercise.png
     :width: 35
     :align: middle
     :alt: exercise
-    
-    
+
+
 .. |Groupwork| image:: ../../_static/groupwork.png
     :width: 35
     :align: middle
     :alt: groupwork
-    
+
 ..	index::
 	pair: class; constructor
 
@@ -29,25 +29,27 @@
 .. |github| raw:: html
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
-   
-Creating and Storing Objects: Constructors
-===========================================
 
-A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has **constructors** like World() and Turtle() which are used to construct and initialize objects from the class. 
+Creating and Initializing Objects: Constructors
+================================================
 
-Constructors always have the same name as the class and are used with the keyword **new**. An object variable is created using the keyword new followed by a call to a constructor. For example, here's how we used the World constructor, World(), to create a new graphical world, and the Turtle constructor, Turtle(world), to create a new Turtle.
+A Java class defines what objects of the class know (attributes) and what they can do (behaviors).  Each class has **constructors** like ``World()`` and ``Turtle(world)`` which are used initialize the attributes in a newly created object.
 
-
-.. code-block:: java 
-
-    // To create a new object, write:
-    // ClassName variableName = new ConstructorName(parameters);
-    World world = new World();
-    Turtle t = new Turtle(world);
+A new object is created with the ``new`` keyword followed by the class name (``new Class()``).  When this code executes, it creates a new object of the specified class and calls a constructor, which has the same name as the class.  For example, ``new World()`` creates and initializes a new object of the ``World`` class, and ``new Turtle(world)`` creates and initializes a new ``Turtle`` object in the specified world.
 
 
-There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the World() constructor above. This simple constructor usually sets the attributes of the object to default values. There can be other constructors that have parameters like the Turtle(world) constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor and used to initialize the attributes of an object. 
-The World class actually has 2 constructors with different parameters.
+.. code-block:: java
+
+    // To create a new object and call a constructor write:
+    // ClassName variableName = new ClassName(parameters);
+    World world = new World();    // create a new World object
+    Turtle t = new Turtle(world); // create a new Turtle object
+
+Overloading Constructors, the No-Argument Constructor, and Parameters
+----------------------------------------------------------------------
+
+There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. There can also be other constructors that take parameters like the ``Turtle(world)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
+The ``World`` class actually has 2 constructors.  One doesn't take any parameters and one takes the world's width and height.
 
 
 .. figure:: Figures/worldConstructors.png
@@ -55,21 +57,51 @@ The World class actually has 2 constructors with different parameters.
     :align: center
     :alt: Two overloaded World constructors
     :figclass: align-center
-    
+
     Figure 1: Two overloaded World constructors
-    
-    
-The default ``World()`` constructor creates a graphical screen of 640x480 pixels. The ``World(int width, int height)`` constructor takes two integer parameters, and initializes the World's width and height to them, for example World(300,400) creates a 300x400 pixel world.
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: overload_const_1
+   :practice: T
+   :answer_a: When a constructor takes one parameter.
+   :answer_b: When a constructor takes more than one parameter.
+   :answer_c: When one constructor is defined in a class.
+   :answer_d: When more than one constructor is defined in a class.
+   :correct: d
+   :feedback_a: For a constructor to be overloaded there must be more than one constructor.
+   :feedback_b: For a constructor to be overloaded there must be more than one constructor.
+   :feedback_c: For a constructor to be overloaded there must be more than one constructor.
+   :feedback_d: Overloading means that there is more than one constructor.  The parameter lists must differ in either number, order, or type of parameters.
+
+   Which of these is overloading?
+
+.. mchoice:: const_def_1
+   :practice: T
+   :answer_a: World w = null;
+   :answer_b: World w = new World;
+   :answer_c: World w = new World();
+   :answer_d: World w = World();
+   :correct: c
+   :feedback_a: This declares a variable w that refers to a World object, but it doesn't create a World object or initialize it.
+   :feedback_b: You must include parentheses () to call a constructor.
+   :feedback_c: Use the new keyword followed by the classname and parentheses to create a new object and call the constructor.
+   :feedback_d: You must use the new keyword to create a new object.
+
+   Which of these is valid syntax for creating and initializing a World object?
+
+The World Class Constructors
+----------------------------------------------------------
+
+The constructor that doesn't take any parameters, ``World()``, creates a graphical window with 640x480 pixels. The ``World(int width, int height)`` constructor takes two integer parameters, and initializes the ``World`` object's width and height to them, for example ``new World(300,400)`` creates a 300x400 pixel world.
 
 .. code-block:: java
-    
+
     World world1 = new World(); // creates a 640x480 world
     World world2 = new World(300,400); // creates a 300x400 world
-    
-The Turtle class also has multiple constructors, although it always requires a world as an parameter to know where to draw the turtle. The default location for the turtle is right in the middle of the world. Try the code below to see this. 
 
-There is another Turtle constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below. The coordinate (0,0) is at the top left of the world. 
-
+.. note ::
+   The turtle word does not use the cartesian coordinate system.  The top left corner is (0,0), x increases to the right, and y increases towards the bottom of the page.
 
 .. figure:: Figures/coords.png
     :width: 200px
@@ -77,23 +109,47 @@ There is another Turtle constructor that places the turtle at a certain (x,y) lo
     :figclass: align-center
 
     Figure 2: The coordinate (0,0) is at the top left of the Turtle world.
-    
+
+The Turtle Class Constructors
+----------------------------------------------------------
+
+The ``Turtle`` class also has multiple constructors, although it always requires a world as an parameter in order to have a place to draw the turtle. The default location for the turtle is right in the middle of the world.
+
+There is another ``Turtle`` constructor that places the turtle at a certain (x,y) location in the world, for example at the coordinate (50, 100) below.
+
 .. code-block:: java
-    
+
     Turtle t1 = new Turtle(world1);
-    Turtle t2 = new Turtle(50, 100, world1
-    
-Notice that the order of the parameters matter. The Turtle constructor always takes (x,y,world) as parameters in that order. Try mixing up the order of the parameters and you will see it causes an error because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- for better error-checking. 
-    
+    Turtle t2 = new Turtle(50, 100, world1);
+
+.. note ::
+   Notice that the order of the parameters matter. The ``Turtle`` constructor takes ``(x,y,world)`` as parameters in that order. If you mix up the order of the parameters it will cause an error, because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- to allow for error-checking.
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: const_turtle
+   :practice: T
+   :answer_a: Turtle t = Turtle(world);
+   :answer_b: Turtle t = new Turtle();
+   :answer_c: Turtle t = new Turtle(world, 100, 100);
+   :answer_d: Turtle t = new Turtle(100, 100, world);
+   :correct: d
+   :feedback_a: You must use the new keyword to create a new Turtle.
+   :feedback_b: All turtle constructors take a world as a parameter.
+   :feedback_c: The order of the parameters matter.
+   :feedback_d: This creates a new Turtle object in the passed world at location (100,100)
+
+   Which of these is valid syntax for creating and initializing a Turtle object?
+
 |CodingEx| **Coding Exercise:**
 
 .. activecode:: TurtleConstructorTest
     :language: java
     :datafile: turtleClassesConstructor
 
-    Try changing the code below to create a World of 300x400. Where is the turtle generated by default? What parameters do you need to give the Turtle constructor to place the turtle in the top right corner? Experiment and find out. What happens if you mix up the order of the parameters?
+    Try changing the code below to create a ``World`` object with 300x400 pixels. Where is the turtle placed by default? What parameters do you need to pass to the ``Turtle`` constructor to put the turtle at the top right corner? Experiment and find out. What happens if you mix up the order of the parameters?
 
-    (If the code below does not work for you, you can also use the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)    
+    (If the code below does not work for you, you can also use the ``Turtle`` code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -102,23 +158,42 @@ Notice that the order of the parameters matter. The Turtle constructor always ta
     {
       public static void main(String[] args)
       {
-          // Can you change the World constructor to 300x400?
+          // Change the World constructor to 300x400
           World world = new World(300,300);
-          // Can you change the Turtle constructor to make the turtle appear in the top right corner?
+
+          // Change the Turtle constructor to put the turtle in the top right corner
           Turtle t1 = new Turtle(world);
-          t1.turnRight();
-          world.show(true); 
+
+          t1.turn(-45);
+          t1.forward();
+          world.show(true);
       }
     }
-    
-You can also declare object variables without calling a constructor and set them equal to **null** which means that they have no value, for example *Turtle t1 = null;* but usually, you will want to call a constructor with new to create an object and store its memory address (a reference) in the variable.
 
+Object Variables and References
+---------------------------------
+
+You can also declare an **object variable** and initialize it to **null** (``Turtle t1 = null;``). An object variable holds a **reference** to an object.  A **reference** is a way to find the object in memory. A reference is like a tracking number that you can use to track the location of a package. The code ``Turtle t1 = null;`` creates a variable ``t1`` that refers to a ``Turtle`` object, but the ``null`` means that it doesn't refer to an object yet. You could later create the object and set the object variable to refer to that new object (``t1 = new Turtle(world)``).  However, you will typically declare an object variable and initialize it in the same line of code (``Turtle t2 = new Turtle(world);``).
+
+.. code-block:: java
+
+    World world = new World();
+    Turtle t1 = null;
+    t1 = new Turtle(world);
+    Turtle t2 = new Turtle(world);
+
+.. note ::
+
+   Notice that you only specify the type (class name) for an object reference when you declare it (``Turtle t1 = null``) and not when you assign it a value (``t1 = new Turtle(world)``).
+
+Constructor and Method Signatures
+-----------------------------------
 
 .. |turtle documentation| raw:: html
 
    <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
-   
-When you use a class that someone has already written for you in a **library** that you can import like the Turtle class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. Constructors are **overloaded** when there are multiple constructors with the same name but a different signature with different parameters. For example, here are the two constructors for the Turtle class that take different parameters:
+
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. Constructors are **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are two constructors for the ``Turtle`` class that take different parameters:
 
 
 .. figure:: Figures/TurtleClassDefn.png
@@ -126,12 +201,12 @@ When you use a class that someone has already written for you in a **library** t
     :align: center
     :alt: Turtle Class Constructor Signatures and Parameters
     :figclass: align-center
-    
+
     Figure 3: Turtle Class Constructor Signatures and Parameters
 
 
 |Exercise| **Check your understanding**
-   
+
 .. mchoice:: TurtleClass1
    :practice: T
    :answer_a: Turtle t = new Turtle();
@@ -145,33 +220,47 @@ When you use a class that someone has already written for you in a **library** t
    :feedback_c: This would initialize the Turtle to the middle of the world, not necessarily coordinates (50,150).
    :feedback_d: Make sure the order of the parameters match the constructor signature above.
    :feedback_e: This matches the second constructor above with the parameters of x, y, and world.
-   
+
    Given the Turtle class in the figure above and a World object world1, which of the following code segments will correctly create an instance of a Turtle object at (x,y) coordinates (50,150)?
-   
+
+.. mchoice:: no_arg_constructor
+   :practice: T
+   :answer_a: public World(int width, int height)
+   :answer_b: public World()
+   :answer_c: public World
+   :answer_d: public World(int width)
+   :correct: b
+   :feedback_a: This constructor signature defines two arguments: width and height.
+   :feedback_b: This constructor signature is correct for a no-argument constructor.
+   :feedback_c: The constructor signature must include parentheses.
+   :feedback_d: This constructor signature defines one argument: width.
+
+   Which of these is the correct signature for a no-argument constructor?
+
 
 Calendar Example
 ----------------
 
-Here is another example. There is a class called GregorianCalendar in Java that can be used for dates and times. You can use this class by adding the line "import java.util.GregorianCalendar;" which will bring in this class library. Then, you can create an object variable called today that uses the default constructor to initialize it to the current date and time. 
+Here is another example. There is a class called ``GregorianCalendar`` in Java that can be used for dates and times. You can use this class by adding the line ``import java.util.GregorianCalendar;`` which will use this class library. Then, you can create an object variable called ``today`` that uses the default constructor to initialize ``today`` to refer to a ``GregorianCalendar`` object with the current date and time.
 
 .. activecode:: GregorianCalendar1
     :language: java
 
     Run the code below to see what it does. Note that the code below will return the current date and time on the server which might be different from the time where you are.
     ~~~~
-    import java.util.GregorianCalendar; 
+    import java.util.GregorianCalendar;
 
     public class Test1
     {
         public static void main(String[] args)
         {
-            GregorianCalendar today = new GregorianCalendar(); 
+            GregorianCalendar today = new GregorianCalendar();
             System.out.println("Current date and time on server: "
                          + today.getTime());
         }
-     } 
-     
-The GregorianCalendar class also has a constructor that takes a particular year, month (starting January at 0), and day as parameters to set up a specific date. Here's the same program again but with a second variable that initializes the variable to the date 1/1/2020.
+     }
+
+The ``GregorianCalendar`` class also has a constructor that takes a particular year, month (note that January is 0), and day as parameters to set up a specific date. Here's the same program again but with a new variable ``myDate`` that refers to a ``GregorianCalendar`` object with the date 1/1/2020.
 
 |CodingEx| **Coding Exercise:**
 
@@ -180,48 +269,79 @@ The GregorianCalendar class also has a constructor that takes a particular year,
 .. activecode:: GregorianCalendar2
     :language: java
 
-    Run the code below to see the use of both constructors. Try adding another GregorianCalendar object to the program for your birthdate and have it print it out. Which constructor do you need to use? 
+    Run the code below to see the use of both constructors. Try adding another ``GregorianCalendar`` object to the program for your birthdate and have it print it out. Which constructor do you need to use?
     ~~~~
-    import java.util.GregorianCalendar; 
+    import java.util.GregorianCalendar;
 
     public class Test2
     {
         public static void main(String[] args)
         {
-            GregorianCalendar today = new GregorianCalendar(); 
-            GregorianCalendar myDate = new GregorianCalendar(2020, 0, 1); 
+            GregorianCalendar today = new GregorianCalendar();
+            GregorianCalendar myDate = new GregorianCalendar(2020, 0, 1);
             System.out.println("Current date and time on server: "
                          + today.getTime());
             System.out.println("New Year's day: "
                          + myDate.getTime());
         }
-     } 
+     }
 
 .. |documentation| raw:: html
 
    <a href="https://docs.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html" target="_blank" style="text-decoration:underline">documentation</a>
 
 
-
 Here is the |documentation| for the GregorianCalendar class which lists two constructors for the class:
 
-- GregorianCalendar() : Constructs a default GregorianCalendar using the current time in the default time zone with the default locale.
-- GregorianCalendar(int year, int month, int dayOfMonth) : Constructs a GregorianCalendar with the given date set in the default time zone with the default locale.
+- GregorianCalendar() : Constructs a default ``GregorianCalendar`` using the current time in the default time zone with the default locale.
+- GregorianCalendar(int year, int month, int dayOfMonth) : Constructs a ``GregorianCalendar`` with the given date set in the default time zone with the default locale.
 
+Formal Parameters, Actual Parameters, and Call by Value
+----------------------------------------------------------
 
-When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal parameters**, (year, month, dayOfMonth) in this example, are filled in with copies of the  **actual parameters** (or **arguments**), which are (2001,1,1) in this example, using a process called **call by value** that copies values, and these values in turn are used by the constructor to initialize the instance variables for the new object. 
+When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal parameters**, (year, month, dayOfMonth), are set to copies of the  **actual parameters** (or **arguments**), which are (2001,1,1).  This is also called **call by value** which means that copies of the actual parameter values are passed to the constructor.  These values are used to initialize the object's attributes.
 
 .. figure:: Figures/parameterMapping.png
     :width: 600px
     :align: center
     :alt: Parameter Mapping
     :figclass: align-center
-    
+
     Figure 4: Parameter Mapping
 
-The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a String when it is expecting an int. And the order of the arguments matters. If you mix up the year and month in the GregorianCalendar constructor, you will get a completely different date!
+|Exercise| **Check your understanding**
 
-In Unit 5, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called Date, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them. 
+The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the year and month in the ``GregorianCalendar`` constructor, you will get a completely different date!
+
+.. mchoice:: 2_2_formal_parms
+   :practice: T
+   :answer_a: objects
+   :answer_b: classes
+   :answer_c: formal parameters
+   :answer_d: actual parameters
+   :correct: c
+   :feedback_a: Objects have attributes and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: A formal parameter is in the constructor's signature.
+   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
+
+   In ``public World(int width, int height)`` what are ``width`` and ``height``?
+
+.. mchoice:: 2_2_actual_parms
+   :practice: T
+   :answer_a: objects
+   :answer_b: classes
+   :answer_c: formal parameters
+   :answer_d: actual parameters
+   :correct: d
+   :feedback_a: Objects have attributes and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: A formal parameter is in the constructor's signature.
+   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
+
+   In ``new World(150, 200)`` what are ``150`` and ``200``?
+
+In Unit 5, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called ``Date``, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them.
 
 .. figure:: Figures/DateClass.png
     :width: 500px
@@ -231,31 +351,31 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
 
     Figure 5: A Date class showing attributes and constructors
 
-
 |Exercise| **Check your understanding**
-     
+
 .. clickablearea:: date_constructor
+    :practice: T
     :question: Click on the constructor headers (signatures)
     :iscode:
     :feedback: Constructors are public and have the same name as the class. Click on the constructor headers which are the first line of the constructors showing their name and parameters.
 
     :click-incorrect:public class Date {:endclick:
-    
+
         :click-incorrect:private int year;:endclick:
         :click-incorrect:private int month;:endclick:
         :click-incorrect:private int day;:endclick:
 
         :click-correct:public Date() :endclick:
             :click-incorrect:{ /** Implementation not shown */ }:endclick:
-            
+
         :click-correct:public Date(int year, int month, int day) :endclick:
             :click-incorrect:{ /** Implementation not shown */ }:endclick:
-         
+
          :click-incorrect:public void print() :endclick:
             :click-incorrect:{ /** Implementation not shown */ }:endclick:
-         
-    :click-incorrect:}:endclick: 
-    
+
+    :click-incorrect:}:endclick:
+
 .. mchoice:: DateClass1
    :practice: T
    :answer_a: Date d = new Date();
@@ -269,16 +389,13 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
    :feedback_c: The comment for the second constructor in the Date class above says that the first parameter must be the year.
    :feedback_d: This matches the second constructor above with the parameters year, month, day.
    :feedback_e: Make sure the order of the parameters match the constructor signature above.
-   
-   Given the Date class in the figure above and assuming that months in the Data class are numbered starting at 1, which of the following code segments will create a Date object for the date September 20, 2019 using the correct constructor?
-   
-This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors. 
- 
 
+   Given the ``Date`` class in the figure above and assuming that months in the ``Date`` class are numbered starting at 1, which of the following code segments will create a ``Date`` object for the date September 20, 2019 using the correct constructor?
+
+This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors.
 
 |Groupwork| Programming Challenge : Debugging
 ---------------------------------------------
-
 
 
 .. activecode:: challenge2-2-TurtleConstructorDebug
@@ -301,7 +418,7 @@ This lesson introduces a lot of vocabulary, but don't worry if you don't underst
           t0.forward();
           t1.turnRight();
           t2.turnLeft();
-          world.show(true); 
+          world.show(true);
       }
     }
 
@@ -309,25 +426,123 @@ This lesson introduces a lot of vocabulary, but don't worry if you don't underst
 Summary
 -------------------
 
-- A class contains **constructors** that are used to create objects. Constructors must have the same name as the class.
 
-- Every object is created using the keyword **new** followed by a call to one of the class’s constructors.
+- **Constructors** initialize the attributes in newly created objects.  They have the same name as the class.
 
-- Parameters allow values to be passed to the constructor to establish the initial state of the object. These values are called the **parameters** or **actual parameters** or **arguments**.
+- A **constructor signature** is the constructor name followed by the parameter list which is a list of the types of the parameters and the variable names used to refer to them in the constructor.
 
-- Constructors are said to be **overloaded** when there are multiple constructors with the same name but a different **signature** with different **parameters**. A **signature** consists of the constructor name and the parameter list.
+- **Overloading** is when there is more than one constructor.  They must differ in the number, type, or order of parameters.
 
-- The parameter list, in the header of a constructor, lists the types of the values that are passed and their variable names. These variables are called the **formal parameters**.
+- **New** is a keyword that is used to create a new object of a class.  The syntax is ``new ClassName()``.  It creates a new object of the specified class and calls a constructor.
 
-- Actual parameters are passed using **call by value** which initializes the formal parameters with copies of the actual parameters. The values passed to a constructor must be compatible with the types identified in the formal parameter list.
+- A **no-argument constructor** is a constructor that doesn't take any passed in values (arguments).
 
+- **Parameters** allow values to be passed to the constructor to initialize the newly created object's attributes.
+
+- The **parameter list**, in the header of a constructor, is a list of the type of the value being passed and a variable name. These variables are called the **formal parameters**.
+
+- **Actual parameters** are the values being passed to a constructor.  The formal parameters are set to a copy of the value of the actual parameters.
+
+- **Formal parameters** are the specification of the parameters in the constructor header.  In Java this is a list of the type and name for each parameter (``World(int width, int height``).
+
+- **Call by value** means that when you pass a value to a constructor or method it passes a copy of the value.
+
+AP Practice
+------------
+
+.. mchoice:: AP2-2-1
+   :practice: T
+   :answer_a: I only
+   :answer_b: I and II
+   :answer_c: I and III
+   :answer_d: I, II, and III
+   :answer_e: II and III
+   :correct: c
+   :feedback_a: I is one of the correct constructors but the second constructor can also be used.
+   :feedback_b: II is not correct because there is no Cat constructor that takes 2 parameters.
+   :feedback_c: I and III call the correct constructors.
+   :feedback_d: II is not correct because there is no Cat constructor that takes 2 parameters.
+   :feedback_e: II is not correct because there is no Cat constructor that takes 2 parameters.
+
+    Consider the following class. Which of the following successfully creates a new Cat object?
+
+    .. code-block:: java
+
+        public class Cat
+        {
+            private String color;
+            private String breed;
+            private boolean isHungry;
+
+            public Cat()
+            {
+                color = "unknown";
+                breed = "unknown";
+                isHungry = false;
+            }
+
+            public Cat(String c, String b, boolean h)
+            {
+                color = c;
+                breed = b;
+                isHungry = h;
+            }
+        }
+
+        I.   Cat a = new Cat();
+        II.  Cat b = new Cat("Shorthair", true);
+        III. String color = "orange";
+             boolean hungry = false;
+             Cat c = new Cat(color, "Tabby", hungry);
+
+.. mchoice:: AP2-2-2
+   :practice: T
+   :answer_a: Movie m = new Movie(8.0, "Lion King");
+   :answer_b: Movie m = Movie("Lion King", 8.0);
+   :answer_c: Movie m = new Movie();
+   :answer_d: Movie m = new Movie("Lion King", "Disney", 8.0);
+   :answer_e: Movie m = new Movie("Lion King");
+   :correct: d
+   :feedback_a: There is no Movie constructor with 2 parameters.
+   :feedback_b: There is no Movie constructor with 2 parameters.
+   :feedback_c: This creates a Movie object but it does not have the correct title and rating.
+   :feedback_d: This creates a Movie object with the correct title and rating.
+   :feedback_e: This creates a Movie object but it does not have a rating of 8.0.
+
+   Consider the following class.  Which of the following code segments will construct a Movie object m with a title of "Lion King" and rating of 8.0?
+
+   .. code-block:: java
+
+        public class Movie
+        {
+            private String title;
+            private String director;
+            private double rating;
+            private boolean inTheaters;
+
+            public Movie(String t, String d, double r)
+            {
+                title = t;
+                director = d;
+                rating = r;
+                inTheaters = false;
+            }
+
+            public Movie(String t)
+            {
+                title = t;
+                director = "unknown";
+                rating = 0.0;
+                inTheaters = false;
+            }
+        }
 
 .. raw:: html
-    
+
       <pre id="turtleClassesConstructor" class="javaFiles" style="display:none;">
       import java.awt.Image;
       import java.awt.image.BufferedImage;
-      
+
       /**
        * Interface to describe a digital picture.  A digital picture can have an
        * associated file name.  It can have a title.  It has pixels
@@ -358,7 +573,7 @@ Summary
         public boolean write(String fileName); // write out a file
       }
       import java.awt.Graphics;
-      
+
       /**
        * Interface to used to communicate between a model
        * and its display
@@ -387,17 +602,17 @@ Summary
          * @return the graphics context
          */
         public Graphics getGraphics();
-        
+
         /**
          * Method to clear the background
          */
         public void clearBackground();
-        
+
         /** Method to get the width of the display
          * @return the width in pixels of the display
          */
         public int getWidth();
-        
+
         /** Method to get the height of the display
          * @return the height in pixels of the display
          */
@@ -405,7 +620,7 @@ Summary
       }
       import java.awt.*;
       import java.awt.geom.*;
-      
+
       /**
        * This class represents a displayable path segment
        * it has a color, width, and a Line2D object
@@ -419,9 +634,9 @@ Summary
         private Color color;
         private int width;
         private Line2D.Float line;
-        
+
         //////////////// constructors ///////////////
-        
+
         /**
          * Constructor that takes the color, width,
          * and line
@@ -433,9 +648,9 @@ Summary
           this.width = theWidth;
           this.line = theLine;
         }
-        
+
         //////////////// methods ////////////////////
-        
+
         /**
          * Method to paint this path segment
          * @param g the graphics context
@@ -448,7 +663,7 @@ Summary
           g2.setColor(this.color);
           g2.draw(this.line);
         }
-        
+
       } // end of class
       import java.awt.*;
       import java.awt.geom.*;
@@ -456,7 +671,7 @@ Summary
       import java.util.List;
       import java.util.ArrayList;
       import java.util.Iterator;
-      
+
       /**
        * Class to represent a pen which has a color, width,
        * and a list of path segments that it should draw.
@@ -472,24 +687,24 @@ Summary
 
         /** track if up or down */
         private boolean penDown = true;
-        
+
         /** color of ink */
         private Color color = Color.green;
-        
+
         /** width of stroke */
         private int width = 1;
-        
+
         /** list of path segment objects to draw */
         private List<PathSegment> pathSegmentList =
           new ArrayList<PathSegment>();
-          
+
         //////////////// constructors ///////////////////
-        
+
         /**
          * Constructor that takes no arguments
          */
         public Pen() { }
-        
+
         /**
          * Constructor that takes all the ink color, and width
          * @param color the ink color
@@ -500,7 +715,7 @@ Summary
           this.color = color;
           this.width = width;
         }
-        
+
         /**
          * Constructor that takes the ink color, width, and penDown flag
          * @param color the ink color
@@ -511,25 +726,25 @@ Summary
         {
           // use the other constructor to set these
           this(color,width);
-          
+
           // set the pen down flag
           this.penDown = penDown;
         }
-        
+
         ////////////////// methods ///////////////////////
-        
+
         /**
          * Method to get pen down status
          * @return true if the pen is down else false
          */
         public boolean isPenDown() { return penDown; }
-        
+
         /**
          * Method to set the pen down value
          * @param value the new value to use
          */
         public void setPenDown(boolean value) { penDown = value; }
-            
+
         /**
          * Method to get the pen (ink) color
          * @return the ink color
@@ -541,19 +756,19 @@ Summary
          * @param color the color to use
          */
         public void setColor(Color color) { this.color = color;}
-        
+
         /**
          * Method to get the width of the pen
          * @return the width in pixels
          */
         public int getWidth() { return width; }
-        
+
         /**
          * Method to set the width of the pen
          * @param width the width to use in pixels
          */
         public void setWidth(int width) { this.width = width; }
-        
+
         /**
          * Method to add a path segment if the pen is down
          * @param x1 the first x
@@ -571,7 +786,7 @@ Summary
             pathSegmentList.add(pathSeg);
           }
         }
-        
+
         /**
          * Method to clear the path stored for this pen
          */
@@ -579,30 +794,30 @@ Summary
         {
           pathSegmentList.clear();
         }
-        
+
         /**
          * Metod to paint the pen path
          * @param g the graphics context
          */
         public synchronized void paintComponent(Graphics g)
         {
-        
+
           Color oldcolor = g.getColor();
-          
+
           // loop through path segment list and
           Iterator iterator = pathSegmentList.iterator();
           PathSegment pathSeg = null;
-          
+
           // loop through path segments
           while (iterator.hasNext())
           {
             pathSeg = (PathSegment) iterator.next();
             pathSeg.paintComponent(g);
           }
-          
+
           g.setColor(oldcolor);
         }
-        
+
       } // end of class
       import java.awt.*;
       import java.awt.font.*;
@@ -611,7 +826,7 @@ Summary
       import java.text.*;
       import java.util.*;
       import java.util.List; // resolves problem with java.awt.List and java.util.List
-      
+
       /**
        * A class that represents a picture.  This class inherits from
        * SimplePicture and allows the student to add functionality to
@@ -619,11 +834,11 @@ Summary
        *
        * @author Barbara Ericson ericson@cc.gatech.edu
        */
-      @SuppressWarnings("unchecked")   
+      @SuppressWarnings("unchecked")
       public class Picture extends SimplePicture
       {
         ///////////////////// constructors //////////////////////////////////
-        
+
         /**
          * Constructor that takes no arguments
          */
@@ -634,7 +849,7 @@ Summary
            */
           super();
         }
-        
+
         /**
          * Constructor that takes a file name and creates the picture
          * @param fileName the name of the file to create the picture from
@@ -644,7 +859,7 @@ Summary
           // let the parent class handle this fileName
           super(fileName);
         }
-        
+
         /**
          * Constructor that takes the height and width
          * @param height the height of the desired picture
@@ -655,7 +870,7 @@ Summary
           // let the parent class handle this width and height
           super(width,height);
         }
-        
+
         /**
          * Constructor that takes a picture and creates a
          * copy of that picture
@@ -666,7 +881,7 @@ Summary
           // let the parent class do the copy
           super(copyPicture);
         }
-        
+
         /**
          * Constructor that takes a buffered image
          * @param image the buffered image to use
@@ -675,9 +890,9 @@ Summary
         {
           super(image);
         }
-        
+
         ////////////////////// methods ///////////////////////////////////////
-        
+
         /**
          * Method to return a string with information about this picture.
          * @return a string with information about the picture such as fileName,
@@ -691,11 +906,11 @@ Summary
           return output;
 
         }
-        
+
       } // this } is the end of class Picture, put all new methods before this
-      
+
       import java.awt.Color;
-      
+
       /**
        * Class that references a pixel in a picture. Pixel
        * stands for picture element where picture is
@@ -707,23 +922,23 @@ Summary
        *
        * @author Barb Ericson ericson@cc.gatech.edu
        */
-      @SuppressWarnings("unchecked")       
+      @SuppressWarnings("unchecked")
       public class Pixel
       {
-      
+
         ////////////////////////// fields ///////////////////////////////////
-        
+
         /** the digital picture this pixel belongs to */
         private DigitalPicture picture;
-        
+
         /** the x (column) location of this pixel in the picture; (0,0) is top left */
         private int x;
-        
+
         /** the y (row) location of this pixel in the picture; (0,0) is top left */
         private int y;
-        
+
         ////////////////////// constructors /////////////////////////////////
-        
+
         /**
          * A constructor that takes the x and y location for the pixel and
          * the picture the pixel is coming from
@@ -735,23 +950,23 @@ Summary
         {
           // set the picture
           this.picture = picture;
-          
+
           // set the x location
           this.x = x;
-          
+
           // set the y location
           this.y = y;
-          
+
         }
-        
+
         ///////////////////////// methods //////////////////////////////
-        
+
         /**
          * Method to get the x location of this pixel.
          * @return the x location of the pixel in the picture
          */
         public int getX() { return x; }
-        
+
         /**
          * Method to get the y location of this pixel.
          * @return the y location of the pixel in the picture
@@ -1435,11 +1650,11 @@ Summary
            try {
                ByteArrayOutputStream output = new ByteArrayOutputStream();
                ImageIO.write(this.bufferedImage, "png", output);
-               String result = 
+               String result =
 	       // DatatypeConverter.printBase64Binary(output.toByteArray());
                // using java.util.Base64 instead of java.xml.bind.DataTypeConverter
             	Base64.getEncoder().encodeToString(output.toByteArray());
-                    
+
 	       System.out.println("&lt;img src=\'data:image/" + this.extension + ";base64," + result + "\'/>");
            } catch (IOException e) {
                System.out.println("Errors occured in image conversion");
@@ -1485,7 +1700,7 @@ Summary
 
        }
 
-     
+
        /**
         * Method to read the contents of the picture from a filename
         * without throwing errors
@@ -2544,7 +2759,7 @@ Summary
        * delay is time between frames, accepts hundredth of a time. Yeah it's weird, blame Oracle
        * loop is the boolean for whether you want to make the image loopable.
        */
-       
+
       public abstract class Giffer {
 
       	// Generate gif from an array of filenames
@@ -2714,7 +2929,7 @@ Summary
        * Copyright Georgia Institute of Technology 2004
        * @author Barb Ericson ericson@cc.gatech.edu
        */
-      @SuppressWarnings("unchecked")   
+      @SuppressWarnings("unchecked")
       public class World implements ModelDisplay
       {
         ////////////////// fields ///////////////////////
@@ -2925,11 +3140,11 @@ Summary
                     URL url = history.toURI().toURL();
 
                     byte[] imageBytes = downloadUrl(url);
-                    String result = 
+                    String result =
 		            //DatatypeConverter.printBase64Binary(imageBytes);
                     //BH: using java.util.Base64 instead of javax.xml.bind.DataTypeConverter
                     Base64.getEncoder().encodeToString(imageBytes);
-                    
+
 		            System.gc();
                     history.delete();
                     double rand = Math.random();
@@ -2992,5 +3207,3 @@ Summary
 
       } // end of World class
       </pre>
-      
-      

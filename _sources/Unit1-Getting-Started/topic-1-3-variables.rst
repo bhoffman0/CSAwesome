@@ -400,7 +400,7 @@ Naming Variables
 ..	index::
 	pair: variable; names
 
-While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and ``-`` or ``_``. It must be all one word with no spaces. 
+While you can name your variable almost anything, there are some rules.  A variable name should start with an alphabetic character (like a, b, c, etc.) and can include letters, numbers, and underscores ``_``. It must be all one word with no spaces. 
 
 You can't use any of the keywords or reserved words as variable names in Java (``for``, ``if``, ``class``, ``static``, ``int``, ``double``, etc).  For a complete list of keywords and reserved words see http://docs.oracle.com/javase/tutorial/java/nutsandbolts/_keywords.html.  
 
@@ -411,14 +411,15 @@ your variables crazy things like ``thisIsAReallyLongName``, especially on the AP
 
     
     - Use meaningful variable names! 
-    - Start variable names with a lower case letter and use camelCase. - Variable names are case-sensitive and spelling sensitive! Each use of the variable in the code must match the variable name in the declaration exactly. 
+    - Start variable names with a lower case letter and use camelCase. 
+    - Variable names are case-sensitive and spelling sensitive! Each use of the variable in the code must match the variable name in the declaration exactly. 
     - Never put variables inside quotes (" ").
 
 ..	index::
     single: camel case
 	pair: variable; naming convention
 	
-The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case**. Another option is to use ``-`` or ``_`` to separate words, but you cannot have spaces in a variable name. 
+The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case**. Another option is to use underscore ``_`` to separate words, but you cannot have spaces in a variable name. 
 
 Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  Run the code below to see the difference.
   

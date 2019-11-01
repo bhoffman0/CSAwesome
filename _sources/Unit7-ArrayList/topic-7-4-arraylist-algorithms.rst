@@ -109,8 +109,35 @@ You can step through the code above by clicking on the following `Example1 <http
 You can step through the code above by clicking on the following `Example2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.*%3B%0A%0Apublic+class+ClassNameHere+%7B%0A+++public+static+void+main(String%5B%5D+args)+%7B%0A++++++List%3CInteger%3E+list1+%3D+new+ArrayList%3CInteger%3E()%3B%0A++++++list1.add(new+Integer(1))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(2))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.add(new+Integer(3))%3B%0A++++++System.out.println(list1)%3B%0A++++++list1.remove(1)%3B%0A++++++System.out.println(list1)%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_.
 
 
-Some algorithms require multiple String, array, or ArrayList objects to be traversed simultaneously.
-      
+Some algorithms require multiple String, array, or ArrayList objects to be traversed simultaneously. For example, the following code traverses two parallel ArrayLists that hold the grades for different tests. 
+
+.. activecode:: parallelArrayLists
+   :language: java
+   
+   import java.util.*;  
+   
+    public class ParallelTests
+    {
+        public static void main(String[] args)
+        {
+            ArrayList<Integer> test1Grades = new ArrayList<Integer>();
+            ArrayList<Integer> test2Grades = new ArrayList<Integer>();
+            test1Grades.add(100);
+            test2Grades.add(100);
+            test1Grades.add(80);
+            test2Grades.add(70);
+            test1Grades.add(70);
+            test2Grades.add(90);
+            double total = 0;
+            for (int i = 0; i < test1Grades.size(); i++)
+            {
+                total +=  test1Grades.get(i) + test2Grades.get(i);
+            }
+            int numberOfGrades = test1Grades.size() * 2;
+            System.out.println("Average over two tests: " + total/numberOfGrades);
+        }
+    }
+
 
 We encourage you to work in pairs or groups to tackle the following challenging FRQ problems and take them one step at a time. These will get easier with practice! 
 

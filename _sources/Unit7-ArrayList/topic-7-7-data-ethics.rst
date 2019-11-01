@@ -43,13 +43,15 @@ Watch the following |video1| about the massive amounts of data our smart phones 
 
 |CodingEx| **Activity**
 
-Try the following activity. If you use GPS location on an Android smartphone for driving directions or games, Google keeps track of your location history and you can see it at https://www.google.com/maps/timeline. You can also turn off location tracking, but it is useful when you want directions and it's free. Do the benefits outweigh the lack of privacy for you? 
+Try the following activity. If you use GPS location on an Android smartphone for driving directions or games, Google keeps track of your location history and you can see it at https://www.google.com/maps/timeline. You can also turn off location tracking, but it is useful when you want directions and it's free. Do the benefits of apps that provide driving directions outweigh the lack of privacy for you? In what situations would it be beneficial or harmful for the app to track your location?
 
 .. figure:: Figures/googletimeline.png
     :width: 600px
     :align: center
     
 As users, we often don't realize how much personal data we are giving away. As computer programmers, we must be aware of the risks to data privacy when our code collects and stores personal data on computer systems. Legally and ethically, we must ask the users for permission to access and store their data. And if there are data breaches where the data is stolen, we must inform the affected users. The laws are slowly catching up to our technology, and many places, like Europe and California, are passing laws to protect data privacy.
+
+Computer use and programs have beneficial and/or harmful impacts on personal security. Software apps for maps and driving directions are very useful, but they have impacts on personal security and privacy if they keep track of your location. This information could be beneficial, for example if you are lost and need to be found, but could be harmful and unsafe if someone unauthorized gains access to your location.
 
 Here are some interesting video resources about data collection and data privacy:
 

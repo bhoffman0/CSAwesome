@@ -75,11 +75,11 @@ Run the code below and also check it out in the |Java visualizer| which shows ho
      }
   }
 
+.. note::
 
-Note that in the code above, this.name, this.email, and this.phoneNumber are equivalent to writing just name, email, and phoneNumber, but this.variable is a way to indicate that we are refering to the instance variables of this object. 
+    Note that in the code above, this.name, this.email, and this.phoneNumber are equivalent to writing just name, email, and phoneNumber, but ``this.variable`` is a way to indicate that we are referring to the instance variables of this object instead of a local variable. 
 
 Static methods cannot refer to this or instance variables because they are called with the classname, not an object, so there is no this object. 
-
 
 
 The keyword this is sometimes used by programmers to distinguish between variables. Programmers can give the parameter variables the same names as the instance variables and this can distinguish them and avoid a naming conflict. For example, both the instance variable and the parameter variable are called name in the code below.
@@ -97,8 +97,144 @@ The keyword this is sometimes used by programmers to distinguish between variabl
      }
 
 
-The this variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. 
+.. |Java visualizer2| raw:: html
 
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20Pay%0A%20%20%20%7B%0A%20%20%20%20private%20double%20pay%3B%0A%0A%20%20%20%20public%20Pay%28double%20p%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20pay%20%3D%20p%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getPay%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20pay%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20void%20calculatePayWithOvertime%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20//%20this%20Pay%20object%20is%20passed%20to%20the%20Overtime%20constructor%0A%20%20%20%20%20%20%20%20Overtime%20ot%20%3D%20new%20Overtime%28this%29%3B%0A%20%20%20%20%20%20%20%20pay%20%3D%20ot.getOvertimePay%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20Pay%20myPay%20%3D%20new%20Pay%28100.0%29%3B%0A%20%20%20%20%20%20%20%20myPay.calculatePayWithOvertime%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28myPay.getPay%28%29%29%3B%0A%20%20%20%20%7D%0A%20%20%20%7D%0A%0A%20%20%20class%20Overtime%0A%20%20%20%7B%0A%20%20%20%20private%20double%20payWithOvertime%3B%0A%0A%20%20%20%20public%20Overtime%28Pay%20p%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20payWithOvertime%20%3D%20p.getPay%28%29%20*%201.5%3B%0A%20%20%20%20%7D%0A%0A%20%20%20%20public%20double%20getOvertimePay%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20return%20payWithOvertime%3B%0A%20%20%20%20%7D%0A%20%20%20%7D&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"  target="_blank" style="text-decoration:underline">Java visualizer</a>
+
+The **this** variable can be used anywhere you would use an object variable.  You can even pass it to another method as an argument. Consider the classes below, Pay and Overtime. The Pay class declares an Overtime object and passes in **this** (the current Pay object) to its constructor which computes the overtime with respect to that Pay object. Try this code in the |Java visualizer2|. Here is an image that shows how this and myPay and p all refer to the same object in memory.
+
+.. figure:: Figures/thisTrace.png
+    :width: 400px
+    :align: center
+
+
+.. activecode:: PayClassThis
+   :language: java
+   
+   What does this code print out? Trace through the code. Notice how the this Pay object is passed to the Overtime constructor.
+   ~~~~
+   public class Pay
+   {
+    private double pay;
+
+    public Pay(double p)
+    {
+        pay = p;
+    }
+
+    public double getPay()
+    {
+        return pay;
+    }
+
+    public void calculatePayWithOvertime()
+    {
+        // this Pay object is passed to the Overtime constructor
+        Overtime ot = new Overtime(this);
+        pay = ot.getOvertimePay();
+    }
+    
+    public static void main(String[] args) 
+    {
+        Pay myPay = new Pay(100.0);
+        myPay.calculatePayWithOvertime();
+        System.out.println(myPay.getPay());
+    }
+   }
+
+   class Overtime
+   {
+    private double payWithOvertime;
+
+    public Overtime(Pay p)
+    {
+        payWithOvertime = p.getPay() * 1.5;
+    }
+
+    public double getOvertimePay()
+    {
+        return payWithOvertime;
+    }
+   }
+
+|Exercise| Check Your Understanding
+
+.. mchoice:: AP5-9-1
+    :practice: T
+
+    Consider the following class definitions.
+    
+    .. code-block:: java
+
+       public class Pay
+       {
+        private double pay;
+
+        public Pay(double p)
+        {
+            pay = p;
+        }
+
+        public double getPay()
+        {
+            return pay;
+        }
+
+        public void calculatePayWithOvertime()
+        {
+            // this Pay object is passed to the Overtime constructor
+            Overtime ot = new Overtime(this);
+            pay = ot.getOvertimePay();
+        }
+       }
+
+       public class Overtime
+       {
+        private double payWithOvertime;
+
+        public Overtime(Pay p)
+        {
+            payWithOvertime = p.getPay() * 1.5;
+        }
+        public double getOvertimePay()
+        {
+            return payWithOvertime;
+        }
+       }
+
+    The following code segment appears in a class other than Pay or Overtime.
+    
+    .. code-block:: java
+
+        Pay one = new Pay(20.0);
+        one.getPayWithOvertime();
+        System.out.println(one.getPay());
+
+    What, if anything, is printed as a result of executing the code segment?
+    
+    - 10.0
+    
+      - The pay starts at 20 and then increases with overtime.
+      
+    - 15.0
+        
+      - If the pay started at 10, this would be the result.
+        
+    - 20.0
+        
+      - The pay starts at 20 and then increases with overtime.
+      
+    - 30.0
+        
+      + Correct! The pay starts at 20 and then increases with overtime by multiplying by 1.5.
+      
+    - Nothing is printed because the code will not compile.
+      
+      - Incorrect. The code will compile.
+
+       
+
+    
 
 |Groupwork| Programming Challenge : Bank Account
 ------------------------------------------------------------
@@ -134,3 +270,89 @@ Summary
 - Static methods do not have a this reference.
 
 - The this variable can be used anywhere you would use an object variable, even to pass it to another method as an argument. 
+
+
+AP Practice
+------------
+
+.. mchoice:: AP5-9-2
+    :practice: T
+
+    Consider the following class definitions.
+    
+    .. code-block:: java
+ 
+        public class Liquid
+        {
+            private int currentTemp;
+
+            public Liquid (int ct)
+            {
+                currentTemp = ct;
+            }
+
+            public int getCurrentTemp()
+            {
+                return currentTemp;
+            }
+
+            public void addToJar(LiquidJar j)
+            {
+                j.addLiquid(this);
+            }
+        }
+
+        public class LiquidJar
+        {
+            private int totalTemp;
+
+            public void addLiquid(Liquid l)
+            {
+                totalTemp += l.getCurrentTemp();
+            }
+
+            public int getTotalTemp()
+            {
+                return totalTemp;
+            }
+            // Constructor not shown.
+        }
+
+    Consider the following code segment, which appears in a class other than Liquid or LiquidJar.
+        
+    .. code-block:: java
+
+            Liquid water = new Liquid(50);
+            Liquid milk = new Liquid(15);
+
+            LiquidJar j = new LiquidJar();
+            water.addToJar(j);
+            milk.addToJar(j);
+            System.out.println(j.getTotalTemp());
+
+    What, if anything, is printed out after the execution of the code segment?
+
+    - 50
+        
+      - The liquid water has a temperature of 50 but more is added to the jar.
+          
+    - 15
+        
+      - The liquid milk has a temperature of 15 but more is added to the jar.
+
+    - 65
+        
+      + Correct! The liquid water with a temperature of 50 and then the liquid milk with a temperature of 15 are added to the jar.
+          
+    - Nothing, the code segment attempts to access the private variable currentTemp outside of its scope.
+          
+      - Incorrect. The currentTemp is never used outside its scope.
+          
+    - Nothing, the code segment attempts to access the private variable totalTemp outside of its scope.
+        
+      - Incorrect. The totalTemp is never used outside its scope.
+
+
+
+
+

@@ -113,7 +113,7 @@ Exercises
 
 Alter the code above or in your own IDE (see section below) to do the following. We encourage you to work in pairs.
 
-* Have it respond “Tell me more about your pets” when the statement contains the word “dog” or “cat.” For example, a possible statement and response would be:
+* Have it respond "Tell me more about your pets" when the statement contains the word "dog" or "cat". For example, a possible statement and response would be:
 
   * Statement: I like my cat Mittens.
   * Response: Tell me more about your pets.

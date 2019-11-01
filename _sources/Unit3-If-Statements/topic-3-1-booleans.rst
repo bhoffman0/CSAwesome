@@ -235,11 +235,10 @@ The following program checks if 5 is a prime number by seeing if it is divisible
 .. activecode:: challenge3-1-primeNumbers
    :language: java
    
-    Answer the questions above to see if the numbers 5, 6, and 7 are prime.
-    ~~~~
-    
-    public class PrimeNumbers
-    {
+   Experiment with the code below adding boolean expressions to determine if the numbers 5, 6, and 7 are prime. Are all odd numbers prime? Are all even numbers not prime?
+   ~~~~    
+   public class PrimeNumbers
+   {
       public static void main(String[] args)
       {
         int number = 5;
@@ -251,7 +250,7 @@ The following program checks if 5 is a prime number by seeing if it is divisible
         System.out.println("Divisible by 4? " + (number % 4 == 0));
         System.out.println("Divisible by 5? " + (number % 5 == 0));
       }
-    }  
+   }  
  
     
 Summary

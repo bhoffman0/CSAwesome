@@ -44,7 +44,9 @@ Calling Methods that Return Values
 Some methods return a value back that the program can use. In the previous lesson, you may have used some set methods with parameters to set the attributes of a turtle to different values, for example yertle.setColor(Color.red); or yertle.setWidth(50); Programmers create get and set methods for each attribute represented as an instance variable in a class to access and modify the value in that variable. The get methods always return back the value of that instance variable, and the set methods modify the value. 
 
 
-Here are some examples of using get methods for the turtle object yertle. When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()*. If a method has **void** as its return type, like most of the methods we have seen so far, that means that it does not return anything and it can be called on its own without using its return value. But methods with return types need to be called in an assignment statement or a print statement or something similar to use what it returns.
+Here are some examples of using get methods for the turtle object yertle. When you use a get method, you need to save what it returns in a variable or use the value in some way for example by printing it out. The data type of the variable must match the data type of the return value of the method. You can find out the return type of a method in its documentation. It will be right before the method name, for example *int getWidth()*. 
+
+If a method is a **void method** and has **void** as its return type, like most of the methods we have seen so far, that means that it does not return anything and it can be called on its own. But methods with return types need to be called in an assignment statement or a print statement or a similar expression to use what it returns.
 
 
 .. code-block:: java 
@@ -255,7 +257,100 @@ Summary
 - Some methods return values.
 - To use the return value when calling a method, it must be stored in a variable or used as part of an expression. The variable data type must match the return type of the method.
 
+AP Practice
+-------------
 
+.. mchoice:: AP2-5-1
+    :practice: T
+    
+    Consider the following method.
+
+    .. code-block:: java
+
+        public double calculatePizzaBoxes(int numOfPeople, double slicesPerBox)
+        { /*implementation not shown */}
+
+    Which of the following lines of code, if located in a method in the same class as calculatePizzaBoxes, will compile without an error?
+    
+    - int result = calculatePizzaBoxes(45, 9.0);
+
+      - The method calculatePizzaBoxes returns a double value that cannot be saved into an int variable.
+      
+    - double result = calculatePizzaBoxes(45.0, 9.0);
+    
+      - The method calculatePizzaBoxes has an int parameter that cannot hold a double value 45.0.
+
+    - int result = calculatePizzaBoxes(45.0, 9);
+    
+      - The method calculatePizzaBoxes has an int parameter that cannot hold a double value 45.0. Note that the int 9 can be passed into a double parameter.
+      
+    - double result = calculatePizzaBoxes(45, 9.0);
+    
+      + The method calculatePizzaBoxes has an int and a double parameter and returns a double result.
+      
+    - result = calculatePizzaBoxes(45, 9);
+    
+      - The variable result has not been declared (with an appropriate data type). 
+      
+.. mchoice:: AP2-5-2
+    :practice: T
+
+    Consider the following class definition.
+
+    .. code-block:: java
+
+        public class Liquid
+        {
+            private double boilingPoint;
+            private double freezingPoint;
+            private double currentTemp;
+
+            public Liquid()
+            {
+                currentTemp = 50;
+            }
+
+            public void lowerTemp()
+            {
+                currentTemp -= 10;
+            }
+
+            public double getTemp()
+            {
+                return currentTemp;
+            }
+        }
+
+    Assume that the following code segment appears in a class other than Liquid.
+    
+    .. code-block:: java
+
+        Liquid water = new Liquid();
+        water.lowerTemp();
+        System.out.println(water.getTemp());
+
+    What is printed as a result of executing the code segment?
+    
+    - \-10
+    
+      - The Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it. 
+    
+    - 50
+    
+      - The Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it. 
+    
+    - water.getTemp()
+    
+      - The System.out.println will print the value returned from water.getTemp().
+        
+    - The code will not compile.
+    
+      - This code should compile.
+
+    - 40
+    
+      + Correct, the Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it, and getTemp() returns the currentTemp value.
+    
 .. raw:: html
     
       <pre id="turtleClassesReturn" class="javaFiles" style="display:none;">

@@ -23,6 +23,9 @@
 Comments and Conditions
 =======================
 
+Comments
+---------
+
 Adding comments to your code helps to make it more readable and maintainable. In the commercial world, software development is usually a team effort where many programmers will use your code and maintain it for years. Commenting is essential in this kind of environment and a good habit to develop. Comments will also help you to remember what you were doing when you look back to your code a month or a year from now.
 
 There are 3 types of comments in Java:
@@ -78,11 +81,11 @@ Note that most IDEs will tend to show comments formatted in italics -- to make t
 
 Notice that there are some special tags that you can use in Java documentation. These are not required but many programmers use them. Here are some common tags:
 
- - @author  Author of the program
- - @since   Date released
- - @version Version of program 
- - @param   Parameter of a method
- - @return  Return value for a method
+- @author  Author of the program
+- @since   Date released
+- @version Version of program 
+- @param   Parameter of a method
+- @return  Return value for a method
  
 Preconditions and  Postconditions
 ---------------------------------
@@ -129,7 +132,6 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
     :language: java
     :datafile: turtleClassesPreconditions
 
-
     import java.util.*;
     import java.awt.*;
 
@@ -145,7 +147,100 @@ Try to break the preconditions of the Turtle constructor below. Does the Turtle 
       }
     }
     
-Even though the Turtle constructor's precondition was documented to say that x and y are between 0 and the width and height of the world, it seems like the constructor checked for values out of that range and set the instance variable to the closest legal value. Preconditions and postconditions are covered on the AP CS A exam. Software validity, testing, and use-case diagrams are not covered on the AP CS A exam, but they are used by professional programmers, and are discussed in the rest of this subsection.
+The Turtle constructor's precondition is that x and y should be between 0 and the width and height of the world. If it receives values out of this range, it sets x and y to the closest legal values that it can so that the turtle appears just at the edge of the world. Similarly, the forward() method will not allow the turtle to leave the world.  
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: AP5-3-1
+    :practice: T
+    :answer_a: /* Precondition: s <= 0 */
+    :answer_b: /* Precondition: score >= 0 */
+    :answer_c: /* Precondition: s and ec >= 0 */
+    :answer_d: /* Precondition: n is not the empty String */
+    :answer_e: /* Precondition: studentName is not the empty String */
+    :correct: c, d
+    :feedback_a: It is not reasonable the s which sets the score should be negative.
+    :feedback_b: The precondition should be about the parameters of the constructor. score is not the parameter variable.
+    :feedback_c: Correct. It is reasonable that the score and extraCredit should be set to positive values using the parameters s and ec.
+    :feedback_d: Correct. It is reasonable that the parameter n which sets the name should be not empty. 
+    :feedback_e: The precondition should be about the parameters of the constructor. score is not the parameter variable.
+   
+    Consider the following class definition.
+
+    .. code-block:: java
+
+        public class TestScore
+        {
+            private String studentName;
+            private double score;
+            private double extraCredit;
+
+            public TestScore (String n, double s, double ec)
+            {
+                studentName = n;
+                score = s;
+                extraCredit = ec;
+            }
+            /* Other methods not shown */
+        }
+
+     Which of the following preconditions are reasonable for the TestScore constructor?
+            
+
+Let's consider the substring method in Java. This method has a strong precondition that its arguments refer to indices within the given string. 
+
+|CodingEx| **Coding Exercise**
+
+.. activecode:: substring-preconditions
+    :language: java
+
+    The following code breaks the preconditions of the substring method and throws an IndexOutOfBoundsException. Can you fix the code by changing the arguments for the substring method to print out "lo"? What are the preconditions for the substring method?
+    ~~~~
+    public class SubstringPreconditions
+    {
+      public static void main(String[] args)
+      {
+          String str = "hello";
+          System.out.println( str.substring(-1,10) );
+      }
+    }
+
+.. note::
+ 
+    The method str.substring(beginIndex, endIndex) has the precondition that 0 <= beginIndex <= endIndex <= str.length.
+    
+|Exercise| **Check your understanding**
+
+.. mchoice:: AP5-3-2
+   :practice: T
+   :answer_a: /* Precondition: i >= 0 */
+   :answer_b: /* Precondition: i <= str.length() */
+   :answer_c: /* Precondition: 0 < i < str.length() */
+   :answer_d: /* Precondition: 0 <= i < str.length() */
+   :correct: d
+   :feedback_a: This is true but it could still throw an exception if i is a large value.
+   :feedback_b: This is true but it could still throw an exception if i is a negative value.   
+   :feedback_c: This is true but a little too restrictive.
+   :feedback_d: Correct. i can refer to character 0 up to str.length().
+      
+   The following method is intended to return the substring starting at index i until the end of the string. For example, getiToEnd("012",1) should return "12". Which of the following is the most appropriate precondition for the method so that it does not throw an exception?
+
+   .. code-block:: java
+
+        /* missing precondition */
+        public String getiToEnd(String str, int i)
+        {
+            return str.substring(i, str.length());
+        }
+    
+
+
+
+
+Software Validity and Use-Case Diagrams
+----------------------------------------
+
+Preconditions and postconditions are covered on the AP CS A exam. Software validity, testing, and use-case diagrams which are discussed in this subsection are not covered on the AP CS A exam, but they use preconditions and postconditions and are used by professional programmers.
 
 Determining the preconditions and postconditions also help us to test our code and determine the **validity** of our software.  Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use. 
 

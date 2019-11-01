@@ -79,7 +79,7 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
 .. activecode:: lccb1
    :language: java
 
-   The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code above to see this.
+   The variable ``isRaining`` is a boolean variable that is either true or false. If it is true then the message ``Take an umbrella!`` will be printed and then execution will continue with the next statement which will print ``Drive carefully``. Run the code below to see this.
    ~~~~
    public class Test1
    {
@@ -176,20 +176,23 @@ Most if statements have a boolean condition that uses relational operators like 
 
 .. mchoice:: qcb1_2
    :practice: T
-   :answer_a: x = 0;
-   :answer_b: if (x > 2) x *= 2;
-   :answer_c: if (x > 2) x = 0;
-   :answer_d: if (x > 2) x = 0; else x *= 2;
+   :answer_a: 3
+   :answer_b: 6
+   :answer_c: 0
+   :answer_d: 4
+   :answer_e: The code will not compile
    :correct: c
-   :feedback_a: If x was set to 1 then it would still equal 1.
-   :feedback_b: What happens in the original when x is greater than 2 and then greater than 4? Do both if statements.  
+   :feedback_a: x is changed by the if statements.
+   :feedback_b: What happens when x is greater than 2 and then greater than 4? Do both if statements.  
    :feedback_c: If x is greater than 2, it's always doubled, and then that result is always greater than 4, so it's set to 0 in the second if statement.  
-   :feedback_d: In the original what happens if x is less than 2?  Does this give the same result?
+   :feedback_d: x is changed by the if statements.
+   :feedback_e: This code will compile.
 
-   Which of the following is equivalent to the code segment below?  
+   Consider the following code segment. What is printed as a result of executing the code segment?
    
    .. code-block:: java
 
+     int x = 3;
      if (x > 2) 
      {
          x = x * 2;
@@ -198,6 +201,8 @@ Most if statements have a boolean condition that uses relational operators like 
      {
         x = 0;
      }
+     System.out.print(x);
+     
 
 .. More practice with if == and < > Active code.
     Note always use == not = in an if statement! Test not assign.
@@ -210,8 +215,14 @@ Most if statements have a boolean condition that uses relational operators like 
     :width: 100
     :align: left
     :alt: Magic 8 Ball
-    
-Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like "Signs point to yes!", "Very doubtful", etc. 
+ 
+ 
+.. |video| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=WSaS17CSS4c" target="_blank">video</a>
+   
+ 
+Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like "Signs point to yes!", "Very doubtful", etc. If you've never seen a Magic 8 ball, check out this |video|.
 
 We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8.
 

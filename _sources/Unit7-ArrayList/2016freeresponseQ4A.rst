@@ -9,7 +9,7 @@ Free Response - StringFormatter A
 	single: trio
     single: free response
     
-The following is a free response question from 2016. It was question 4 part A on the exam. You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice. 
+The following is a free response question from 2016. It was question 4 part A on the exam. You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year. 
 
 4.  This question involves the process of taking a list of words, called ``wordList``, and producing a formatted string of a specified length. 
 The list ``wordList`` contains at least two words, consisting of letters only.  
