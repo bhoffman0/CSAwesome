@@ -164,8 +164,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
           // Change the Turtle constructor to put the turtle in the top right corner
           Turtle t1 = new Turtle(world);
 
-          t1.turn(-45);
-          t1.forward();
+          t1.turnLeft();
           world.show(true);
       }
     }
