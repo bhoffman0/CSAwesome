@@ -9,16 +9,16 @@ Free Response Questions (FRQs) for Control Structures
     single: control structures
     single: free response
 
-Since 2019, the AP exam's first free response question (FRQ) is on Methods and Control Structures. This question 1 will use expressions, loops, and if statements. The AP exam will provide the method header with some parameter variables and other methods that you will need to use in the solution. This question will not involve more complex topics such as arrays.
+The AP exam's first free response question (FRQ) is on Methods and Control Structures as of 2019. This question 1 uses expressions, loops, and if statements. The AP exam provides the method header with some parameter variables and other methods that you will need to call in the solution. This question does not involve more complex topics such as arrays.
 
 
 FRQ Question 1 on Control Structures will probably involve:
 
-- a for-loop that probably uses the method parameter variables,
+- a for-loop that probably uses the method's parameter variables,
 
 - an if statement, probably inside the loop,
 
-- a call to another method given to you in the class,
+- a call to other class methods given to you,
 
 - a numerical or string value that is calculated by the loop and returned at the end of the method.
 
@@ -252,7 +252,7 @@ If we used the formula in exercise 4-10-4 above for the date in exercise 4-10-5 
 
 - firstDayOfYear(2019) + dayOfYear(1,8,2019) - 1 = 2 + 8 = 10
 
-But there is no 10th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. The FRQ that involves writing an expression will probably use the mod operator. Remember to use the mod operator whenever:
+But there is no 10th day of week. There are only 7 days of the week. So when we reach a Sunday, we must start back at 0. This is a place where the mod operator % is useful. The FRQ that involves writing an expression will probably use the mod operator. Remember these tips about when to use the mod operator:
 
 
 - Use mod whenever you need to wrap around to the front if the value goes over the limit (num % limit). For example here for weekdays or for hours and minutes.

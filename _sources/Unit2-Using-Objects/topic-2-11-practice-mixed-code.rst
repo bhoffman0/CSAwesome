@@ -25,7 +25,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====  
-           int num = Math.random() * 50 + 1;
+           int num = (int)(Math.random() * 50) + 1;
    =====
            System.out.println(num);
    =====
