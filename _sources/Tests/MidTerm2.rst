@@ -8,107 +8,82 @@ Mid Term Exam Part - 2 (not timed)
 The following problems are similar to what you might see on the AP CS A exam.  Please answer each to the best of your ability.
 
 .. mchoice:: mid_2_1
-   :answer_a: inside static block
-              a = 4
-              inside constructor
-              a = 11
-   :answer_b: Compiler Error
-   :answer_c: Run Time Error
-   :answer_d: inside static block
-              a = 4
-              inside constructor
-              a = 5
-   :answer_e: inside static block
-              a = 10
-              inside constructor
-              a = 11
-   :correct: a
-   :feedback_a: Static blocks are called before the constructors. Therefore, on object creation of class Test, static block is called. So, static variable a = 4.Then constructor Test() is called which assigns a = 10. Finally, function func() increments its value.
-   :feedback_b: Compile time errors usually occur when there is missing parenthesis, missing semicolon or printing the value of the variable without declaring it.
-   :feedback_c: Runtime error occurs after successful compilation. Example division by zero.
-   :feedback_d: Static blocks are called before the constructors. Therefore, on object creation of class Test, static block is called. So, static variable a = 4.Then constructor Test() is called which assigns a = 10.
-   :feedback_e: Static blocks are called before the constructors. Therefore, on object creation of class Test, static block is called. So, static variable a = 4 and not 10.
+   :answer_a: The getAge method should be declared as private.
+   :answer_b: The return type of the getAge method should be void.
+   :answer_c: The getAge method should have at least one parameter.
+   :answer_d: The variable age is not declared inside the getAge method.
+   :answer_e: The instance variable age should be returned instead of a, which is local to the constructor.
+   :correct: e
+   :feedback_a: The method should be public so it can be accessed outside of the class.
+   :feedback_b: The method return type should stay as int.
+   :feedback_c: The getAge should not take any parameters.
+   :feedback_d: This is an instance variable and should be declared outside.
+   :feedback_e: Correct! The accessor method getAge should return the instance variable age.
 
-   What does the following code print?
+   Consider the following Cat class, with the cat’s age stored in the method’s int attribute. The getAge method is intended to allow methods in other classes to access a Cat object’s age value; however, it does not work as intended. Which of the following best explains why the getAge method does NOT work as intended?
 
    .. code-block:: java
 
-     class Test
+     public class Cat
      {
-        static int a;
-        static
+        private int age;
+
+        public Cat(int a)
         {
-            a = 4;
-            System.out.print("inside static block\n");
-            System.out.println ("a = " + a);
+            age = a;
         }
-        Test()
+
+        public int getAge()
         {
-            System.out.println("\ninside constructor\n");
-            a = 10;
+            return a;
         }
-        public static void func()
-        {
-            a = a + 1;
-            System.out.println ("a = " + a);
-        }
-        public static void main(String[] args)
-        {
-            Test obj = new Test();
-            obj.func();
-        }
-     }
+      }
 
 .. mchoice:: mid_2_2
-   :answer_a: 10 20
-   :answer_b: 20 10
-   :answer_c: 10 10
-   :answer_d: 20 20
-   :correct: a
-   :feedback_a: Static block is executed before main method. If we declare a Static block in java class it is executed when class loads.
-   :feedback_b: Static block is executed before main method.
-   :feedback_c: Static block is executed before main method.
-   :feedback_d: Static block is executed before main method.
+   :answer_a: I only
+   :answer_b: I and II only
+   :answer_c: I and III only
+   :answer_d: IV
+   :correct: d
+   :feedback_a: It's true that the local variables can be declared in the body of constructors and methods, but II,III are also true about local variables.
+   :feedback_b: Static methods cannot call non-static methods. Hence III is false.
+   :feedback_c: Both I and III are true but also II is true about local variables.
+   :feedback_d: Correct!
 
-   What does the following code print?
+   Which of the following statement/s are TRUE about local variables?
 
    .. code-block:: java
 
-     class Test
-     {
-        static void main(String[] args)
-        {
-            int x = 20;
-            System.out.println(x);
-        }
-        static
-        {
-            int x = 10;
-            System.out.print(x + " ");
-        }
-     }
+     I.   Local variables can be declared in the body of constructors and methods.
+     II.  Local variables may only be used within the constructor or method and cannot be
+          declared to be public or private.
+     III. When there is a local variable with the same name as an instance variable, the
+          variable name will refer to the local variable instead of the instance variable.
+     IV.  All of the above.
 
 .. mchoice:: mid_2_3
-   :answer_a: O(log n)
-   :answer_b: O(n log n)
-   :answer_c: O(n)
-   :answer_d: O(n*n)
-   :answer_e: O(n!)
-   :correct: b
-   :feedback_a: This would be correct if there was just the inner loop.
-   :feedback_b: The outer loop is n but the inner loop is log n since k is multiplied by 2 each time through the loop.
-   :feedback_c: This would be correct if there was just the outer loop.
+   :answer_a: I and II
+   :answer_b: V
+   :answer_c: I,II and IV
+   :answer_d: I and III
+   :correct: c
+   :feedback_a: Both I and II are true about static methods, but IV is also true.
+   :feedback_b: Static methods cannot call non-static methods. Hence III is false.
+   :feedback_c: Correct!
    :feedback_d: This would be correct if the inner lop was incremented by 1 instead of multiplied by 2.
-   :feedback_e: To get n! as big-oh we would need n nested loops.
+   :feedback_e: I and III are not true. Static methods cannot call non-static methods.
 
-   Which best characterizes the running time of the following code segment?
+   Which of the following statement/s are TRUE about Static methods?
 
    .. code-block:: java
 
-     for (int j = 1; j <= n; j++) {
-        for (int k = 1; k <= n; k = k * 2)
-           System.out.println(j + " " + k);
-     }
+     I.   Static methods and variables include the keyword static before their name in the
+          header or declaration. They can be public or private.
+     II.  Static methods cannot access or change the values of instance variables, but they
+          can access or change the values of static variables.
+     III. Static methods can call non-static methods.
+     IV.  Static methods are associated with the class, not objects of the class.
+     V.   All of the above.
 
 .. mchoice:: mid_2_4
       :answer_a: The values don't matter, this will always cause an infinite loop.
@@ -121,7 +96,7 @@ The following problems are similar to what you might see on the AP CS A exam.  P
       :feedback_b: Values larger then temp will not cause an infinite loop.
       :feedback_c: Values larger then temp will not cause an infinite loop.
       :feedback_d: Values equal to temp will not cause an infinite loop.
-      :feedback_e: When a contains a value that is less than or equal to zero, then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
+      :feedback_e: Correct! When a contains a value that is less than or equal to zero, then multiplying that value by 2 will never make the result larger than the temp value (which was set to some value > 0), so an infinite loop will occur.
 
       Assume that ``temp`` is an ``int`` variable initialized to be greater than zero and that ``a`` is an array of type ``int``.  Also, consider the following code segment.  Which of the following will cause an infinite loop?
 
@@ -182,6 +157,40 @@ The following problems are similar to what you might see on the AP CS A exam.  P
      333
      44
      5
+
+     I.   for (int j = 1; j <= 5; j++) {
+             for (int k = 5; k >= j; k--) {
+                System.out.print(j + " ");
+             }
+             System.out.println();
+          }
+
+     II.  for (int j = 1; j <= 5; j++) {
+             for (int k = 5; k >= 1; k--) {
+                System.out.print(j + " ");
+             }
+             System.out.println();
+          }
+
+     III. for (int j = 1; j <= 5; j++) {
+             for (int k = 1; k <= j; k++) {
+                System.out.print(j + " ");
+             }
+             System.out.println();
+          }
+
+     IV.  for (int j = 1; j <= 5; j++) {
+             for (int k = 1; k <= 5; k++) {
+                System.out.println(j + " ");
+             }
+          }
+
+     V.   for (int j = 1; j <= 5; j++) {
+             for (int k = j; k <= 5; k++) {
+                System.out.print(k + " ");
+             }
+             System.out.println();
+          }
 
 .. mchoice:: mid_2_7
    :answer_a: 5 4 3 2 1
@@ -398,17 +407,43 @@ The following problems are similar to what you might see on the AP CS A exam.  P
          }
 
 .. mchoice:: mid_2_14
-      :answer_a: The value is the first one in the array
-      :answer_b: The value is in the middle of the array
-      :answer_c: The value is at position 3 in the array
-      :answer_d: The value isn't in the array
-      :answer_e: The value is at position 6 in the array
-      :correct: d
-      :feedback_a: This would be true for the shortest execution.  This would only take one execution of the loop.
-      :feedback_b: This would take 5 executions of the loop.
-      :feedback_c: This would take 3 executions of the loop.
-      :feedback_d: A sequential search loops through the elements of an array starting with the first and ending with the last and returns from the loop as soon as it finds the passed value.  It has to check every value in the array when the value it is looking for is not in the array.  This would take 10 executions of the loop.
-      :feedback_e: This would take 6 executions of the loop.
+      :answer_a: I only
+      :answer_b: I and II
+      :answer_c: II only
+      :answer_d: II and III
+      :answer_e: I, II, and III
+      :correct: c
+      :feedback_a: I needs to initialize the object variable with a call to new Party().
+      :feedback_b: I needs to initialize the object variable with a call to new Party().
+      :feedback_c: Correct!
+      :feedback_d: III calls the Party constructor with a double parameter instead of an int.
+      :feedback_e: I needs to initialize the object and III needs to use an int instead of a double as the parameter for the constructor.
+
+        Which of the following code segments correctly creates an instance of a new Party object?
+
+        .. code-block:: java
+
+            public class Party
+            {
+                private int numInvited;
+                private boolean partyCancelled;
+
+                public Party()
+                {
+                    numInvited = 1;
+                    partyCancelled = false;
+                }
+                public Party(int invites)
+                {
+                    numInvited = invites;
+                    partyCancelled = false;
+                }
+            }
+            I.   Party myParty;
+            II.  int classSize = 20;
+                 Party ourParty = new Party(classSize);
+            III. int numOfFriends = 6;
+                 Party yourParty = new Party(numOfFriends + 3.0);
 
 .. mchoice:: mid_2_15
       :answer_a: IV
