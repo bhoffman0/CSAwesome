@@ -22,7 +22,7 @@ If you see errors or bugs, please report them with this |form|.
 **Acknowledgements**
 
 
-We gratefully acknowledge the use of the Jobe server from the University of Canterbury, New Zealand.  The Java programs in this eBook are actually running on the Jobe server.
+We gratefully acknowledge the use of the Runestone platform and Jobe server run by Brad Miller, and the past use of the Jobe server from the University of Canterbury, New Zealand. 
 
 Special thanks also to the following people that we have collaborated with:
 
@@ -99,6 +99,14 @@ Many others have been involved in the creation of content for the eBook (includi
 
 **License**
 
+.. figure:: https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png
+   :align: center
+   
+.. |creative commons| raw:: html
+
+   <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank" style="text-decoration:underline">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License</a>
+
+This work is licensed under a |creative commons|.
 
 Barbara Ericson `barbarer@umich.edu <mailto://barbarer@umich.edu>`_ 
 2014

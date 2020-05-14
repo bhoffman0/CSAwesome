@@ -35,8 +35,6 @@ In Unit 2, we learned how to create objects using constructor. Objects are creat
     Turtle t = new Turtle(world);
     Person p = new Person("Pat","pat@gmail.com","123-456-7890");
     
- 
-Constructors don't actually construct the objects.  The class makes the object when you declare the object variable and then the constructor initializes the values of the instance variables.  
 
 In a new class, constructors are usually written after the instance variables and before any methods.    They typically start with ``public`` and then the *name* of the class: ``public ClassName()``. Unlike other methods, they do not have a return type, not even void, after the access modifier public.  They can take **parameters** (specified in parentheses) for the data which is used to initialize the instance variables. 
 
@@ -133,7 +131,6 @@ If there are no constructors written for a class, Java provides a no-argument **
 
 |CodingEx| **Coding Exercise**
 
-The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Note that this constructor sets the default instance variable values to 1 rather than 0 -- so we don't end up with divide by zero. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer|.
 
 .. |Java visualizer| raw:: html
 
@@ -142,6 +139,8 @@ The following class defines a Fraction with the instance variables numerator and
 .. activecode:: class-Fraction
   :language: java
 
+  The following class defines a Fraction with the instance variables numerator and denominator. It uses 2 constructors. Note that this constructor sets the default instance variable values to 1 rather than 0 -- so we don't end up with divide by zero. Try to guess what it will print before you run it.  Hint!  Remember to start with the main method! You can also view it in the |Java visualizer|.     
+  ~~~~
   public class Fraction
   {
      //  instance variables
@@ -181,11 +180,11 @@ The following class defines a Fraction with the instance variables numerator and
   
 |CodingEx| **Coding Exercise**
 
-The following class defines a Car with the instance variables model and year, for example a Honda 2010 car. However, some of the code is missing. Fill in the code for the 2 constructors that are numbered 1 and 2. And fill in the code to call the constructors in the main method numbered 3. The car1 object should test the first constructor with default values and the car2 object should test the second constructor to create a Honda 2010 car. Run your program and make sure it works and prints out the information for both cars.
-
 .. activecode:: class-Car
   :language: java
 
+  The following class defines a Car with the instance variables model and year, for example a Honda 2010 car. However, some of the code is missing. Fill in the code for the 2 constructors that are numbered 1 and 2. And fill in the code to call the constructors in the main method numbered 3. The car1 object should test the first constructor with default values and the car2 object should test the second constructor to create a Honda 2010 car. Run your program and make sure it works and prints out the information for both cars.
+  ~~~~
   public class Car
   {
      //  instance variables
@@ -265,8 +264,12 @@ We encourage you to work in pairs for this challenge to create a Student class w
    * with 4 instance variables,
    * 3 constructors, a print method, 
    * and a main method to test them.
-   * (drag the triangle at the bottom of this window 
-  */ to enlarge the window.)
+   */
+   public class Student 
+   {
+   
+   
+   }
   
   
 Summary
@@ -313,7 +316,7 @@ AP Practice
             }
         }
 
-        Which of the following statements will create a Cat object that represents a cat that is considered a senior cat?
+    Which of the following statements will create a Cat object that represents a cat that is considered a senior cat?
     
     - Cat c = new Cat ("Oliver", 7);
 
@@ -368,7 +371,7 @@ AP Practice
             age = a;
             kittens = k;
         }
-        public Cat(String n, age a)
+        public Cat(String n, int a)
         {
             name = n;
             age = a;
@@ -395,13 +398,11 @@ AP Practice
             /* missing constructor */
         }
 
-    The following statement appears in a method in a class other than Cat. It is intended to create a new Cat object c with its attributes set to "black" and true.
+    The following statement appears in a method in a class other than Cat. It is intended to create a new Cat object c with its attributes set to "black" and true. Which of the following can be used to replace  **missing constructor code** in the class definition so that the object c below is correctly created?
     
     .. code-block:: java
   
         Cat c = new Cat("black", true);
-        
-        Which of the following can be used to replace /* missing constructor */ so that the object c is correctly created?
         
     - .. code-block:: java
     

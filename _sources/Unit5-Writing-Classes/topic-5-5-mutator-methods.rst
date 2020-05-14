@@ -23,7 +23,7 @@
 Mutator Methods
 =================
 
-Corresponding to each get method, programmers also provide a public **set method** to change the value of a private instance variable in a class. These are called **mutator methods**. They are **void methods** meaning that they do not return a value, but they do take a **parameter**, the new value for the instance variable. Here are some examples of how to write a set method for an instance variable:
+Corresponding to each get method, programmers also provide a public **set method** to change the value of a private instance variable in a class. These are called **mutator methods** (or settters or set or modifier methods). They are **void methods** meaning that they do not return a value, but they do take a **parameter**, the new value for the instance variable. Here are some examples of how to write a set method for an instance variable:
 
 .. code-block:: java
      
@@ -213,21 +213,13 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
 
 .. activecode:: challenge-5-5-Pet-Class
   :language: java
-
-  public class TesterClass 
-  {
-     // main method for testing
-     public static void main(String[] args)
-     {
-        // Create Pet objects and test all your set methods
-        
-     }   
-   }
   
+  Create a Pet class that keeps track of the name, age, weight, type of animal, and breed for records at an animal clinic with 2 constructors, accessor (get) methods, a toString method, and mutator (set) methods for each instance variable.
+  ~~~~
   /**
       Pet class (complete comments)
       @author
-      @since
+      @since 
       
   */
   class Pet 
@@ -236,6 +228,15 @@ Mutator methods do not have to have a name with "set" in it, although most do. T
      
   }
   
+  public class TesterClass 
+  {
+     // main method for testing
+     public static void main(String[] args)
+     {
+        // Create Pet objects and test all your set methods
+        
+     }   
+   }  
 
 Summary
 --------

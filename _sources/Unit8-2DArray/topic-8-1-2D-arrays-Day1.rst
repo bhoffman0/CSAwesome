@@ -204,11 +204,13 @@ The code below creates a 2D array with 2 rows and 3 columns named ``ticketInfo``
   
 |CodingEx| **Coding Exercise**
 
-What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained in the next lesson.
+
 
 .. activecode:: 2DArrayCreate
   :language: java
   
+  What will the following code print out? Can you change ticketInfo to be an array of 5 rows and 10 columns? Can you declare another array called studentNames that has 10 rows and 5 columns? The length property of arrays will be explained in the next lesson.
+  ~~~~
   public class Test 
   {
      public static void main(String[] args)

@@ -9,7 +9,7 @@ StudentAnswerSheet - Part A
 	single: StudentAnswerSheet
     single: free response
 
-The following is a free response question from 2007.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+The following is a free response question from 2007.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 3.** Consider a system for processing student test scores.  The following class will be used as part of this system and contains a student's name
 and the student's answers for a multiple-choice test. The answers are represented as strings of length one with an omitted answer being represented by a string containing a single question mark (``"?"``). 

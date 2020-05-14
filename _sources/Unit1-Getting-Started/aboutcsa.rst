@@ -73,6 +73,6 @@ The 4 free response questions allow students to write code to answer a problem a
    <a href="https://apcentral.collegeboard.org/courses/ap-course-audit" target="_blank" style="text-decoration:underline">AP Audit</a>
    
    
-For more information on the exam see the College Board |AP CS A site| and the 200+ page |AP CS A CED|. The |AP CS A past FRQs| are available online. Here is an |FRQ resource| that categorizes the past FRQs by topic and provides links to their solutions (which are available online in many places). The College Board provides a question bank and formative assessment quizzes for each unit online for registered AP classes (you must complete the |AP Audit| for access to these). 
+For more information on the exam see the College Board |AP CS A site| and the 200+ page |AP CS A CED|. The |AP CS A past FRQs| are available online. Here is an |FRQ resource| that categorizes the past FRQs by topic and provides links to their solutions (which are available online in many places). The College Board provides a question bank and formative assessment quizzes for each unit online for registered AP classes.
 
 Also check out this list of |CS Careers| that taking CS A can lead to. Learning to code is an increasingly important skill that has applications in many careers!  

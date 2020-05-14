@@ -41,6 +41,8 @@ If you use a variable to keep score you would probably increment it (add one to 
 .. activecode:: lccv1
    :language: java
    
+   Try the code below to see how score is incremented by 1.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -61,6 +63,28 @@ You can set one variable's value to a *copy* of the value of another variable.  
    <a href="http://www.pythontutor.com/visualize.html#code=public+class+Test2%0A%7B%0A+++public+static+void+main(String%5B%5D+args%29%0A+++%7B%0A+++++int+x+%3D+3%3B%0A+++++int+y+%3D+2%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++x+%3D+y%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++++y+%3D+5%3B%0A+++++System.out.println(x%29%3B%0A+++++System.out.println(y%29%3B%0A+++%7D%0A%7D&mode=display&origin=opt-frontend.js&cumulative=false&heapPrimitives=false&textReferences=false&py=java&rawInputLstJSON=%5B%5D&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 Click on this cool |Java visualizer| to step through the code. Click on the Forward button at the bottom of the code to see how the values of the variables change.
+
+ 
+.. codelens:: asgn-viz1
+    :language: java 
+ 
+    public class Test2
+    {
+      public static void main(String[] args)
+      {
+        int x = 3;
+        int y = 2;
+        System.out.println(x);
+        System.out.println(y);
+        x = y;
+        System.out.println(x);
+        System.out.println(y);
+        y = 5;
+        System.out.println(x);
+        System.out.println(y);
+      }
+    }
+
 
 .. only works with https
 
@@ -164,11 +188,13 @@ Java uses the operator ``==`` to test if the value on the left is equal to the v
 
 |CodingEx| **Coding Exercise:** 
 
-Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
+
 
 .. activecode:: lcop1
    :language: java
    
+   Run the code below to see all the operators in action. Do all of those operators do what you expected?  What about ``2 / 3``? Isn't surprising that it prints ``0``?  See the note below.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -195,11 +221,13 @@ Operators can be used to create compound expressions with more than one operator
 
 |CodingEx| **Coding Exercise:** 
 
-In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**.
+
 
 .. activecode:: compound1
    :language: java
    
+   In the example below, try to guess what it will print out and then run it to see if you are right. Remember to consider **operator precedence**.
+   ~~~~
    public class TestCompound
    {
       public static void main(String[] args)
@@ -253,11 +281,13 @@ The percent sign operator (``%``) is the **mod (modulo)** or **remainder** opera
     Figure 1: Long division showing the whole number result and the remainder
     
 
-|CodingEx| **Coding Exercise:** In the example below, try to guess what it will print out and then run it to see if you are right.
+|CodingEx| **Coding Exercise:** 
 
 .. activecode:: lcop2
    :language: java
    
+   In the example below, try to guess what it will print out and then run it to see if you are right.
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -335,6 +365,8 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 .. activecode:: challenge1-4
    :language: java
 
+   Calculate your age, your pet's age, and your pet's age in dog years.
+   ~~~~
    public class Challenge1_4
    {
       public static void main(String[] args)

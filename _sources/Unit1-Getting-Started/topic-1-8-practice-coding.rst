@@ -9,7 +9,71 @@ Mixed Up Code Practice
 ------------------------------
 
 Try to solve each of the following. Click the *Check Me* button to check each solution.  You will be told if your solution is too short, has a block in the wrong order, or you are using the wrong block.  Some of the problems may have an extra block that isn't needed in the correct solution.  Try to solve these on your phone or other mobile device!
-                
+
+.. parsonsprob:: ch4ex1muc
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The following program segment should print Maria's first name on one line and her last name on the next line.  But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   String firstName = "Maria";
+   String lastName = "Hernandez";
+   =====
+   System.out.println(firstName);
+   =====
+   System.out.println(lastName);
+   =====
+   System.out.printlln(firstname); #distractor
+
+
+.. parsonsprob:: ch4ex2muc
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The following program segment should print the words to a famous poem. But the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   System.out.println("Roses are red");
+   =====
+   System.out.println("Violets are blue");
+   =====
+   System.out.println("Sugar is sweet");
+   =====
+   System.out.println("And so are you");
+
+
+.. parsonsprob:: ch4ex3muc
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The main method in the following class should print Marcus's name on one line and his favorite color on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public class Test1
+   {
+   =====
+       public static void main(String[] args)
+       {
+   =====
+           String name = "Marcus";
+           String color = "Blue";
+   =====
+           System.out.println(name);
+   =====
+           System.out.println(color);
+   =====
+       } // end main method
+
+   =====
+   } // end of class
+   =====
+           System.out.println(Name); #distractor
+           
+
 .. parsonsprob:: ch3ex1muc
    :numbered: left
    :practice: T
@@ -110,6 +174,64 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public void main(String[] args)
        { #distractor
        
+
+.. parsonsprob:: ch4ex5muc
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The main method in the following class should print the name on one line followed by the age on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public class Test1
+   {
+   =====
+       public static void main(String[] args)
+       {
+   =====
+           String name = "Layla";
+           String age = "16";
+   =====
+           System.out.println("Your name is " + name);
+   =====
+           System.out.println("Your age is " + age);
+   =====
+       } // end main method
+   =====
+   } // end class
+   =====
+           System.out.println("Your age is " age); #distractor
+
+
+.. parsonsprob:: ch4ex6muc
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The main method in the following class should print the name on one line and the favorite food on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
+   -----
+   public class Test1
+   {
+   =====
+       public static void main(String[] args)
+   =====
+       {
+   =====
+           String name = "Julian";
+           String food = "chicken wings";
+   =====
+           System.out.println("Your name is " + name);
+   =====
+           System.out.println("You favorite food is " + food);
+   =====
+       }
+   =====
+   }
+   =====
+           System.println("Your name is " + name); #distractor
+       
+
 .. parsonsprob:: ch3ex6muc
    :numbered: left
    :practice: T
@@ -266,16 +388,351 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 Code Practice with Variables
 ------------------------------
 
-.. tabbed:: ch3Ex1
+
+.. tabbed:: ch4Ex2
 
         .. tab:: Question
 
-           
-           The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.  
+           .. activecode::  ch4Ex2q
+              :language: java
+
+              The following code should print "Mary's favorite color is blue".  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = Mary";
+                      String color = "blue"
+                      System.out.println(Name +
+                                         "'s favorite color is " + color);
+                  }
+              }
+
+
+        .. tab:: Answer
+
+           Line 5 is missing a starting ``"``.  Line 6 is missing a ending ``;``.  Line 7 has ``Name`` when it should be ``name``.  Remember that variable names start with a lowercase letter.
+
+           .. activecode::  ch4Ex2a
+              :language: java
+
+              This is the answer to the previous question.
+              ~~~~              
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Mary";
+                      String color = "blue";
+                      System.out.println(name +
+                                         "'s favorite color is " + color);
+                  }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex2d
+
+.. tabbed:: ch4Ex3
+
+        .. tab:: Question
+
+           .. activecode::  ch4Ex3q
+              :language: java
+
+              The following code should print "Gabby's favorite sport is soccer".  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name "Gabby";
+                      String sport = "soccer;
+                      System.out.println(Name +
+                                         "'s favorite sport is "
+                                         sport);
+                  }
+              }
+
+
+        .. tab:: Answer
+
+           Line 5 is missing a ``=``.  Line 6 is missing the closing ``"``.  Line 7 has ``Name`` when it should be ``name``.  Remember that a variable name starts with a lowercase letter.  Line 8 is missing an ending ``+``.
+
+           .. activecode::  ch4Ex3a
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Gabby";
+                      String sport = "soccer";
+                      System.out.println(name +
+                                         "'s favorite sport is " +
+                                         sport);
+                  }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex3d
+
+.. tabbed:: ch4Ex5
+
+        .. tab:: Question
+
+           .. activecode::  ch4Ex5q
+              :language: java
+
+              The following code should print "Your name is Carly and your favorite color is red".  Finish the code so that it prints the output correctly.
+              ~~~~
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Carly";
+                      String color = "red";
+                      System.out.println();
+                  }
+
+              }
+
+
+        .. tab:: Answer
+
+           Add the required strings using the ``+`` operator and be sure to include spaces as needed.
+
+           .. activecode::  ch4Ex5a
+              :language: java
+
+              This is the answer to the previous question.
+              ~~~~              
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Carly";
+                      String color = "red";
+                      System.out.println("Your name is " +
+                                         name +
+                                         " and your favorite color is " +
+                                         color);
+                   }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex5d
+
+.. tabbed:: ch4Ex6
+
+        .. tab:: Question
+
+
+           Finish the code below so that it prints "Your name is Justin and your age is 16".
+
+           .. activecode::  ch4Ex6q
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Justin";
+                      int age = 16;
+                      System.out.println();
+
+                  }
+              }
+
+
+        .. tab:: Answer
+
+           Use the ``+`` operator to append the strings.  Be sure to include spaces as needed.
+
+           .. activecode::  ch4Ex6a
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Justin";
+                      int age = 16;
+                      System.out.println("Your name is " +
+                                         name +
+                                         " and your age is " +
+                                         age);
+
+                  }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex6d
+
+.. tabbed:: ch4Ex7
+
+        .. tab:: Question
+
+           .. activecode::  ch4Ex7q
+              :language: java
+
+              Write the code to print "Julian's favorite color is green.  His favorite food is pizza.".
+              ~~~~
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Julian";
+                      String color = "green";
+                      String food = "pizza";
+                      System.out.println();
+                  }
+              }
+
+
+        .. tab:: Answer
+
+           Add the strings together using ``+``.  Don't forget to include spaces and periods at the end of the sentences.
+
+           .. activecode::  ch4Ex7a
+              :language: java
+
+              This is the answer to the previous question.
+              ~~~~
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String name = "Julian";
+                      String color = "green";
+                      String food = "pizza";
+                      System.out.println(name + "'s favorite color is " + color +
+                                         ".  His favorite food is " + food + ".");
+                  }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex7d
+
+.. tabbed:: ch4Ex8
+
+        .. tab:: Question
+
+           .. activecode::  ch4Ex8q
+              :language: java
+
+              Finish the code below to print your favorite animal and food.
+              ~~~~
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String animal =
+                      String food =
+                      System.out.println();
+
+                  }
+              }
+
+
+        .. tab:: Answer
+
+           Use ``+`` to add strings together.  Add spaces as needed and periods.
+
+           .. activecode::  ch4Ex8a
+              :language: java
+
+              This is the answer to the previous question.
+              ~~~~              
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String animal = "horse";
+                      String food = "chicken";
+                      System.out.println("My favorite animal is a " +
+                                         animal + ".  " +
+                                         "My favorite food is " +
+                                         food + ".");
+                  }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex8d
+
+.. tabbed:: ch4Ex9
+
+        .. tab:: Question
+
+           Finish the code below to print your favorite movie and book.
+
+           .. activecode::  ch4Ex9q
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String movie = "";
+                      String book = "";
+                      System.out.println();
+
+                  }
+              }
+
+
+        .. tab:: Answer
+
+           Add the strings together using ``+``.  Don't forget to include spaces and periods at the end of the sentences.
+
+           .. activecode::  ch4Ex9a
+              :language: java
+
+              public class Test1
+              {
+                  public static void main(String[] args)
+                  {
+                      String movie = "The Princess Bride";
+                      String book = "Harry Potter";
+                      System.out.println("My favorite movie is " + movie + ".  " +
+                                         "My favorite book is " + book + ".");
+
+                  }
+              }
+
+        .. tab:: Discussion
+
+            .. disqus::
+                :shortname: cslearn4u
+                :identifier: javareview_ch4Ex9d
+
+.. tabbed:: ch3Ex1
+
+        .. tab:: Question  
            
            .. activecode::  ch3Ex1q
               :language: java
    
+              The following code should calculate the cost of a trip that is 300 miles if gas is $2.50 a gallon and your car gets 36 miles per gallon.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``.  Fix the code so that it compiles and runs correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -297,6 +754,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex1a
               :language: java
    
+              This is the answer for the previous question.
+              ~~~~   
               public class Test1
               {
                   public static void main(String[] args)
@@ -318,14 +777,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex2
 
-        .. tab:: Question
-
-           
-           The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``. Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch3Ex2q
               :language: java
    
+              The following code should calculate the body mass index (BMI) for someone who is 5 feet tall and weighs 110 pounds.  However, the code has syntax errors, like missing semicolons, wrong case on names, or unmatched ``"`` or ``(``. Fix the code so that it compiles and runs correctly.
+              ~~~~  
               public class Test1
               {
                   public static void main(String[] args)
@@ -347,6 +805,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex2a
               :language: java
    
+              This is the answer for the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -368,14 +828,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex3
 
-        .. tab:: Question
-
-           
-           The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch3Ex3q
               :language: java
    
+              The following code should calculate the number of miles that you can drive when you have $8.00 and the price of gas is 2.35 and the car gets 40 miles per gallon.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~          
               public class Test1
               {
                   public static void main(String[] args)
@@ -396,7 +855,9 @@ Code Practice with Variables
         
            .. activecode::  ch3Ex3a
               :language: java
-   
+             
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -418,14 +879,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex4
 
-        .. tab:: Question
-
-           
-           The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch3Ex4q
               :language: java
    
+              The following code should calculate the cost of an item that is on clearance (70% off) when you also have a coupon for an additional 20% off the clearance price.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -445,6 +905,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex4a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -465,14 +927,13 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex5
 
-        .. tab:: Question
-
-           
-           The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question 
            
            .. activecode::  ch3Ex5q
               :language: java
    
+              The following code should calculate the number of whole days in 320893 seconds. However, the code has errors.  Fix the code so that it compiles and runs correctly. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -492,6 +953,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex5a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -512,13 +975,12 @@ Code Practice with Variables
 .. tabbed:: ch3Ex6
 
         .. tab:: Question
-
-           
-           Write the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.
            
            .. activecode::  ch3Ex6q
               :language: java
    
+              Write the code below to calculate and print how many months it will take to save $200 if you earn $20 a week.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -535,6 +997,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex6a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -555,13 +1019,14 @@ Code Practice with Variables
                 
 .. tabbed:: ch3Ex7
 
-        .. tab:: Question
-  
-           Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon. 
+        .. tab:: Question 
            
            .. activecode::  ch3Ex7q
               :language: java
    
+                
+              Write the code to calculate the number of miles you can drive if you have a 10 gallon gas tank and are down to a quarter of a tank of gas and your car gets 32 miles per gallon.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -578,6 +1043,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex7a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -599,12 +1066,12 @@ Code Practice with Variables
 .. tabbed:: ch3Ex8
 
         .. tab:: Question
-  
-           Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.
            
            .. activecode::  ch3Ex8q
               :language: java
    
+              Write the code to calculate the number of seconds in 3 days.  Remember that there are 60 seconds in a minute and 60 minutes in an hour and 24 hours in a day.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -621,6 +1088,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex8a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -643,13 +1112,13 @@ Code Practice with Variables
 
 .. tabbed:: ch3Ex10
 
-        .. tab:: Question
-  
-           Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can't buy part of a wing. 
+        .. tab:: Question 
            
            .. activecode::  ch3Ex10q
               :language: java
    
+              Write the code to print the number of chicken wings you can buy if you have $4.50 and they cost $0.75 each.  Remember that you can't buy part of a wing.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -666,6 +1135,8 @@ Code Practice with Variables
            .. activecode::  ch3Ex10a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)

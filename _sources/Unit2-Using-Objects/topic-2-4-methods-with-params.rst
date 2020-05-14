@@ -92,15 +92,14 @@ Here is the Turtle class diagram again that shows some of the variables and meth
 
    <a href="https://www2.cs.uic.edu/~i101/doc/SimpleTurtle.html" target="_blank">javadoc (documentation) file</a>   
 
-Try some of the methods above in the turtle code below. You can see all the methods that are inherited in Turtle in this |javadoc (documentation) file|.
+Try some of the methods above in the turtle code below. You can see all the methods that are inherited in Turtle in this |javadoc (documentation) file|. 
+
+Methods are said to be **overloaded** when there
+are multiple methods with the same name but a
+different **method signature**, where it requires a different number or type of parameters. For example, we have two different forward methods, forward() with no parameters and forward(100) which has a parameter that tells it how much to move forward. If there are more than one parameter, then the values given to the method need to correspond to the order and types in the method signature. 
 
 
-|CodingEx| **Coding Exercises:**
-
-
-1. Can you make yertle draw a square and change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the |Color| class in Java which has some colors predefined like red, yellow, blue, magenta, cyan. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
-
-2. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. Use the turn method which has a parameter for the angle of the turn in degrees. For example, turn(90) is the same as turnRight(). 
+|CodingEx| **Coding Exercise**
 
 (If the code below does not work for you, you can also use the Turtle code at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
 
@@ -2820,7 +2819,8 @@ Try some of the methods above in the turtle code below. You can see all the meth
     :language: java
     :datafile: ModelDisplay.java, DigitalPicture.java, Pixel.java, SimplePicture.java, Turtle.java, SimpleTurtle.java, World.java, Picture.java, Pen.java, Giffer.java, PathSegment.java
 
-    Try drawing a square with different colors. Try drawing a triangle.
+    1. Can you make yertle draw a square and change the pen color for each side of the square? Try something like: yertle.setColor(Color.red); This uses the |Color| class in Java which has some colors predefined like red, yellow, blue, magenta, cyan. You can also use more specific methods like setPenColor, setBodyColor, and setShellColor.
+    2. Can you draw a triangle? The turnRight() method always does 90 degree turns, but you'll need 60 degree angles for a equilateral triangle. Use the turn method which has a parameter for the angle of the turn in degrees. For example, turn(90) is the same as turnRight(). Try drawing a square with different colors. Try drawing a triangle.
     ~~~~
     import java.util.*;
     import java.awt.*;
@@ -2851,13 +2851,6 @@ Try the following mixed up code to draw a simple house made of a square and a tr
     :align: left
     :alt: simple house
     
-.. .. figure:: Figures/house.png
-    :width: 200px
-    :align: center
-    :alt: simple house
-    :figclass: align-center
-    
-    Figure 2: Simple House
     
 .. parsonsprob:: DrawAHouse
    :numbered: left
@@ -2904,11 +2897,49 @@ Try the following mixed up code to draw a simple house made of a square and a tr
    }
    
 
-Methods are said to be **overloaded** when there
-are multiple methods with the same name but a
-different **method signature**, where it requires a different number or type of parameters. For example, we have two different forward methods, forward() with no parameters and forward(100) which has a parameter that tells it how much to move forward. If there are more than one parameter, then the values given to the method need to correspond to the order and types in the method signature. 
+Tracing Methods
+-----------------
 
-You will not write your own methods until Unit 5, but you should be able to trace through method calls like below. 
+You will not write your own methods until Unit 5, but you should be able to trace and interpret method calls like below. 
+
+Here is another version of the Old MacDonald Song with a more powerful abstraction. The method verse has 2 parameters for the animal and the noise it makes, so that it can be used for any animal.
+Use the |Java Visualizer| to step through the code.
+
+.. |Java visualizer| raw:: html
+
+   <a href="http://www.pythontutor.com/java.html#code=public%20class%20Song%20%0A%7B%0A%20%20%0A%20%20%20%20public%20void%20verse%28String%20animal,%20String%20noise%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22And%20on%20that%20farm%20he%20had%20a%20%22%20%2B%20animal%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22With%20a%20%22%20%2B%20noise%20%2B%20%22%20%22%20%2B%20noise%20%2B%20%22%20here,%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22And%20a%20%22%20%2B%20noise%20%2B%20%22%20%22%20%2B%20noise%20%2B%20%22%20there,%22%29%3B%0A%20%20%20%20%20%20%20%20System.out.println%28%22Old%20MacDonald%20had%20a%20farm%22%29%3B%0A%20%20%20%20%20%20%20%20chorus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20public%20void%20chorus%28%29%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20System.out.println%28%22E-I-E-I-O%22%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20%0A%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%20%0A%20%20%20%20%7B%0A%20%20%20%20%20%20%20Song%20s%20%3D%20new%20Song%28%29%3B%0A%20%20%20%20%20%20%20s.verse%28%22cow%22,%20%22moo%22%29%3B%0A%20%20%20%20%20%20%20s.verse%28%22duck%22,%22quack%22%29%3B%0A%20%20%20%20%7D%0A%7D&cumulative=false&curInstr=1&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank" style="text-decoration:underline">Java visualizer</a>
+   
+.. activecode:: SongFarm
+    :language: java
+    
+    Add another verse in main that calls the method verse with a different animal and noise.
+    ~~~~
+    public class Song 
+    { 
+  
+        public void verse(String animal, String noise) 
+        {
+            System.out.println("Old MacDonald had a farm");
+            chorus();
+            System.out.println("And on that farm he had a " + animal);
+            chorus();
+            System.out.println("With a " + noise + " " + noise + " here,");
+            System.out.println("And a " + noise + " " + noise + " there,");
+            System.out.println("Old MacDonald had a farm");
+            chorus();
+        }
+        public void chorus()
+        {
+            System.out.println("E-I-E-I-O");
+        }
+
+        public static void main(String[] args) 
+        {
+           Song s = new Song();
+           s.verse("cow", "moo");
+           s.verse("duck","quack");
+        }
+    }
 
 |Exercise| **Check your understanding**
 

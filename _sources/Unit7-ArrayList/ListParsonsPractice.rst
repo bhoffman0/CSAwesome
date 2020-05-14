@@ -18,7 +18,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    import java.util.List;
    import java.util.ArrayList;
    =====
-   import java.util.List; #distractor 
+   import java.util.List; #distractor
    =====
    public class ListTest {
    =====
@@ -78,7 +78,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
        if (listOfNums.get(i).equals(zero)) {
    =====
-       if (listOfNums.get(i) == 0) { #distractor
+       if (listOfNums.get(i) == zero) { #distractor
    =====
            listOfNums.remove(i);
    =====
@@ -214,21 +214,21 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    -----
    public static void removeShort(ArrayList<String> words) {
    =====
-      int i = 0;
+       int i = 0;
    =====
-      while (i < words.size()) {
+       while (i < words.size()) {
    =====
-          if (words.get(i).length() <= 3) {
+           if (words.get(i).length() <= 3) {
    =====
-          if (words.get(i).length <= 3) { #distractor
+           if (words.get(i).length <= 3) { #distractor
    =====
-              words.remove(i);
+               words.remove(i);
    =====
-          } else {
-              i++;
-          }
+           } else {
+               i++;
+           }
    =====
-      } //end while loop
+       } //end while loop
    =====
    } //end removeShort method
 
@@ -267,7 +267,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following method should remove a specific Integer (specified in parameter) whenever it occurs in a given ArrayList of Integers (the parameter).  But, the blocks have been mixed up and include <b>three extra blocks</b> that are not needed in a correct solution.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
-   public static void removeElement(ArrayList<Integer> nums, 
+   public static void removeElement(ArrayList<Integer> nums,
                                     int toRemove) {
    =====
       int i = 0;
@@ -280,7 +280,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
           if (nums.get(i) == nums(toRemove)) { #distractor
    =====
-            nums.remove(i);
+           nums.remove(i);
    =====
           } //end if
    =====
@@ -292,8 +292,3 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
       } //end while loop
    } //end average method
-
-
-
-
-

@@ -41,8 +41,7 @@ Calling Methods Without Parameters
 
 **Methods** are a set of instructions that define behaviors for all objects of a class. For example, in the ``Turtle`` class, methods like ``forward()`` and ``turnRight()`` give ``Turtle`` objects the ability to move forward and turn 90 degrees right.
 
-To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, ``yertle.forward();`` calls ``yertle``'s ``forward`` method to move a turtle object forward 100 pixels. These are called **object methods** or **non-static methods**.  The ``main`` method is a **static method** or **class method** which means that it doesn't need to be called on an object of a class. An **object method** or **non-static method**
-method *must* be called on an object of the class that the method is defined in.  **Object methods** work with the **attributes** of the object, such as the direction the turtle is heading or its position.
+To use an object's method, you must use the object name and the dot (.) operator followed by the method name, for example, ``yertle.forward();`` calls ``yertle``'s ``forward`` method to move a turtle object forward 100 pixels. These are called **object methods** or **non-static methods**. An object method *must* be called on an object of the class that the method is defined in.  Object methods work with the **attributes** of the object, such as the direction the turtle is heading or its position. 
 
 Every method call is followed by parentheses. The parentheses ``()`` after method names are there in case you need to give the method parameters (data) to do its job, which we will see in the next lesson. You must always include the parentheses after the method name.
 
@@ -248,7 +247,7 @@ Try this |visualization2| to see this code in action.
 
 .. note::
 
-    method(); is used to call a method within the same class, but object.method(); is necessary in the main method or from inside of a different class than the method you are calling.
+    method(); is used to call a method within the same class, but object.method(); is necessary if you are calling the method from the main method or from a different class.
 
 
 Before you call a method from ``main`` or from outside of the current class, you must make sure that you have created and initialized an object. Remember that if you just declare an object reference without setting it to refer to a new object the value will be ``null`` meaning that it doesn't reference an object. If you call a method on a variable who's value is ``null``, you will get a **NullPointerException** error.  A **pointer** is another name for a reference.

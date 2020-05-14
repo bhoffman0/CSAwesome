@@ -9,31 +9,34 @@ Free Response - Horse Barn A
 	single: horse barn
     single: free response
     
-The following is part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.  
+The following FRQ is a great example of working with an array of objects. It is a variation of part a of a free response question from 2012.  It was question 3 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
-**Question 3.**  Consider a software system that models a horse barn. Classes that represent horses implement (or follow) the following interface. (Note that interfaces are no longer covered on the CS A exam, but here the Horse interface just describes the methods that a Horse class must have.)
+The original question had an interface called Horse, but the problem below has been changed to a class Horse instead of the interface. Interfaces are no longer covered on the AP CS A exam. However, you can still solve problems that have interfaces in them by changing them to a class, since an interface just describes the methods that a class must have.
+
+ 
+
+**Question 3.**  Consider a software system that models a horse barn. 
+
 
 .. code-block:: java 
 
-   public interface Horse
+   public class Horse
    {
       /** @return the horse's name */
-      String getName();
+      public String getName()
+      { implementation not shown }
 
       /** @return the horse's weight */
-      int getWeight();
+      public int getWeight()
+      { implementation not shown }
+ 
+      // There may be other methods that are not shown
+      
    }
 
-A horse barn consists of N numbered spaces. Each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the HorseBarn class is shown below.
+Another class called HorseBarn consists of N numbered spaces where each space can hold at most one horse. The spaces are indexed starting from 0; the index of the last space is N - 1. No two horses in the barn have the same name. The declaration of the HorseBarn class is shown below.
 
-**Part a.**  Write the HorseBarn method findHorseSpace. This method returns the index of the space in which the horse with the specified name is located. If there is no horse with the specified name in the barn, the method returns -1.
 
-.. figure:: Figures/horseBarnA.png
-    :width: 700px
-    :align: center
-    :figclass: align-center
-
-    Figure 1: Example calls and results
 
 .. code-block:: java 
 
@@ -55,6 +58,15 @@ A horse barn consists of N numbered spaces. Each space can hold at most one hors
       public int findHorseSpace(String name)
       { /* to be implemented in part (a) */ }
    }
+    
+**Part a.**  Write the HorseBarn method findHorseSpace. This method returns the index of the space in which the horse with the specified name is located. If there is no horse with the specified name in the barn, the method returns -1.
+
+.. figure:: Figures/horseBarnA.png
+    :width: 700px
+    :align: center
+    :figclass: align-center
+
+    Figure 1: Example calls and results
     
 How to solve this problem
 ===========================
@@ -94,21 +106,12 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
 .. activecode:: lcfrhba1
    :language: java
    
-   interface Horse
-   {
-      /** @return the horse's name */
-      String getName();
-
-      /** @return the horse's weight */
-      int getWeight();
-   }
-   
-   class Horsey implements Horse
+   class Horse
    {
       private String name;
       private int weight;
   
-      public Horsey(String theName, int theWeight)
+      public Horse(String theName, int theWeight)
       {
          this.name = theName;
          this.weight = theWeight;
@@ -164,11 +167,11 @@ Try to write the code for the method ``findHorseSpace`` in the ``HorseBarn`` cla
       public static void main (String[] args)
       {
         HorseBarn barn = new HorseBarn(7);
-        barn.spaces[0] = new Horsey("Trigger", 1340);
-        barn.spaces[2] = new Horsey("Silver",1210);
-        barn.spaces[3] = new Horsey("Lady", 1575);
-        barn.spaces[5] = new Horsey("Patches", 1350);
-        barn.spaces[6] = new Horsey("Duke", 1410);
+        barn.spaces[0] = new Horse("Trigger", 1340);
+        barn.spaces[2] = new Horse("Silver",1210);
+        barn.spaces[3] = new Horse("Lady", 1575);
+        barn.spaces[5] = new Horse("Patches", 1350);
+        barn.spaces[6] = new Horse("Duke", 1410);
         
         // print out what is in the barn
         System.out.println(barn);

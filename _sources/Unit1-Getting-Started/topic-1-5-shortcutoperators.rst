@@ -42,6 +42,8 @@ The ``--`` operator is used to subtract one from the current value: ``y--`` is t
 .. activecode:: lcpp
    :language: java
    
+   Run the code below to see what the ++ increment operator does.
+   ~~~~
    public class Test2
    {
       public static void main(String[] args)

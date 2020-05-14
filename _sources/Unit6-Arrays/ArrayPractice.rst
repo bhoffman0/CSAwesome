@@ -9,11 +9,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-           Fix the following code so that it prints every other value in the array ``arr1`` starting with the value at index 0.
-
            .. activecode::  ch7Ex1q
               :language: java
 
+              Fix the following code so that it prints every other value in the array ``arr1`` starting with the value at index 0.
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -34,6 +34,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex1a
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -57,12 +59,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-
-           Fix the following to print the values in the array ``a1`` starting with the value at the last index and then backwards to the value at the first index.
-
            .. activecode::  ch7Ex2q
               :language: java
-
+              
+              Fix the following to print the values in the array ``a1`` starting with the value at the last index and then backwards to the value at the first index.
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -81,6 +82,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex2a
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -102,12 +105,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-
-           Rewrite the following code so that it prints all the values in an array ``arr1`` using a for-each loop instead of a ``for`` loop.
-
            .. activecode::  ch7Ex3q
               :language: java
 
+              Rewrite the following code so that it prints all the values in an array ``arr1`` using a for-each loop instead of a ``for`` loop.
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -129,6 +131,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex3a
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -151,12 +155,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-
-           Finish the following code so that it prints out all of the odd values in the array ``a1``.
-
            .. activecode::  ch7Ex4q
               :language: java
 
+              Finish the following code so that it prints out all of the odd values in the array ``a1``.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -176,6 +179,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex4a
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -203,11 +208,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-           Finish the following method ``getSum`` to return the sum of all values in the passed array.
-
            .. activecode::  ch7Ex5q
               :language: java
 
+              Finish the following method ``getSum`` to return the sum of all values in the passed array.
+              ~~~~
               public class Test
               {
 
@@ -233,6 +238,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex5a
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test
               {
 
@@ -264,12 +271,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-
-           Finish the following method to return the sum of all of the non-negative values in the passed array.
-
            .. activecode::  ch7Ex6q
               :language: java
 
+              Finish the following method to return the sum of all of the non-negative values in the passed array.
+              ~~~~
               public class Test
               {
 
@@ -286,8 +292,6 @@ Code Practice with Arrays
               }
 
 
-
-
         .. tab:: Answer
 
           Declare a variable to hold the ``sum`` and initialize it to zero.  Loop through all the values in the array.  If the current value is non negative (greater than or equal to 0) then add it to the ``sum``.  Return the ``sum``.
@@ -295,6 +299,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex6a
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test
               {
 
@@ -331,12 +337,12 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-
-           Finish the following code to print the strings at the odd indices in the array.
-
            .. activecode::  ch7Ex7nq
               :language: java
 
+              
+              Finish the following code to print the strings at the odd indices in the array.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -354,6 +360,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex7na
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -376,11 +384,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-           Finish the method ``getSumChars`` below to return the total number of characters in the array of strings ``strArr``.
-
            .. activecode::  ch7Ex8nq
               :language: java
 
+              Finish the method ``getSumChars`` below to return the total number of characters in the array of strings ``strArr``.
+              ~~~~ 
               public class Test
               {
 
@@ -405,6 +413,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex8na
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test
               {
                   public static int getSumChars(String[] strArr)
@@ -435,11 +445,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-           Finish the method ``findMin`` so that it finds and returns the minimum value in the array.
-
            .. activecode::  ch7Ex9nq
               :language: java
 
+              Finish the method ``findMin`` so that it finds and returns the minimum value in the array.
+              ~~~~
               public class Test
               {
 
@@ -464,6 +474,8 @@ Code Practice with Arrays
            .. activecode::  ch7Ex9na
               :language: java
 
+              Solution to question above.    
+              ~~~~
               public class Test
               {
 
@@ -501,11 +513,11 @@ Code Practice with Arrays
 
         .. tab:: Question
 
-           Finish the method ``getAverage`` to calculate and return the average of all of the values in the array.
-
            .. activecode::  ch7Ex10nq
               :language: java
-
+              
+              Finish the method ``getAverage`` to calculate and return the average of all of the values in the array.
+              ~~~~
               public class Test
               {
 
@@ -527,7 +539,9 @@ Code Practice with Arrays
 
            .. activecode::  ch7Ex10na
               :language: java
-
+              
+              Solution to question above.    
+              ~~~~
               public class Test
               {
 

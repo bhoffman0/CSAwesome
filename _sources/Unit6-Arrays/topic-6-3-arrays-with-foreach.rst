@@ -36,7 +36,7 @@ There is a special kind of loop that can be used with arrays that is called an *
     :align: center
     :figclass: align-center
     
-    Figure 2: Comparing App Inventor, AP CSP, and Java for each
+    Figure 1: Comparing App Inventor, AP CSP, and Java for each
     
 See the examples below in Java that loop through an int and a String array. Notice the type of the loop variable is the type of the array.
 
@@ -58,15 +58,17 @@ See the examples below in Java that loop through an int and a String array. Noti
       System.out.println(name); 
   }
 
-Use the enhanced for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don't need to know their index and don't need to change their values.  This type of loop can only be used with collections of items like arrays.  It will loop through the collection and each time through the loop it will use the next item from the collection.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array. 
+Use the enhanced for each loop with arrays whenever you can, because it cuts down on errors. You can use it whenever you need to loop through all the elements of an array and don't need to know their index and don't need to change their values.  It starts with the first item in the array (the one at index 0) and continues through in order to the last item in the array. This type of loop can only be used with arrays and some other collections of items like ArrayLists which we will see in the next unit.  
 
 |CodingEx| **Coding Exercise**
 
-Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.
+
 
 .. activecode:: foreach1
    :language: java
    
+   Try the following code. Notice the for each loop with an int array and a String array. Add another high score and another name to the arrays and run again.
+   ~~~~
    public class ForEachDemo
    {      
       public static void main(String[] args)
@@ -88,11 +90,13 @@ Try the following code. Notice the for each loop with an int array and a String 
   
 |CodingEx| **Coding Exercise**
 
-Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!
+
 
 .. activecode:: evenLoop
    :language: java
    
+   Rewrite the following for loop which prints out the even numbers in the array as an enhanced for-each loop. Make sure it works!
+   ~~~~
    public class EvenLoop
    {      
       public static void main(String[] args)
@@ -107,15 +111,53 @@ Rewrite the following for loop which prints out the even numbers in the array as
       }
    }
 
+Foreach Loop Limitations
+--------------------------
+
 .. |visualizer| raw:: html
 
    <a href="http://www.pythontutor.com/visualize.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&cumulative=false&curInstr=0&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>	
    
-What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the new variable changes, not the real array values. We would need an indexed loop for this to work. Try it in the |visualizer| and click on Forward to see why it doesn't work. 
+What if we had a loop that incremented all the elements in the array. Would that work with an enhanced for-each loop? Unfortunately not! Because only the variable in the loop changes, not the real array values. We would need an indexed loop to modify array elements. Try it in the Active Code below or in the |visualizer| and click on Forward to see why it doesn't work. 
 
-.. raw:: html
+|CodingEx| **Coding Exercise**
 
-    <iframe width="800" height="500" frameborder="0" style="max-width:90%; margin-left:5%" src="http://pythontutor.com/iframe-embed.html#code=%20%20%20public%20class%20IncrementLoop%0A%20%20%20%7B%20%20%20%20%20%20%0A%20%20%20%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20int%5B%20%5D%20values%20%3D%20%7B6,%202,%201,%207,%2012,%205%7D%3B%0A%20%20%20%20%20%20%20%20//%20Can%20this%20loop%20increment%20the%20values%3F%0A%20%20%20%20%20%20%20%20for%20%28int%20val%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20val%2B%2B%3B%0A%20%20%20%20%20%20%20%20%20%20System.out.println%28%22New%20val%3A%20%22%20%2B%20val%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20//%20Print%20out%20array%20to%20see%20if%20they%20really%20changed%0A%20%20%20%20%20%20%20%20for%20%28int%20v%20%3A%20values%29%0A%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20System.out.print%28v%20%2B%20%22%20%22%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%20%20%20&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false"> </iframe>
+
+.. activecode:: incrementLoop
+   :language: java
+
+   Note that the for-each loop below cannot change the values in the array because only the loop variable value will change. Change the loop to an indexed for loop to make it change the array values.
+   ~~~~
+   public class IncrementLoop
+   {      
+      public static void main(String[] args)
+      {
+        int[ ] values = {6, 2, 1, 7, 12, 5};
+        // Can this loop increment the values?
+        for (int val : values)
+        {
+          val++;
+          System.out.println("New val: " + val);
+        }
+        // Print out array to see if they really changed
+        System.out.println("Array after the loop: ");
+        for (int v : values)
+        {
+          System.out.print(v + " ");
+        }
+      }
+   }
+   
+.. note::
+
+   For each loops cannot be used in all situations. Only use for-each loops when you want to loop through **all** the values in an array without changing their values. 
+   
+   - Do not use for each loops if you need the index.
+   - Do not use for each loops if  you need to change the values in the array.
+   - Do not use for each loops if you want to loop through only part of an array or in a different order.
+  
+
+
 
 |Exercise| **Check Your Understanding**
 
@@ -132,13 +174,51 @@ What if we had a loop that incremented all the elements in the array. Would that
    :feedback_d: For-each loops access all of an array's elements and allow users to refer to elements through a variable, but do not allow users to modify elements directly.  
 
 
-   What are some of the reasons you would use a for-each loop instead of a for loop?
+   What are some of the reasons you would use an enhanced for-each loop instead of a for loop?
    
    .. code-block:: java
 
       I: If you wish to access every element of an array.
       II: If you wish to modify elements of the array.
       III: If you wish to refer to elements through a variable name instead of an array index. 
+
+
+.. mchoice:: qfor-each
+   :practice: T
+   
+   What is the output of the following code segment?
+   
+   .. code-block:: java
+   
+      int[ ] numbers = {44, 33, 22, 11};
+      for (int num : numbers)
+      {
+          num *= 2;
+      }
+      for (int num : numbers)
+      {
+          System.out.print(num + " ");
+      }
+      
+   - 44 33 22 11
+    
+     + The array is unchanged because the foreach loop cannot modify the array elements.
+      
+   - 46 35 24 13
+    
+     - Remember that the foreach loop cannot modify the array elements, but it also uses multiplication, not addition.
+    
+   - 88 66 44 22
+    
+     - Remember that the foreach loop cannot modify the array elements. Only the variable num will be doubled, not the original array values.
+         
+   - The code will not compile. 
+    
+     - This code will compile.
+    
+
+Foreach Loop Algorithms
+--------------------------
 
 .. You can step through this code using the Java Visualizer by clicking on the following link  `link1 <http://www.pythontutor.com/java.html#code=public+class+Test1%0A%7B%0A+++public+static+double+getAvg(int%5B%5D+values)%0A+++%7B%0A+++++double+total+%3D+0%3B%0A+++++for+(int+val+%3A+values)%0A+++++%7B%0A+++++++total++%3D+total+%2B+val%3B%0A+++++%7D%0A+++++return+total+/+values.length%3B%0A+++%7D%0A%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A+++++int%5B+%5D+values+%3D+%7B2,+6,+7,+12,+5%7D%3B%0A+++++System.out.println(getAvg(values))%3B%0A+++%7D%0A%7D&mode=display&curInstr=0>`_. 
 
@@ -172,9 +252,7 @@ What if we had a loop that incremented all the elements in the array. Would that
 
 .. The **for-each** loop is shown on line 6 above.  It says to loop through the array called ``values`` and each time through the loop set the variable ``val`` to the next item in the array.  We have to specify the type of ``val`` first since this declares a variable.  The type must match the type of objects in the array.
 
-.. note ::
-
-   Only use the for-each loop when you want to loop through **all** the values in an array or list.  If you only want to loop through part of an array or list use a for loop instead.  Also use a for loop instead of a for-each loop if you want to **change** any of the values in the array or list.  
+ 
 
 .. The code above wasn't object-oriented.  You may have noticed that it was declared to be **static**.  This means that it is a **class method** not an **object method**.  It is a **class method** since it doesn't operate on any object fields - all data that it needs has been passed in to the method.  Class methods can be called using ``ClassName.methodName()``.  They can also be called on an object of the class.  Object methods can only be called on an object of the class.  
     
@@ -191,6 +269,8 @@ Here is an object-oriented example that has the array as a private instance vari
 .. activecode:: lcaf2
    :language: java
    
+   Try the code below. 
+   ~~~~
    public class ArrayWorker
    {
       private int[ ] values;
@@ -229,7 +309,7 @@ Here is an object-oriented example that has the array as a private instance vari
    :practice: T
    :adaptive:
 
-   The following method has the correct code to return the largest value in an integer array called <i>vals</i> (a field of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
+   The following method has the correct code to return the largest value in an integer array called <i>vals</i> (an instance variable of the current object), but the code is mixed up.  Drag the blocks from the left into the correct order on the right and indent them correctly as well. You will be told if any of the blocks are in the wrong order or not indented correctly.</p>
    -----
    public int getLargest()
    {
@@ -265,87 +345,29 @@ If you want to step through the correct code to see what it does in the Java Vis
 
 .. mchoice:: qab_3
    :practice: T
-   :answer_a: Whenever the first element in <i>a</i> is equal to <i>val</i>.
-   :answer_b: Whenever <i>a</i> contains any element which equals <i>val</i>.
-   :answer_c: Whenever the last element in <i>a</i> is equal to <i>val</i>.
-   :answer_d: Whenever only 1 element in <i>a</i> is equal to <i>val</i>.
+   :answer_a: Whenever the first element in <i>array</i> is equal to <i>target</i>.
+   :answer_b: Whenever <i>array</i> contains any element which equals <i>target</i>.
+   :answer_c: Whenever the last element in <i>array</i> is equal to <i>target</i>.
+   :answer_d: Whenever only 1 element in <i>array</i> is equal to <i>target</i>.
    :correct: c
    :feedback_a: This would be true if the loop started at the end of the array and moved toward the beginning.  But, it will loop from the first element to the last.  
-   :feedback_b: This would be true if temp was only set to the result of checking if the current element in the array is equal to <i>val</i> when it is <i>false</i>.  But, it is reset each time through the loop.
-   :feedback_c: The variable <i>temp</i> is assigned to the result of checking if the current element in the array is equal to <i>val</i>.  The last time through the loop it will check if the last element is equal to <i>val</i>.
-   :feedback_d: There is no count of the number of times the array element is equal to <i>val</i>.  
+   :feedback_b: This would be true if temp was only set to the result of checking if the current element in the array is equal to <i>target</i> when it is <i>false</i>.  But, it is reset each time through the loop.
+   :feedback_c: The variable <i>temp</i> is assigned to the result of checking if the current element in the array is equal to <i>target</i>.  The last time through the loop it will check if the last element is equal to <i>val</i>.
+   :feedback_d: There is no count of the number of times the array element is equal to <i>target</i>.  
 
 
-   Given that ``a`` is an array of integers and ``val`` is an integer value, which of the following best describes the conditions under which the following code segment will return true?
+   Given that ``array`` is an array of integers and ``target`` is an integer value, which of the following best describes the conditions under which the following code segment will return true?
    
    .. code-block:: java 
 
      boolean temp = false;
-     for ( int i = 0; i < a.length; i++) 
+     for (int val : array)
      { 
-       temp = ( a[i] == val ); 
+       temp = ( target == val ); 
      }
      return temp;
      
-.. mchoice:: qab_4
-   :practice: T
-   :answer_a: All values in positions <i>m+1</i> through <i>myStuff.length-1</i> are greater than or equal to <i>n</i>.
-   :answer_b: All values in position 0 through <i>m</i> are less than <i>n</i>.
-   :answer_c: All values in position <i>m+1</i> through <i>myStuff.length-1</i> are less than <i>n</i>.
-   :answer_d: The smallest value is at position <i>m</i>.
-   :correct: a
-   :feedback_a: Mystery steps backwards through the array until the first value less than the passed num (<i>n</i>) is found and then it returns the index where this value is found.
-   :feedback_b: This would be true if mystery looped forward through the array and returned when it found a value greater than the passed num (<i>n</i>).
-   :feedback_c: This would be true if it returned when it found a value at the current index that was greater than num (<i>n</i>).
-   :feedback_d: It returns the first time the condition is met so nothing is known about the values which are unchecked. 
 
-   Given the following field and method, which of the following best describes the contents of ``myStuff`` after (``int m = mystery(n);``) has been executed?
-   
-   .. code-block:: java 
-
-     // private field in the class
-     private int[ ] myStuff;
-
-     //precondition: myStuff contains
-     //  integers in no particular order
-     public int mystery(int num)
-     {
-        for (int k = myStuff.length - 1; k >= 0; k--)
-        {
-            if (myStuff[k] < num)
-            {
-               return k;
-            }
-        }
-
-        return -1;
-      }
-      
-.. mchoice:: qab_5
-   :practice: T
-   :answer_a: The values don't matter this will always cause an infinite loop.
-   :answer_b: Whenever <i>a</i> includes a value that is less than or equal to zero.
-   :answer_c: Whenever <i>a</i> has values larger then <i>temp</i>.
-   :answer_d: When all values in <i>a</i> are larger than <i>temp</i>.
-   :answer_e: Whenever <i>a</i> includes a value equal to <i>temp</i>.
-   :correct: b
-   :feedback_a: An infinite loop will not always occur in this code segment.
-   :feedback_b: When <i>a</i> contains a value that is less than or equal to zero then multiplying that value by 2 will never make the result larger than the <i>temp</i> value (which was set to some value > 0), so an infinite loop will occur.
-   :feedback_c: Values larger then <i>temp</i> will not cause an infinite loop.
-   :feedback_d: Values larger then <i>temp</i> will not cause an infinite loop.
-   :feedback_e: Values equal to <i>temp</i> will not cause the infinite loop.
-
-   Given the following code segment, which of the following will cause an infinite loop?  Assume that ``temp`` is an int variable initialized to be greater than zero and that ``a`` is an array of integers.
-   
-   .. code-block:: java 
-
-      for ( int k = 0; k < a.length; k++ )
-      {
-         while ( a[ k ] < temp )
-         {
-            a[ k ] *= 2;
-         }
-      }
 
 |Groupwork| Programming Challenge : SpellChecker 2
 ---------------------------------------------------
@@ -364,34 +386,35 @@ If you want to step through the correct code to see what it does in the Java Vis
 
    <a href= "https://repl.it/@BerylHoffman/SpellChecker1" target="_blank">repl.it</a>
    
-Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the spellcheck(word), and printStartsWith(firstLetters) methods to use enhanced for-each loops instead of indexed for-loops.
-
-
-
+Copy the code you used in the Spell Checker Challenge in the last lesson. Re-write the spellcheck(word) method described in the last lesson to use enhanced for-each loops instead of indexed for-loops. If you did the optional printStartsWith(firstLetters) method, re-write that one too. You may use the code in |repl.it| instead to have the full dictionary.
 
 .. activecode:: challenge-6-3-spellchecker2
    :language: java
    
    public class SpellChecker
    {
-      private String[] dictionary;
-      
-      public SpellChecker() {
-         dictionary =     {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","part"};
-      }
+     private String[] dictionary = {"the","of","and","a","to","in","is","you","that","it","he","was","for","on","are","as","with","his","they","I","at","be","this","have","from","or","one","had","by","word","but","not","what","all","were","we","when","your","can","said","there","use","an","each","which","she","do","how","their","if","will","up","other","about","out","many","then","them","these","so","some","her","would","make","like","him","into","time","has","look","two","more","write","go","see","number","no","way","could","people","my","than","first","water","been","call","who","oil","its","now","find","long","down","day","did","get","come","made","may","cat","dog","cats","dogs"};
 
-      // Write your methods here using for-each loops
+      // Re-write the spellcheck(word) (and optionally the printStartsWith(firstLetters)) methods to use enhanced for-each loops.
+       
+      /* Write a spellcheck() method using an enhanced for-each loop 
+       * that takes a word as a parameter and returns true if it is 
+       * in the dictionary array. Return false if it is not found.
+       */
       
       public static void main(String[] args)
       {
         SpellChecker checker = new SpellChecker();
-        checker.printStartsWith("ab");
-        String word = "youz";
+        /* Uncomment to test your method
+        String word = "catz";
         if (checker.spellcheck(word) == true)
             System.out.println(word + " is spelled correctly!");
         else
             System.out.println(word + " is misspelled!");
-        // Test 3rd method too!
+        */
+
+       // Optional:
+       // checker.printStartsWith("ab");
       }
    }
  

@@ -38,7 +38,7 @@ This is simliar to a toddler toy that has pictures of animals and when a handle 
     Figure 1: A see n say toy
 
    
-If you were simulating this toy in software you could create an Animal class that had an abstract makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
+If you were simulating this toy in software you could create an Animal class that had a makeNoise method. Each subclass of Animal would override the makeNoise method to make the correct noise for that type.  This type of polymorphism is called **inheritance-based polymorphism**.  You have a common parent class, but the behavior is specified in the child class.
 
 ..	index::
     single: declared type
@@ -252,64 +252,13 @@ You can step through the code using the Java Visualizer by clicking on the follo
 
       public class Dictionary extends Book
       {
-         public String getDefinition(String word)
+         public String getDefinition()
          {
             // implementation not shown
          }
       } 
       
-.. mchoice:: qoo_14
-   :practice: T
-   :answer_a: ABDC
-   :answer_b: AB
-   :answer_c: ABCD
-   :answer_d: ABC
-   :correct: a
-   :feedback_a: Even though b is declared as type Base it is created as an object of the Derived class, so all methods to it will be resolved starting with the Derived class.
-   :feedback_b: This would be true if the object was created of type Base using new Base. But the object is really a Derived object. So all methods are looked for starting with the Derived class.
-   :feedback_c: After the call to methodOne in the super class printing "A", the code continues with the implicit this.methodTwo which resolves from the current object's class which is Derived. methodTwo in the Derived class is executed which then calls super.methodTwo which invokes printin "B" from methodTwo in the Base class. Then the "D" in the Derive methodTwo is printed. Finally the program returns to methodOne in the Derived class are prints "C".
-   :feedback_d: The call to methodTwo in super.methodOne is to this.methodTwo which is the method from the Derived class. Consequently the "D" is also printed.
-   
-   Assume that the following declaration appears in a client program **Base b = new Derived();**.  What is the result of the call **b.methodOne()**?
-   
-   .. code-block:: java
 
-      public class Base
-      {
-         public void methodOne()
-         {
-            System.out.print("A");
-            methodTwo();
-         }
-
-         public void methodTwo()
-         {
-            System.out.print("B");
-         }
-         
-         public static void main(String[] args)
-         {
-            Base b = new Derived();
-            b.methodOne();
-         }
-      }
-
-      class Derived extends Base
-      {
-         public void methodOne()
-         {
-            super.methodOne();
-            System.out.print("C");
-         }
-
-         public void methodTwo()
-         {
-            super.methodTwo();
-            System.out.print("D");
-         }
-      }
-
-You can step through this code using the Java Visualizer by clicking on the following link: `Base Example <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=public+class+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++System.out.print(%22A%22)%3B%0A++++++methodTwo()%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A++++++System.out.print(%22B%22)%3B%0A+++%7D%0A+++++++++%0A+++public+static+void+main(String%5B%5D+args)%0A+++%7B%0A++++++Base+b+%3D+new+Derived()%3B%0A++++++b.methodOne()%3B%0A+++%7D%0A%7D%0A%0Aclass+Derived+extends+Base%0A%7B%0A+++public+void+methodOne()%0A+++%7B%0A++++++super.methodOne()%3B%0A++++++System.out.print(%22C%22)%3B%0A+++%7D%0A%0A+++public+void+methodTwo()%0A+++%7B%0A++++++super.methodTwo()%3B%0A++++++System.out.print(%22D%22)%3B%0A+++%7D%0A%7D&mode=display&curInstr=10>`_.
 
 |Groupwork| Programming Challenge : Shopping Cart 2
 ---------------------------------------------------
@@ -339,7 +288,9 @@ In this challenge, you will write a method called ``int countDiscountedItems()``
 .. activecode:: challenge-9-6-shopping2
   :language: java     
   
-    import java.util.*;
+  Copy in your code for DiscountedItem below and then write a method called countDiscountedItems which traverses the polymorphic ArrayLists of Items. Use instanceOf to test items to see see if they are a DiscountedItem.
+  ~~~~
+  import java.util.*;
 
     /** 
        The ShoppingCart class has an ArrayList of Items.

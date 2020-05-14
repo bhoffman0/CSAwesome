@@ -29,7 +29,12 @@
 Boolean Expressions
 ===================
 
-**Boolean** variables or expressions can only have **true** or **false** values.  Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal) to return boolean values. 
+**Boolean** variables or expressions can only have **true** or **false** values.  
+
+Testing Equality (==)
+----------------------
+
+Primitive values like ints and reference values like Strings can be compared using the operators == and != (not equal) to return boolean values. 
 
 .. note::
 
@@ -60,15 +65,24 @@ Boolean Expressions
       }
    }
 
-|CodingEx| **Coding Exercise**
 
+We can also use == or != to test if two reference values, like Turtle and String objects,  refer to the same object. In the figure below, we are creating two separate Turtle objects called juan and mia. They do not refer to same object or turtle. Then, we create a reference variable called friend that is set to mia. The turtle mia will have two ways (**references** or **aliases**) to name her -- she's both mia and friend, and these variables refer to the same object (same Turtle) in memory. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with == will return true which you can see in the code below. 
+
+.. figure:: Figures/turtleEquality.png
+    :width: 500px
+    :align: center
+    :figclass: align-center
+    
+    Figure 1: Turtle Reference Equality
+    
+|CodingEx| **Coding Exercise**
 
 
 .. activecode:: boolRef
    :language: java
    :datafile: turtleClassesBooleans   
    
-   We can also use == to test if two reference values refer to the same object. What will the code below print out? Try to guess before you run it! Here we are creating two separate Turtle objects called juan and mia. They do not refer to same object or turtle. Then, we create a reference variable called friend that is set to mia. The turtle mia will have two ways (references or aliases) to name her -- she's both mia and friend, and these variables refer to the same object (same Turtle) in memory.
+   What will the code below print out? Try to guess before you run it! 
    ~~~~     
    import java.util.*;
    import java.awt.*;
@@ -88,15 +102,11 @@ Boolean Expressions
       }
     }
 
-Reference values can be compared using == and !=. If two reference  variables refer to the same object like the turtle on the right in the image below, the test with == will return true.
 
-.. figure:: Figures/turtleEquality.png
-    :width: 500px
-    :align: center
-    :figclass: align-center
-    
-    Figure 1: Turtle Reference Equality
    
+Relational Operators (<, >)
+----------------------------
+
 The **Relational Operators** below in Java are used to compare numeric values or arithmetic expressions. Although some programming languages allow using relational operators like < to compare strings, Java only uses these operators for numbers, and uses the string methods compareTo() and equals() for comparing String values.
 
 - < Less Than
@@ -146,6 +156,9 @@ If you have trouble telling < and > apart, think of a number line and think of <
     
     Drag the boolean expression from the left and drop it on what it is testing on the right.  Click the "Check Me" button to see if you are correct.
  
+
+Testing with mod (%)
+---------------------
 
 Here are some boolean expressions that are very useful in coding:
 
@@ -235,11 +248,10 @@ The following program checks if 5 is a prime number by seeing if it is divisible
 .. activecode:: challenge3-1-primeNumbers
    :language: java
    
-    Answer the questions above to see if the numbers 5, 6, and 7 are prime.
-    ~~~~
-    
-    public class PrimeNumbers
-    {
+   Experiment with the code below adding boolean expressions to determine if the numbers 5, 6, and 7 are prime. Are all odd numbers prime? Are all even numbers not prime?
+   ~~~~    
+   public class PrimeNumbers
+   {
       public static void main(String[] args)
       {
         int number = 5;
@@ -251,7 +263,7 @@ The following program checks if 5 is a prime number by seeing if it is divisible
         System.out.println("Divisible by 4? " + (number % 4 == 0));
         System.out.println("Divisible by 5? " + (number % 5 == 0));
       }
-    }  
+   }  
  
     
 Summary

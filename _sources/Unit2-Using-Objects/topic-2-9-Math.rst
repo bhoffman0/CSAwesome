@@ -177,7 +177,7 @@ Here are some examples that move a random number into a specific range.
 Other Math functions that you can use are:
 
 
-- int abs(int) : Returns the absolute value of an int value (which just removes any negative signs).
+- int abs(int) : Returns the absolute value of an int value (which is the value of a number without its sign, for example Math.abs(-4) = 4). 
 
 - double abs(double) : Returns the absolute value of a double value.
 
@@ -188,8 +188,11 @@ Other Math functions that you can use are:
 - double random() :  Returns a double value greater than or equal to 0.0 and less than 1.0 (not including 1.0!).
 
 
+.. |AP CS A Reference Sheet| raw:: html
 
-These are all listed in the Java Quick Reference guide that you can use during the exam: https://apcentral.collegeboard.org/pdf/ap-computer-science-a-2014-java-quick-reference.pdf?course=ap-computer-science-a.  
+   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-java-quick-reference-0.pdf?course=ap-computer-science-a" target="_blank">AP CS A Java Quick Reference Sheet</a> 
+   
+These are all listed in the |AP CS A Reference Sheet| that you can use during the exam.
 
 |Groupwork| Programming Challenge : Random Numbers
 --------------------------------------------------

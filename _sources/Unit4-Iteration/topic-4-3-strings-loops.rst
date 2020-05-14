@@ -58,7 +58,10 @@ The String methods (covered in lesson 2.7 and given in the |AP CS A Reference Sh
 
 - **String substring(int from)** : returns substring(from, length()).
 
- 
+
+.. |Java visualizer1| raw:: html
+
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20RemoveAs%20%7B%0A%20%20%20%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%0A%20%20%20%20%20%20String%20s%20%3D%20%22are%20apples%20tasty%20without%20a's%3F%22%3B%20%0A%20%20%20%20%20%20int%20index%20%3D%200%3B%0A%20%20%20%20%20%20System.out.println%28%22Original%20string%3A%20%22%20%2B%20s%29%3B%0A%0A%20%20%20%20%20%20//%20while%20there%20is%20an%20a%20in%20s%0A%20%20%20%20%20%20while%20%28s.indexOf%28%22a%22%29%20%3E%3D%200%29%0A%20%20%20%20%20%20%7B%0A%20%20%20%0A%20%20%20%20%20%20%20%20%20//%20Find%20the%20next%20index%20for%20an%20a%0A%20%20%20%20%20%20%20%20%20index%20%3D%20s.indexOf%28%22a%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20//%20Remove%20the%20a%20at%20index%20by%20concatenating%20%0A%20%20%20%20%20%20%20%20%20//%20substring%20up%20to%20index%20and%20then%20rest%20of%20the%20string.%0A%20%20%20%20%20%20%20%20%20s%20%3D%20s.substring%280,index%29%20%2B%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20s.substring%28index%2B1%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%20//%20end%20loop%20%0A%20%20%0A%20%20%20%20%20%20System.out.println%28%22String%20with%20a's%20removed%3A%22%20%2B%20s%29%3B%0A%20%20%20%0A%20%20%20%7D%20//%20end%20method%0A%7D&cumulative=false&curInstr=23&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 
 .. |Java visualizer| raw:: html
@@ -68,7 +71,62 @@ The String methods (covered in lesson 2.7 and given in the |AP CS A Reference Sh
 While Find and Replace Loop
 ---------------------------
 
-Google has been scanning old books and then using software to read the scanned text.  But, the software can get things mixed up like using the number 1 for the letter l. Try the code below that cleans up scanning mistakes like this.
+A while loop can be used with the String indexOf method to find certain characters in a string and process them, usually using the substring method.
+
+.. code-block:: java 
+
+   String s = "example";
+   int i = 0;
+   // while there is an a in s
+   while (s.indexOf("a") >= 0)
+   {
+     // Find and save the next index for an a
+     i = s.indexOf("a");
+     // Process the string at that index
+     String ithLetter = s.substring(i,i+1);
+     ...
+   }
+
+The example in the mixed up code below finds and removes all the letter a's in a string. You can watch it in action in this |Java visualizer1|.
+
+|Exercise| **Check Your Understanding**
+  
+
+.. parsonsprob:: removeA
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The following program removes all the a's from a string, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
+   -----
+   public static void main(String[] args)
+   {
+   =====
+      String s = "are apples tasty without an a?"; 
+      int index = 0;
+      System.out.println("Original string: " + s);
+   =====
+      // while there is an a in s
+      while (s.indexOf("a") >= 0)
+      {
+   =====      
+         // Find the next index for an a
+         index = s.indexOf("a");
+   =====         
+         // Remove the a at index by concatenating 
+         // substring up to index and then rest of the string.
+         s = s.substring(0,index) + 
+             s.substring(index+1);
+   =====         
+      } // end loop 
+   =====
+      System.out.println("String with a's removed:" + s);
+   =====
+   } // end method
+   
+   
+Google has been scanning old books and then using software to read the scanned text.  But, the software can get things mixed up like using the number 1 for the letter l. Try the code below (and in the |Java visualizer|) to clean up scanning mistakes like this.
 
 |CodingEx| **Coding Exercise**
 
@@ -97,53 +155,13 @@ The following code loops through a string replacing all 1's with l's.  Trace thr
            String lastpart = message.substring(index+1);
            message = firstpart + "l" + lastpart;
            System.out.println("Replaced 1 with l at index " + index);
-           System.out.println("The message is currently " + message + " but we aren't done looping yet!";
+           System.out.println("The message is currently " + message + " but we aren't done looping yet!");
         }
         System.out.println("Cleaned text: " + message);
       }
    }
   
  
-
-
-
- 
-|Exercise| **Check Your Understanding**
-  
-
-.. parsonsprob:: removeA
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following method has the correct code to return a string with all a's removed, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
-   -----
-   public static String remA(String s)
-   {
-   =====
-      int index = 0;
-   =====
-      // while still an a in str
-      while (s.indexOf("a") >= 0)
-      {
-   =====      
-         // Find the next index for an a
-         index = s.indexOf("a");
-   =====         
-         // Remove the a at index by concatenating 
-         // substring up to index and then rest of the string.
-         s = s.substring(0,index) + 
-             s.substring(index+1);
-   =====         
-      } // end loop 
-   =====
-      return s;
-   =====
-   } // end method
-
-
-
 For Loops: Reverse String
 --------------------------
 
@@ -154,7 +172,51 @@ For-loops can also be used to process strings, especially in situations where yo
 
     While loops are often used with strings when you are looking for a certain character or substring in a string and do not know how many times the loop needs to run. For loops are used when you know you want to visit every character.
 
-For loops with strings usually start at 0 and use the string's length() for the ending condition to step through the string character by character. Here is a for-loop that creates a new string that reverses the string s.  We start with a blank string sReversed and build up our reversed string in that variable by copying in characters from the string s. You can also run this code in this |Java visualizer link|. 
+For loops with strings usually start at 0 and use the string's length() for the ending condition to step through the string character by character. 
+
+.. code-block:: java 
+
+   String s = "example";
+   // loop through the string from 0 to length 
+   for(int i=0; i < s.length(); i++) 
+   {
+      String ithLetter = s.substring(i,i+1);           
+      // Process the string at that index
+      ...
+   }
+
+|Exercise| **Check Your Understanding**
+  
+
+.. parsonsprob:: countEs
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+
+   The following main method has the correct code to count the number of e's in a string, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
+   -----
+   public static void main(String[] args)
+   {
+   =====
+      String message = "e is the most frequent English letter.";
+      int count = 0;
+   =====
+      for(int i=0; i < message.length(); i++) 
+      {
+   =====
+         if (message.substring(i,i+1).equalsIgnoreCase("e"))
+   =====
+            count++;
+   =====        
+      }
+   =====     
+        System.out.println(count);  
+   =====
+   }
+    
+    
+Here is a for-loop that creates a new string that reverses the string s.  We start with a blank string sReversed and build up our reversed string in that variable by copying in characters from the string s. You can also run this code in this |Java visualizer link|. 
 
 
 
@@ -187,36 +249,7 @@ For loops with strings usually start at 0 and use the string's length() for the 
       }
     }
 
-|Exercise| **Check Your Understanding**
-  
 
-.. parsonsprob:: countEs
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following main method has the correct code to count the number of e's in a string, but the code is mixed up.  Drag the blocks from the left area into the correct order in the right area.  Click on the "Check Me" button to check your solution.
-   -----
-   public static void main(String[] args)
-   {
-   =====
-      String message = "e is the most frequent English letter.";
-      int count = 0;
-   =====
-      for(int i=0; i < message.length(); i++) 
-      {
-   =====
-         if (message.substring(i,i+1).equalsIgnoreCase("e"))
-   =====
-            count++;
-   =====        
-      }
-   =====     
-        System.out.println(count);  
-   =====
-   }
-    
 
 |Groupwork| Programming Challenge : String Replacement Cats and Dogs
 ---------------------------------------------------------------------

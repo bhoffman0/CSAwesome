@@ -94,11 +94,13 @@ Since you can find out the number of rows and columns in a 2D array you can use 
    
 |CodingEx| **Coding Exercise**
 
-What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Note that an array can be passed in as an argument to a method.
+
 
 .. activecode:: lcgetAverage
    :language: java 
    
+   What does the following code do? Add another row of numbers to the matrix. Will the loops traverse this row too? Note that an array can be passed in as an argument to a method.
+   ~~~~
    public class Test
    {
 
@@ -180,11 +182,13 @@ Most nested loops with 2D Arrays use "row-major order" where the outer loop goes
    
 |CodingEx| **Coding Exercise**
 
-What will the following code print out? Try to guess before you run it.
+
 
 .. activecode:: ColumnMajorTraversal
    :language: java 
    
+   What will the following code print out? Try to guess before you run it.
+   ~~~~
    public class ColumnMajorTraversal
    {
      public static void main(String[] args)

@@ -347,12 +347,12 @@ AP Practice
     
       - This code should compile.
 
-    - 40
+    - 40.0
     
-      + Correct, the Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it, and getTemp() returns the currentTemp value.
+      + Correct, the Liquid() constructor sets the currentTemp instance variable to 50 and the lowerTemp() method subtracts 10 from it, and getTemp() returns the currentTemp value as a double.
     
 .. raw:: html
-    
+     
       <pre id="turtleClassesReturn" class="javaFiles" style="display:none;">
    
       import java.awt.Image;

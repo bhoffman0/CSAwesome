@@ -130,11 +130,13 @@ Inheritance is also useful for **specialization** which is when you want most of
 
 |CodingEx| **Coding Exercise**
 
-The Student class can also inherit from the class Person just like Employee and Customer because a Student is a type of Person. What do you need to add to the Student class declaration below to make it inherit from type Person? When you fix the code, the **instanceof** operator will return true that Student s is an instance of both the Student and the Person class. What other private instance variables could you add to Person and Student? In which class would you put an address attribute? Where would you put gpa?
+The Student class can also inherit from the class Person just like Employee and Customer because a Student is a type of Person. 
 
 .. activecode:: StudentInheritance
   :language: java
   
+  What do you need to add to the Student class declaration below to make it inherit from type Person? When you fix the code, the **instanceof** operator will return true that Student s is an instance of both the Student and the Person class. What other private instance variables could you add to Person and Student? In which class would you put an address attribute? Where would you put gpa?
+  ~~~~
     class Person
     {
        private String name;

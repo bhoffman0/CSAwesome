@@ -28,6 +28,7 @@
 	single: object reference
 	single: reference
 	pair: String; definition
+    
 
 Strings
 ========
@@ -155,6 +156,8 @@ Strings can be **appended** to each other to create a new string using the ``+``
 .. activecode:: lcso1
    :language: java
    
+   Try the following code. Can you use += or + to have it add on another name Andrea and 2 more exlamation points (!) to the happy birthday greeting? 
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -203,11 +206,12 @@ You can even add other items to a string using the ``+`` operator.  The other it
    
 |CodingEx| **Coding Exercise:**
 
-What do you think the following will print? Guess before you hit run.
 
 .. activecode:: lcso2
    :language: java
    
+   What do you think the following will print? Guess before you hit run. If you want the addition to take place before the numbers are turned into a string what should you do? Try to modify the code  so that it adds 4 + 3 before appending the value to the string. Hint: you used this to do addition before multiplication in arithmetic expressions.
+   ~~~~
    public class Test2
    {
       public static void main(String[] args)
@@ -222,15 +226,13 @@ What do you think the following will print? Guess before you hit run.
   
 Since the same operators are processed from left to right this will print ``1243``.  First 4 will be turned into a string and appended to 12 and then 3 will be turned into a string and appended to 124.  
 
-|CodingEx| **Coding Exercise:**
-
-If you want the addition to take place before the numbers are turned into a string what should you do?  Try to modify the code above so that it adds 4 + 3 before appending the value to the string. Hint: you used this to do addition before multiplication in arithmetic expressions.
-
-What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a **backslash escape sequence**. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \\n which will put in a newline. Here are the escape sequences that may be used in the AP course:
+What if you wanted to print out a double quote " character? Since the double quote " is a special character with meaning in Java, we put in a backslash in front of the quote to signal that we want just the character. This is called a **backslash escape sequence**. And if you wanted to print out a backslash, you would have to backslash it too in order to escape its special meaning. Another useful backslashed character is backslash \\n which will put in a newline. 
 
 .. activecode:: bhescape
    :language: java
    
+   Here are the escape sequences that may be used in the AP course
+   ~~~~
    public class TestEscape
    {
       public static void main(String[] args)
@@ -262,6 +264,8 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
 .. activecode:: challenge2-6-MadLibs
    :language: java
    
+   If you used repl.it for this challenge, copy the url of your repl here to turn in.
+   ~~~~
    public class MadLibs1
    {
       public static void main(String[] args)
@@ -279,6 +283,9 @@ Then, working in pairs, come up with another silly story that uses at least 5 ne
         System.out.println(pluralnoun1 + " are " + color2);
         System.out.println("I like " + food);
         System.out.println("Do " + pluralnoun2 + " like them too?");
+        
+        // Now come up with your own silly poem!
+        
       }
    }
 

@@ -32,6 +32,7 @@ String Methods
 	pair: String; indexOf
 	pair: String; compareTo
 	pair: String; equals
+    pair: String; methods
 
 A string holds characters in a sequence.  Each character is at a position or **index** which starts with 0 as shown below.  An **index** is a number associated with a position in a string.  The length of a string is the number of characters in it including any spaces or special characters.  The string below has a length of 14.
 
@@ -60,11 +61,17 @@ For the AP CS A exam there are only a few things that you have to know about str
 
     -  **boolean equals(String other)** returns true when the characters in the current string are the same as the ones in the ``other`` string.  This method is inherited from the Object class, but is **overriden** which means that the String class has its own version of that method.
 
-Run the code below to see the output from ``length``, ``substring``, and ``indexOf``. Notice that indexOf returns -1 if it cannot find the substring in the message.
+
+String Methods: length, substring, indexOf
+------------------------------------------
+
+Run the code below to see the output from the String methods ``length``, ``substring``, and ``indexOf``. The length method returns the number of characters in the string, not the last index which is length-1. The ``str.substring(from,to)`` method returns the substring from the ``from`` index up to (but not including) the ``to`` index. The method ``str.indexOf(substring)`` returns the index of where it finds substring in str or -1 if it is not there.   
 
 .. activecode:: lcsm1
    :language: java
 
+   This code shows the output from String methods length, substring, and indexOf. How many letters does substring(0,3) return? What does indexOf return when its argument is not found? 
+   ~~~~
    public class Test1
    {
       public static void main(String[] args)
@@ -76,8 +83,9 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
         System.out.println(message2.length());
 
         System.out.println(message1.substring(0,3));
+        System.out.println(message2.substring(4,5));
         System.out.println(message1.substring(5));
-
+        
         System.out.println(message1.indexOf("is")); // This will match the is in "This"!
         System.out.println(message1.indexOf("Hello"));
         System.out.println(message2.indexOf("Hello"));
@@ -90,7 +98,7 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
 
 .. note::
 
-   Did you notice that ``message1.substring(0,3)`` includes all the characters from position 0 to 2 and doesn't include the character at position 3? Remember that substring(from,to) does not include the character at the ``to`` index!
+   Remember that substring(from,to) does not include the character at the ``to`` index! To return a single character at index i, use ``str.substring(index, index + 1)``.
 
 |Exercise| **Check your understanding**
 
@@ -190,11 +198,19 @@ Run the code below to see the output from ``length``, ``substring``, and ``index
      String s2 = s1.substring(2);
 
 
+
+CompareTo and Equals
+-----------------------
+
+We can compare primitive types like int and double using operators like == and < or >, which you will learn about in the next unit. However, with reference types like String, you must use the methods equals and compareTo, not == or < or >.
+
 Run the example below to see the output from ``compareTo`` and ``equals``. Notice that compareTo tells you how you would order the two strings alphabetically. If they are equal, it returns 0. Since "Hello!" would be alphabetically ordered after "And", compareTo returns a positive number. Since "Hello!" would be alphabetically ordered before "Zoo", compareTo returns a negative number.  And notice that equals is case-sensitive.
 
 .. activecode:: lcsm2
    :language: java
 
+   Run the code to see how the String methods equals and compareTo work. Is equals case-sensitive? When does compareTo return a negative number? 
+   ~~~~
    public class Test2
    {
       public static void main(String[] args)
@@ -327,20 +343,49 @@ The String library which is built into the default java.lang library simplifies 
    
 
 
-Common Mistakes
----------------
+Common Mistakes with Strings
+-------------------------------
 
-  -  Using ``==`` to test if two strings are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals`` or ``compareTo`` instead.    
-  
-  -  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false.  
+The following code shows some common mistakes with strings.
+
+.. activecode:: stringMistakes
+   :language: java
+
+   
+   This code contains some common mistakes with strings. Fix the code to use the string methods correctly.
+   ~~~~
+   public class StringMistakes
+   {
+      public static void main(String[] args)
+      {
+        String str1 = "Hello!";
+        
+        // Print out the first letter?
+        System.out.println("The first letter in " + str1 + ":" + str1.substring(1,1) );
+   
+        // Print out the last character?
+        System.out.println("The last char. in " + str1 + ":" + str1.substring(8) );
+        
+        // Print str1 in lower case? Will str1 change?
+        str1.toLowerCase();
+        System.out.println("In lowercase: " + str1);
+    
+      }
+   }
+
+Here is a list of common mistakes made with Strings.
+ 
   
   -  Thinking that substrings include the character at the last index when they don't. 
   
   -  Thinking that strings can change when they can't.  They are immutable.  
   
-  -  Trying to invoke a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
-  
   - Trying to access part of a string that is not between index 0 and length - 1. This will throw an IndexOutOfBoundsException.
+  
+  -  Trying to call a method like ``indexOf`` on a string reference that is null.  You will get a null pointer exception.
+  
+  -  Using ``==`` to test if two strings are equal.  This is actually a test to see if they refer to the same object.  Usually you only want to know if they have the same characters in the same order.  In that case you should use ``equals`` or ``compareTo`` instead.    
+  -  Treating upper and lower case characters the same in Java.  If ``s1 = "Hi"`` and ``s2 = "hi"`` then ``s1.equals(s2)`` is false. 
 
 
 |Groupwork| Programming Challenge : Pig Latin

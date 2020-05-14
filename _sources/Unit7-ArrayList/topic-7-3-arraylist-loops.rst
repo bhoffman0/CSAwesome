@@ -260,11 +260,13 @@ ArrayList of Student Objects
 
 |CodingEx| **Coding Exercise**
 
-You can put any kind of Objects into an ArrayList. Even objects for a class that you wrote. For example, here is an ArrayList of Students. Although the print statement works here, you may want a nicer printout. Add a loop that prints out each student and then a new line.
+You can put any kind of Objects into an ArrayList. For example, here is an ArrayList of Students. Although the print statement works here, you may want a nicer printout. 
 
 .. activecode:: StudentList
   :language: java
 
+  Add a loop that prints out each student and then a new line.
+  ~~~~
   import java.util.*;
   
   public class StudentList 
@@ -340,6 +342,8 @@ First, see if you can create an ArrayList of WordPair Objects below. Look at the
 .. activecode:: ArrayListWordPair1
    :language: java
    
+    Create an Arraylist of WordPair objects.
+    ~~~~
     import java.util.*; 
 
     public class Test {
@@ -393,6 +397,8 @@ In the class WordPairsList below, you will write the constructor which takes the
 .. activecode:: challenge-7-3-WordPairs
    :language: java
    
+    FRQ WordPairs Challenge: Complete the constructor for WordPairsList below which will add pairs of words from a given array to the ArrayList. Then, complete the method numMatches().
+    ~~~~
     import java.util.*; 
 
     public class WordPairsList

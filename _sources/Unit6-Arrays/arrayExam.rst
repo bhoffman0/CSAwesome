@@ -50,8 +50,8 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :correct: b
       :feedback_a: This would be true if the while loop continued as long as i1 and i2 where greater than or equal to 0.  
       :feedback_b: This loops and only increments count when the same value is in x1 and x2, but it doesn't compare the values at index 0 since it stops when either index is 0.
-      :feedback_c: It may appear that the indicies get out of synchronization, but check out the else if and else code.
-      :feedback_d: The very first time trough the loop the values at the two indicies are equal and count is incremented.  
+      :feedback_c: It may appear that the indices get out of synchronization, but check out the else if and else code.
+      :feedback_d: The very first time through the loop the values at the two indicies are equal and count is incremented.  
 
       What is the value of ``count`` after the following code has executed?
    
@@ -320,7 +320,7 @@ Click the "Start" button when you are ready to begin the exam, but only then as 
       :feedback_c: This will cause an out of bounds error.
       :feedback_d: This increments a2 before copying the value into array2 and so puts it in the wrong place. 
 
-      Which of the following correctly copies all the even numbers from ``array1`` to ``array2`` at the same position as they are in ``array1`` without any errors?  Assume that ``array2`` is large enough for all the copied values.  
+      Which of the following correctly copies all the even numbers from ``array1`` to ``array2`` in the same order as they are in ``array1`` without any errors?  Assume that ``array2`` is large enough for all the copied values.  
    
       .. code-block:: java
       

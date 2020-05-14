@@ -37,6 +37,8 @@ The casting operators (int) and (double) are used right next to a number or vari
 .. activecode:: lcct1
    :language: java
    
+   What happens when you divide an int by an int or with a double operand or with the type cast (double) on one of the operands?
+   ~~~~
    public class Test
    {
       public static void main(String[] args)
@@ -57,11 +59,13 @@ Values of type double can be rounded to the nearest integer by adding or subtrac
     int nearestInt = (int)(number + 0.5); 
     int nearestNegInt = (int)(negNumber – 0.5);
     
-For example, if you divide 5/3 using integer division, Java will truncate 1.67 to 1 to give an int result. However, we usually round up any answer .5 and above. Using the formula above, if we add 1.67 + 0.50, we get 2.17 and then casting it to an int throws away what's after the decimal point, just leaving 2.  Run the code below to see how the formula of adding or subtracting .5 and then casting with (int) rounds a positive or negative double number to the closest int.
+For example, if you divide 5/3 using integer division, Java will truncate 1.67 to 1 to give an int result. However, we usually round up any answer .5 and above. Using the formula above, if we add 1.67 + 0.50, we get 2.17 and then casting it to an int throws away what's after the decimal point, just leaving 2.  
 
 .. activecode:: nearestInt
    :language: java
    
+   Run the code below to see how the formula of adding or subtracting .5 and then casting with (int) rounds a positive or negative double number to the closest int.
+   ~~~~
    public class NearestInt
    {
       public static void main(String[] args)
@@ -90,6 +94,8 @@ For example, int values are stored in 4 bytes of memory. There is an Integer.MAX
 .. activecode:: overfl
    :language: java
    
+   Try the integer overflows below. An int cannot hold that high a value!
+   ~~~~
    public class TestOverflow
    {
       public static void main(String[] args)
@@ -107,6 +113,8 @@ Although it's not on the exam, you can format long decimal numbers to just show 
 .. activecode:: double_precision
    :language: java
    
+   Run the code below to see how a decimal number can be formatted to show 2 digits after the decimal point.
+   ~~~~
    public class TestFormat
    {
       public static void main(String[] args)
@@ -173,6 +181,8 @@ Your teacher may suggest that you use a Java IDE like |repl| for this challenge 
 .. activecode:: challenge1-6-average
    :language: java
 
+   Type in three made up int grades and then sum and average them. Use casting to report the result as a double. If you do this challenge on repl.it, please paste your repl link here to turn it in.
+   ~~~~
    public class Challenge1_6
    {
       public static void main(String[] args)

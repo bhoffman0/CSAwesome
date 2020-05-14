@@ -45,15 +45,15 @@ A new object is created with the ``new`` keyword followed by the class name (``n
     World world = new World();    // create a new World object
     Turtle t = new Turtle(world); // create a new Turtle object
 
-Overloading Constructors, the No-Argument Constructor, and Parameters
-----------------------------------------------------------------------
+Overloading Constructors
+---------------------------
 
 There can be more than one constructor defined in a class. This is called **overloading** the constructor. There is usually a constructor that has no parameters (nothing inside the parentheses following the name of the constructor) like the ``World()`` constructor above.  This is also called the **no-argument constructor**.  The **no-argument** constructor usually sets the attributes of the object to default values. There can also be other constructors that take parameters like the ``Turtle(world)`` constructor call above. A **parameter** (also called **actual parameter** or **argument**) is a value that is passed into a constructor.  It can be used to initialize the attribute of an object.
 The ``World`` class actually has 2 constructors.  One doesn't take any parameters and one takes the world's width and height.
 
 
 .. figure:: Figures/worldConstructors.png
-    :width: 400px
+    :width: 350px
     :align: center
     :alt: Two overloaded World constructors
     :figclass: align-center
@@ -122,7 +122,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
     Turtle t1 = new Turtle(world1);
     Turtle t2 = new Turtle(50, 100, world1);
 
-.. note ::
+.. note::
    Notice that the order of the parameters matter. The ``Turtle`` constructor takes ``(x,y,world)`` as parameters in that order. If you mix up the order of the parameters it will cause an error, because the parameters will not be the data types that it expects. This is one reason why programming languages have data types -- to allow for error-checking.
 
 |Exercise| **Check your understanding**
@@ -164,8 +164,7 @@ There is another ``Turtle`` constructor that places the turtle at a certain (x,y
           // Change the Turtle constructor to put the turtle in the top right corner
           Turtle t1 = new Turtle(world);
 
-          t1.turn(-45);
-          t1.forward();
+          t1.turnLeft();
           world.show(true);
       }
     }
@@ -182,18 +181,18 @@ You can also declare an **object variable** and initialize it to **null** (``Tur
     t1 = new Turtle(world);
     Turtle t2 = new Turtle(world);
 
-.. note ::
+Notice that you only specify the type (class name) for an object reference when you declare it (``Turtle t1 = null``) and not when you assign it a value (``t1 = new Turtle(world)``).
 
-   Notice that you only specify the type (class name) for an object reference when you declare it (``Turtle t1 = null``) and not when you assign it a value (``t1 = new Turtle(world)``).
-
-Constructor and Method signatures
+Constructor Signatures
 -----------------------------------
 
 .. |turtle documentation| raw:: html
 
    <a href="https://www2.cs.uic.edu/~i101/doc/Turtle.html" target="_blank" style="text-decoration:underline">documentation</a>
 
-When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. Constructors are **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are two constructors for the ``Turtle`` class that take different parameters:
+When you use a class that someone has already written for you in a **library** that you can import like the ``Turtle`` class above, you can look up how to use the constructors and methods in the |turtle documentation| for that class.  The documentation will list the **signatures** (or headers) of the constructors or methods which will tell you their name and parameter list. The **parameter list**, in the **header** of a constructor, lists the **formal parameters**, declaring the variables that will be passed in as values and their data types. 
+
+Constructors are **overloaded** when there are multiple constructors, but the constructors have different signatures. They can differ in the number, type, and/or order of parameters.  For example, here are two constructors for the ``Turtle`` class that take different parameters:
 
 
 .. figure:: Figures/TurtleClassDefn.png
@@ -237,110 +236,6 @@ When you use a class that someone has already written for you in a **library** t
 
    Which of these is the correct signature for a no-argument constructor?
 
-
-Calendar Example
-----------------
-
-Here is another example. There is a class called ``GregorianCalendar`` in Java that can be used for dates and times. You can use this class by adding the line ``import java.util.GregorianCalendar;`` which will use this class library. Then, you can create an object variable called ``today`` that uses the default constructor to initialize ``today`` to refer to a ``GregorianCalendar`` object with the current date and time.
-
-.. activecode:: GregorianCalendar1
-    :language: java
-
-    Run the code below to see what it does. Note that the code below will return the current date and time on the server which might be different from the time where you are.
-    ~~~~
-    import java.util.GregorianCalendar;
-
-    public class Test1
-    {
-        public static void main(String[] args)
-        {
-            GregorianCalendar today = new GregorianCalendar();
-            System.out.println("Current date and time on server: "
-                         + today.getTime());
-        }
-     }
-
-The ``GregorianCalendar`` class also has a constructor that takes a particular year, month (note that January is 0), and day as parameters to set up a specific date. Here's the same program again but with a new variable ``myDate`` that refers to a ``GregorianCalendar`` object with the date 1/1/2020.
-
-|CodingEx| **Coding Exercise:**
-
-
-
-.. activecode:: GregorianCalendar2
-    :language: java
-
-    Run the code below to see the use of both constructors. Try adding another ``GregorianCalendar`` object to the program for your birthdate and have it print it out. Which constructor do you need to use?
-    ~~~~
-    import java.util.GregorianCalendar;
-
-    public class Test2
-    {
-        public static void main(String[] args)
-        {
-            GregorianCalendar today = new GregorianCalendar();
-            GregorianCalendar myDate = new GregorianCalendar(2020, 0, 1);
-            System.out.println("Current date and time on server: "
-                         + today.getTime());
-            System.out.println("New Year's day: "
-                         + myDate.getTime());
-        }
-     }
-
-.. |documentation| raw:: html
-
-   <a href="https://docs.oracle.com/javase/7/docs/api/java/util/GregorianCalendar.html" target="_blank" style="text-decoration:underline">documentation</a>
-
-
-Here is the |documentation| for the GregorianCalendar class which lists two constructors for the class:
-
-- GregorianCalendar() : Constructs a default ``GregorianCalendar`` using the current time in the default time zone with the default locale.
-- GregorianCalendar(int year, int month, int dayOfMonth) : Constructs a ``GregorianCalendar`` with the given date set in the default time zone with the default locale.
-
-Formal Parameters, Actual Parameters, and Call by Value
-----------------------------------------------------------
-
-When a constructor like ``GregorianCalendar(2001,1,1)`` is called, the **formal parameters**, (year, month, dayOfMonth), are set to copies of the  **actual parameters** (or **arguments**), which are (2001,1,1).  This is also called **call by value** which means that copies of the actual parameter values are passed to the constructor.  These values are used to initialize the object's attributes.
-
-.. figure:: Figures/parameterMapping.png
-    :width: 600px
-    :align: center
-    :alt: Parameter Mapping
-    :figclass: align-center
-
-    Figure 4: Parameter Mapping
-
-|Exercise| **Check your understanding**
-
-The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the year and month in the ``GregorianCalendar`` constructor, you will get a completely different date!
-
-.. mchoice:: 2_2_formal_parms
-   :practice: T
-   :answer_a: objects
-   :answer_b: classes
-   :answer_c: formal parameters
-   :answer_d: actual parameters
-   :correct: c
-   :feedback_a: Objects have attributes and behavior.
-   :feedback_b: A class defines the data and behavior for all objects of that type.
-   :feedback_c: A formal parameter is in the constructor's signature.
-   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
-
-   In ``public World(int width, int height)`` what are ``width`` and ``height``?
-
-.. mchoice:: 2_2_actual_parms
-   :practice: T
-   :answer_a: objects
-   :answer_b: classes
-   :answer_c: formal parameters
-   :answer_d: actual parameters
-   :correct: d
-   :feedback_a: Objects have attributes and behavior.
-   :feedback_b: A class defines the data and behavior for all objects of that type.
-   :feedback_c: A formal parameter is in the constructor's signature.
-   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
-
-   In ``new World(150, 200)`` what are ``150`` and ``200``?
-
 In Unit 5, you will learn to write your own classes. However, if you see a class definition on the AP exam, like the one below for a class called ``Date``, you should be able to pick out the attributes (instance variables) and the constructors and know how to use them.
 
 .. figure:: Figures/DateClass.png
@@ -349,7 +244,7 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
     :alt: A Date class showing attributes and constructors
     :figclass: align-center
 
-    Figure 5: A Date class showing attributes and constructors
+    Figure 4: A Date class showing attributes and constructors
 
 |Exercise| **Check your understanding**
 
@@ -380,19 +275,65 @@ In Unit 5, you will learn to write your own classes. However, if you see a class
    :practice: T
    :answer_a: Date d = new Date();
    :answer_b: Date d = new Date(9,20);
-   :answer_c: Date d = new Date(9,20,2019);
-   :answer_d: Date d = new Date(2019,9,20);
-   :answer_e: Date d = new Date(2019,20,9);
+   :answer_c: Date d = new Date(9,20,2020);
+   :answer_d: Date d = new Date(2020,9,20);
+   :answer_e: Date d = new Date(2020,20,9);
    :correct: d
-   :feedback_a: This would initialize the date attributes to today's date according to the constructor comment above, which might not be Sept. 20, 2019.
+   :feedback_a: This would initialize the date attributes to today's date according to the constructor comment above, which might not be Sept. 20, 2020.
    :feedback_b: There is no Date constructor that takes 2 parameters according to the figure above.
    :feedback_c: The comment for the second constructor in the Date class above says that the first parameter must be the year.
    :feedback_d: This matches the second constructor above with the parameters year, month, day.
    :feedback_e: Make sure the order of the parameters match the constructor signature above.
 
-   Given the ``Date`` class in the figure above and assuming that months in the ``Date`` class are numbered starting at 1, which of the following code segments will create a ``Date`` object for the date September 20, 2019 using the correct constructor?
+   Given the ``Date`` class in the figure above and assuming that months in the ``Date`` class are numbered starting at 1, which of the following code segments will create a ``Date`` object for the date September 20, 2020 using the correct constructor?
 
-This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors.
+
+Formal and Actual Parameters
+--------------------------------
+
+When a constructor like ``Date(2005,9,1)`` is called, the **formal parameters**, (year, month, day), are set to copies of the  **actual parameters** (or **arguments**), which are (2005,9,1).  This is also called **call by value** which means that copies of the actual parameter values are passed to the constructor.  These values are used to initialize the object's attributes.
+
+.. figure:: Figures/parameterMappingDate.png
+    :width: 450px
+    :align: center
+    :alt: Parameter Mapping
+    :figclass: align-center
+
+    Figure 5: Parameter Mapping
+
+The type of the values being passed in as arguments have to match the type of the formal parameter variables. We cannot give a constructor a ``String`` object when it is expecting an ``int``. The order of the arguments also matters. If you mix up the month and the day in the ``Date`` constructor, you will get a completely different date, for example January 9th (1/9) instead of Sept. 1st (9/1).
+
+|Exercise| **Check your understanding**
+
+.. mchoice:: 2_2_formal_parms
+   :practice: T
+   :answer_a: objects
+   :answer_b: classes
+   :answer_c: formal parameters
+   :answer_d: actual parameters
+   :correct: c
+   :feedback_a: Objects have attributes and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: A formal parameter is in the constructor's signature.
+   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
+
+   In ``public World(int width, int height)`` what are ``width`` and ``height``?
+
+.. mchoice:: 2_2_actual_parms
+   :practice: T
+   :answer_a: objects
+   :answer_b: classes
+   :answer_c: formal parameters
+   :answer_d: actual parameters
+   :correct: d
+   :feedback_a: Objects have attributes and behavior.
+   :feedback_b: A class defines the data and behavior for all objects of that type.
+   :feedback_c: A formal parameter is in the constructor's signature.
+   :feedback_d: A actual parameter (argument) is the value that is passed into the constructor.
+
+   In ``new World(150, 200)`` what are ``150`` and ``200``?
+
+This lesson introduces a lot of vocabulary, but don't worry if you don't understand everything about classes and constructors yet. You will learn more about how this all works in Unit 5 when you write your own classes and constructors. And you will see parameters again with methods in the next lessons.
 
 |Groupwork| Programming Challenge : Debugging
 ---------------------------------------------

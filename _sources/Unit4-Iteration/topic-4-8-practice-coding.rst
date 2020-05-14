@@ -8,13 +8,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex1
 
         .. tab:: Question
-
-           
-           Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 1 (inclusive).  
            
            .. activecode::  ch6ex1q
               :language: java
    
+              Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 1 (inclusive).  
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -31,11 +30,11 @@ Coding Practice with Loops
 
         .. tab:: Answer
         
-           In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
-        
            .. activecode::  ch6ex1a
               :language: java
    
+              In a ``for`` loop you declare and initialize the variable(s), specify the condition, and specify how the loop variable(s) change in the header of the ``for`` loop as shown below.
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -55,13 +54,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex2
 
         .. tab:: Question
-
-           
-           Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 1 to 10 (inclusive).
            
            .. activecode::  ch6ex2q
               :language: java
    
+              Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 1 to 10 (inclusive).
+              ~~~~
               public class Test
               {
                   public static void main(String[] args)
@@ -100,14 +98,14 @@ Coding Practice with Loops
                 
 .. tabbed:: ch6ex3
 
-        .. tab:: Question
-
-           
-           Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 15 (inclusive).    
+        .. tab:: Question  
            
            .. activecode::  ch6ex3q
               :language: java
    
+                         
+              Rewrite the following code so that it uses a ``for`` loop instead of a ``while`` loop to print out all the integers from 5 to 15 (inclusive).  
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -149,13 +147,13 @@ Coding Practice with Loops
 .. tabbed:: ch6ex4
 
         .. tab:: Question
-
-           
-           Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 10 to 100 by 10's (inclusive).
            
            .. activecode::  ch6ex4q
               :language: java
    
+                         
+              Rewrite the following code to use a ``while`` loop instead of a ``for`` loop to print out the numbers from 10 to 100 by 10's (inclusive).
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -196,13 +194,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex5
 
         .. tab:: Question
-
-           
-           The following code should print the values from 1 to 10 (inclusive) but has errors.  Fix the errors so that the code works as intended. If the code is in an infinite loop you can refresh the page to stop the loop. 
            
            .. activecode::  ch6ex5q
               :language: java
-   
+              
+              The following code should print the values from 1 to 10 (inclusive) but has errors.  Fix the errors so that the code works as intended. If the code is in an infinite loop you can refresh the page in the browser to stop the loop and then click on Load History and move the bar above it to see your last changes.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -245,13 +242,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex6
 
         .. tab:: Question
-
-           
-           The following code should print the values from 10 to 5, but it has errors.  Fix the errors so that the code works as intended.
            
            .. activecode::  ch6ex6q
               :language: java
    
+              The following code should print the values from 10 to 5, but it has errors.  Fix the errors so that the code works as intended.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -294,13 +290,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex7n
 
         .. tab:: Question
-
-           
-           The following code should print the values from 10 to 1, but it has errors.  Fix the errors so that the code works as intended.
            
            .. activecode::  ch6ex7nq
               :language: java
    
+              The following code should print the values from 10 to 1, but it has errors.  Fix the errors so that the code works as intended.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -344,12 +339,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex8n
 
         .. tab:: Question
-  
-           Finish the code below to print a countdown from 100 to 0 by 10's.
            
            .. activecode::  ch6ex8nq
               :language: java
    
+              Finish the code below to print a countdown from 100 to 0 by 10's.
+              ~~~~           
               public class Test1
               {
                   public static void main(String[] args)
@@ -385,12 +380,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex9n
 
         .. tab:: Question
-  
-           Finish the following code so that it prints a string minus the last character each time through the loop until there are no more characters in the string.
            
            .. activecode::  ch6ex9nq
               :language: java
-   
+  
+              Finish the following code so that it prints a string minus the last character each time through the loop until there are no more characters in the string.       
+              ~~~~       
               public class Test1
               {
                   public static void main(String[] args)
@@ -428,13 +423,14 @@ Coding Practice with Loops
                 
 .. tabbed:: ch6ex10n
 
-        .. tab:: Question
-  
-           Finish the code to print the value of ``x`` and ``" is even"`` if ``x`` is even and ``" is odd"`` if it is odd for all values from 10 to 1.   
+        .. tab:: Question  
            
            .. activecode::  ch6ex10nq
               :language: java
    
+  
+              Finish the code to print the value of ``x`` and ``" is even"`` if ``x`` is even and ``" is odd"`` if it is odd for all values from 10 to 1. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -473,13 +469,13 @@ Coding Practice with Loops
                 
 .. tabbed:: ch6ex11n
 
-        .. tab:: Question
-  
-           Finish the code below to print the values for ``10 * x`` where ``x`` changes from 0 to 10.  
+        .. tab:: Question  
            
            .. activecode::  ch6ex11nq
               :language: java
-   
+     
+              Finish the code below to print the values for ``10 * x`` where ``x`` changes from 0 to 10.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -490,12 +486,12 @@ Coding Practice with Loops
 
 
         .. tab:: Answer
-        
-           Use a ``for`` loop with ``x`` changing from 0 to 10 and print the value of ``x`` and ``10 * x``.  Use parentheses around ``x * 10`` to make sure it is evaluated before it is turned into a string.
            
            .. activecode::  ch6ex11na
               :language: java
    
+              This is the answer to the question above. Use a ``for`` loop with ``x`` changing from 0 to 10 and print the value of ``x`` and ``10 * x``.  Use parentheses around ``x * 10`` to make sure it is evaluated before it is turned into a string.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -513,13 +509,13 @@ Coding Practice with Loops
                 
 .. tabbed:: ch6ex12n
 
-        .. tab:: Question
-  
-           Finish the code to loop printing the message each time through the loop and remove an ``x`` from the message until all the ``x``'s are gone.   
+        .. tab:: Question  
            
            .. activecode::  ch6ex12nq
               :language: java
    
+              Finish the code to loop printing the message each time through the loop and remove an ``x`` from the message until all the ``x``'s are gone. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -558,60 +554,67 @@ Coding Practice with Loops
                 :shortname: cslearn4u
                 :identifier: javareview_ch6ex12nd
                 
-.. tabbed:: ch6ex13n
+
+.. tabbed:: ch6ex16n
 
         .. tab:: Question
-  
-           Write the code below to print 55555, 4444, 333, 22, with each on a different line.  
            
-           .. activecode::  ch6ex13nq
+           .. activecode::  ch6ex16nq
               :language: java
-   
+  
+              Write the code below to print the number of ``x``'s in the string message.  Use the ``indexOf`` and ``substring`` methods.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
+                      String message = "xyxxzax";
                   }
               }
 
 
         .. tab:: Answer
         
-           Use nested ``for`` loops. The outer loop controls what is printed on each row and the number of rows.  The inner loop controls the number of values printer per row. 
+           Use indexOf to find the next ``x``.  Loop while pos is greater than or equal to 0.  Use substring to reset message beyond the next ``x``.   
            
-           .. activecode::  ch6ex13na
+           .. activecode::  ch6ex16na
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      for (int x = 5; x >= 1; x--)
+                      
+                      String message = "xyxxzax";
+                      int pos = message.indexOf("x");
+                      int count = 0;
+                      while (pos >= 0)
                       {
-                         for (int y = x; y > 0; y--)
-                         {
-                             System.out.print(x);
-                         }
-                         System.out.println();
+                          count++;
+                          message = message.substring(pos+1);
+                          pos = message.indexOf("x");
                       }
+                      System.out.println("There were " + count + " x's");
                   }
               }
               
         .. tab:: Discussion 
-
-            .. disqus::
+        
+           .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch6ex13nd
+                :identifier: javareview_ch6ex16nd
                 
+
+
 .. tabbed:: ch6ex14n
 
-        .. tab:: Question
-  
-           Write the code below to print a rectangle of stars (``*``) with 5 rows of stars and 3 stars per row. 
+        .. tab:: Question 
            
            .. activecode::  ch6ex14nq
               :language: java
    
+              Write the code below to print a rectangle of stars (``*``) with 5 rows of stars and 3 stars per row.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -652,12 +655,12 @@ Coding Practice with Loops
 .. tabbed:: ch6ex15n
 
         .. tab:: Question
-  
-           Write the code below to print a rectangle of stars (``*``) with 3 rows of stars and 5 stars per row. 
            
            .. activecode::  ch6ex15nq
               :language: java
    
+              Write the code below to print a rectangle of stars (``*``) with 3 rows of stars and 5 stars per row. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -694,60 +697,48 @@ Coding Practice with Loops
                 :shortname: cslearn4u
                 :identifier: javareview_ch6ex15nd
                 
-.. tabbed:: ch6ex16n
 
-        .. tab:: Question
-  
-           Write the code below to print the number of ``x``'s in the string message.  Use the ``indexOf`` and ``substring`` methods.
+.. tabbed:: ch6ex13n
+
+        .. tab:: Question 
            
-           .. activecode::  ch6ex16nq
+           .. activecode::  ch6ex13nq
               :language: java
    
+              Write the code below to print 55555, 4444, 333, 22, 1 with each on a different line. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      String message = "xyxxzax";
                   }
               }
 
 
         .. tab:: Answer
         
-           Use indexOf to find the next ``x``.  Loop while pos is greater than or equal to 0.  Use substring to reset message beyond the next ``x``.   
+           Use nested ``for`` loops. The outer loop controls what is printed on each row and the number of rows.  The inner loop controls the number of values printer per row. 
            
-           .. activecode::  ch6ex16na
+           .. activecode::  ch6ex13na
               :language: java
    
               public class Test1
               {
                   public static void main(String[] args)
                   {
-                      
-                      String message = "xyxxzax";
-                      int pos = message.indexOf("x");
-                      int count = 0;
-                      while (pos >= 0)
+                      for (int x = 5; x >= 1; x--)
                       {
-                          count++;
-                          message = message.substring(pos+1);
-                          pos = message.indexOf("x");
+                         for (int y = x; y > 0; y--)
+                         {
+                             System.out.print(x);
+                         }
+                         System.out.println();
                       }
-                      System.out.println("There were " + count + " x's");
                   }
               }
               
         .. tab:: Discussion 
-        
-           .. disqus::
+
+            .. disqus::
                 :shortname: cslearn4u
-                :identifier: javareview_ch6ex16nd
-
-                
-                
-
-  
-   
-
-
-   
+                :identifier: javareview_ch6ex13nd

@@ -27,11 +27,13 @@ Enhanced For-Each Loop for 2D Arrays (Day 2)
 ..	index::
 	pair: 2D Array; for-each loop
 
-Since 2D arrays are really arrays of arrays you can also use a nested for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row!
+Since 2D arrays are really arrays of arrays you can also use a nested enhanced for-each loop to loop through all elements in an array.  We loop through each of the inner arrays and loop through all the values in each inner array. Notice the type of the outer loop array variable -- it is an array that will hold each row!
 
 .. activecode:: getAvgForEach
    :language: java
    
+   Nested enhanced for loops demo.
+   ~~~~
    public class Test
    {
 
@@ -68,12 +70,13 @@ All of the array algorithms can be applied to 2D arrays too. For example, counti
 
 |CodingEx| **Coding Exercise**
 
-What will the following code print out? Can you add another method that gets the total for a column? 
+
 
 .. activecode:: lca2dloopPart
    :language: java 
  
-
+   What will the following code print out? Can you add another method that gets the total for a column? 
+   ~~~~
    public class Test
    {
 
@@ -102,6 +105,8 @@ You can loop through just part of a 2D array. You can change the starting value 
 .. activecode:: lca2dloopPart2
    :language: java 
 
+   Loooping through just part of a 2D array.
+   ~~~~
    public class Test
    {
       public static int countValues(int value, int[][] a, 
@@ -131,12 +136,13 @@ Here is a linear search algorithm where we access each row and then apply a line
 
 |CodingEx| **Coding Exercise**
 
-What will the following code print? Can you change the code to work for a String 2D array?
+
 
 .. activecode:: linearSearch2DArrays
    :language: java 
- 
-
+   
+   What will the following code print? Can you change the code to work for a String 2D array?
+   ~~~~
    public class Test
    {
       public static boolean search(int[][] array, int value)
@@ -189,7 +195,11 @@ What will the following code print? Can you change the code to work for a String
 
 .. |repl.it project| raw:: html
 
-   <a href= "https://repl.it/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it project</a>
+   <a href= "https://repl.it/@BerylHoffman/Picture-Lab" style="text-decoration:underline" target="_blank" >Repl.it Swing project</a>
+
+.. |repl 2| raw:: html
+
+   <a href= "https://repl.it/@jds7184/PictureLab" style="text-decoration:underline" target="_blank" >alternative Repl.it project</a>
 
 
 .. raw:: html
@@ -211,8 +221,7 @@ model, which stores values for red, green, and blue, each ranging from 0 to 255.
 
 
 
-Scroll down to the bottom of the following code and take a look at the 
-switchColors method. Run the code and watch what it does. It switches RGB values of each pixel and the colors change! 
+Scroll down to the bottom of the following code and take a look at the switchColors method. Run the code and watch what it does. It switches RGB values of each pixel and the colors change! 
 
 
 
@@ -220,6 +229,8 @@ switchColors method. Run the code and watch what it does. It switches RGB values
     :language: java
     :datafile: pictureClasses, arch.jpg
 
+    Picture Lab
+    ~~~~
     import java.awt.*;
     import java.awt.font.*;
     import java.awt.geom.*;
@@ -327,7 +338,11 @@ switchColors method. Run the code and watch what it does. It switches RGB values
          }
        }
      }
-
+      
+     /* Add new methods here.
+        zeroBlue() method sets the blue values at all pixels to zero 
+     */
+     
       /* Main method for testing 
        */
       public static void main(String[] args)
@@ -336,10 +351,26 @@ switchColors method. Run the code and watch what it does. It switches RGB values
         arch.show();
         arch.switchColors();
         arch.show();
+        
+        //Uncomment the follow code to test your zeroBlue method.    
+        /*
+        Picture arch2 = new Picture("arch.jpg");
+        System.out.println("Zero blue: "); //using new method
+        arch2.zeroBlue();
+        arch2.show();
+        */ 
+        System.out.println();
+
+        //Uncomment the follow code to test your keepOnlyBlue method.
+        /*   
+        System.out.println("Keep only blue: ");
+        arch.keepOnlyBlue();// using new method
+        arch.show();
+        */  
       }
     } 
 
-Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. Test it in the active code above or on |repl.it project| or your own IDE to see what it does.  
+Now, write a similar method called zeroBlue() that sets the blue values at all pixels to zero. You can test it in the active code above or on this |repl.it project| or this |repl 2| by teacher Jason Stark from LA (click output.jpg to see the result)  or your own IDE to see what it does.  
 
 Here are some more exercises from the |Picture Lab|:
 

@@ -106,33 +106,9 @@ Imagine that your cell phone wanted to remind you to take an umbrella if it was 
    -    :^Drive carefully$: Correct.  If the boolean is false, it will skip executing the print statement after the if.
         :.*: Try it and see
         
-        
-  
 
-.. note::
-
-   An if will only execute one single statement following it until the semicolon (;) unless there is a block of statements enclosed in a pair of open and closed curly braces ``{`` and ``}``.  Java doesn't care if you indent the code -- it goes by the { }. 
-   
-|CodingEx| **Coding Exercise**
-
-
-   
-.. activecode:: lccb2-indent
-   :language: java
-
-   The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
-   ~~~~
-   public class Test
-   {
-      public static void main(String[] args)
-      {
-        boolean isCold = false;
-        if (isCold) 
-            System.out.println("Wear a coat");
-            System.out.println("Wear gloves");
-        System.out.println("Bye");
-      }
-   }
+Relational Operators in If Statements
+---------------------------------------
 
 Most if statements have a boolean condition that uses relational operators like ==, !=, <, >, <=, >=, as we saw in the last lesson. 
 
@@ -151,7 +127,7 @@ Most if statements have a boolean condition that uses relational operators like 
       public static void main(String[] args)
       {
         // Get a random number from -10 up to 10.
-        int number = (int) (Math.random()*20 - 10);
+        int number = (int) (Math.random()*21 - 10);
         System.out.println("The number is " + number);
         
         // is it positive?
@@ -176,20 +152,23 @@ Most if statements have a boolean condition that uses relational operators like 
 
 .. mchoice:: qcb1_2
    :practice: T
-   :answer_a: x = 0;
-   :answer_b: if (x > 2) x *= 2;
-   :answer_c: if (x > 2) x = 0;
-   :answer_d: if (x > 2) x = 0; else x *= 2;
+   :answer_a: 3
+   :answer_b: 6
+   :answer_c: 0
+   :answer_d: 4
+   :answer_e: The code will not compile
    :correct: c
-   :feedback_a: If x was set to 1 then it would still equal 1.
-   :feedback_b: What happens in the original when x is greater than 2 and then greater than 4? Do both if statements.  
+   :feedback_a: x is changed by the if statements.
+   :feedback_b: What happens when x is greater than 2 and then greater than 4? Do both if statements.  
    :feedback_c: If x is greater than 2, it's always doubled, and then that result is always greater than 4, so it's set to 0 in the second if statement.  
-   :feedback_d: In the original what happens if x is less than 2?  Does this give the same result?
+   :feedback_d: x is changed by the if statements.
+   :feedback_e: This code will compile.
 
-   Which of the following is equivalent to the code segment below?  
+   Consider the following code segment. What is printed as a result of executing the code segment?
    
    .. code-block:: java
 
+     int x = 3;
      if (x > 2) 
      {
          x = x * 2;
@@ -198,11 +177,45 @@ Most if statements have a boolean condition that uses relational operators like 
      {
         x = 0;
      }
+     System.out.print(x);
+     
 
 .. More practice with if == and < > Active code.
     Note always use == not = in an if statement! Test not assign.
 
+        
+Common Errors with If Statements
+---------------------------------
 
+Here are some rules to follow with if statements to avoid some common errors:
+
+   - Always use curly brackets ``{`` and ``}`` to enclose the block of statements under the if condition. Java doesn't care if you indent the code -- it goes by the { }. 
+   
+   - Don't put in a semicolon ``;`` after the first line of the if statement, if (test);. The if statement is a multiline block of code that starts with the if condition and then { the body of the if statement }. 
+   
+   - Always use **==**, not =, in the condition of an if statement to test a variable. One = assigns, two == tests!
+
+
+|CodingEx| **Coding Exercise**
+
+   
+.. activecode:: lccb2-indent
+   :language: java
+
+   The code below doesn't work as expected.  Fix it to only print "Wear a coat" and "Wear gloves" when isCold is true.
+   ~~~~
+   public class Test
+   {
+      public static void main(String[] args)
+      {
+        boolean isCold = false;
+        if (isCold = true); 
+            System.out.println("Wear a coat");
+            System.out.println("Wear gloves");
+        
+      }
+   }
+   
 |Groupwork| Programming Challenge : Magic 8 Ball
 ------------------------------------------------
 
@@ -215,11 +228,15 @@ Most if statements have a boolean condition that uses relational operators like 
 .. |video| raw:: html
 
    <a href="https://www.youtube.com/watch?v=WSaS17CSS4c" target="_blank">video</a>
-   
+
+
+.. |lesson 2.9| raw:: html
+
+   <a href="https://runestone.academy/runestone/books/published/csawesome/Unit2-Using-Objects/topic-2-9-Math.html" target="_blank">lesson 2.9</a>
  
 Have you ever seen a Magic 8 ball? You ask it a yes-no question and then shake it to get a random response like "Signs point to yes!", "Very doubtful", etc. If you've never seen a Magic 8 ball, check out this |video|.
 
-We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8.
+We encourage you to work in pairs for this challenge. Come up with 8 responses to yes-no questions. Write a program below that chooses a random number from 1 to 8 and then uses if statements to test the number and print out the associated random response from 1-8. If you need help with random numbers, see |lesson 2.9|.
 
 .. activecode:: challenge3-2-if-Magic8ball
    :language: java

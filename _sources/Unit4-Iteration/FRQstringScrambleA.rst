@@ -1,15 +1,15 @@
 .. qnum::
-   :prefix: 4-11-
+   :prefix: 4-12-
    :start: 1
 
 Free Response - String Scramble A
 -----------------------------------
 
 ..	index::
-	  single: string scramble
+    single: string scramble
     single: free response
 
-The following is part a of a free response question from 2014.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+The following is part a of a free response question from 2014.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 1.**  This question involves reasoning about strings made up of uppercase letters. You will implement two related methods that appear in the same class (not shown). The first method takes a single string parameter and returns a scrambled version of that string. The second method takes a list of strings and modifies the list by scrambling each entry in the list. Any entry that cannot be scrambled is removed from the list.
 

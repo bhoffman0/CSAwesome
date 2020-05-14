@@ -25,7 +25,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
        public static void main(String[] args)
        {
    =====  
-           int num = Math.random() * 50 + 1;
+           int num = (int)(Math.random() * 50) + 1;
    =====
            System.out.println(num);
    =====
@@ -37,68 +37,6 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            int num = Math.random() * 50; #distractor
            
 
-.. parsonsprob:: ch4ex1muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following program segment should print Maria's first name on one line and her last name on the next line.  But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   String firstName = "Maria";
-   String lastName = "Hernandez";
-   =====
-   System.out.println(firstName);
-   =====
-   System.out.println(lastName);
-   =====
-   System.out.printlln(firstname); #distractor
-
-
-.. parsonsprob:: ch4ex2muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The following program segment should print the words to a famous poem. But the blocks have been mixed up.  Drag the blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   System.out.println("Roses are red");
-   =====
-   System.out.println("Violets are blue");
-   =====
-   System.out.println("Sugar is sweet");
-   =====
-   System.out.println("And so are you");
-
-
-.. .. parsonsprob:: ch4ex3muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The main method in the following class should print Marcus's name on one line and his favorite color on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   public class Test1
-   {
-   =====
-       public static void main(String[] args)
-       {
-   =====
-           String name = "Marcus";
-           String color = "Blue";
-   =====
-           System.out.println(name);
-   =====
-           System.out.println(color);
-   =====
-       } // end main method
-
-   =====
-   } // end of class
-   =====
-           System.out.println(Name); #distractor
 
 
 .. parsonsprob:: ch4ex4muc
@@ -129,61 +67,6 @@ Try to solve each of the following. Click the *Check Me* button to check each so
            System.out.println(part1 * part2); #distractor
 
 
-.. .. parsonsprob:: ch4ex5muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The main method in the following class should print the name on one line followed by the age on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   public class Test1
-   {
-   =====
-       public static void main(String[] args)
-       {
-   =====
-           String name = "Layla";
-           String age = "16";
-   =====
-           System.out.println("Your name is " + name);
-   =====
-           System.out.println("Your age is " + age);
-   =====
-       } // end main method
-   =====
-   } // end class
-   =====
-           System.out.println("Your age is " age); #distractor
-
-
-.. .. parsonsprob:: ch4ex6muc
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-
-   The main method in the following class should print the name on one line and the favorite food on the next line. But, the blocks have been mixed up and include an extra block that isn't needed in the solution.  Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
-   -----
-   public class Test1
-   {
-   =====
-       public static void main(String[] args)
-   =====
-       {
-   =====
-           String name = "Julian";
-           String food = "chicken wings";
-   =====
-           System.out.println("Your name is " + name);
-   =====
-           System.out.println("You favorite food is " + food);
-   =====
-       }
-   =====
-   }
-   =====
-           System.println("Your name is " + name); #distractor
 
 .. parsonsprob:: ch4ex7muc
    :numbered: left
@@ -218,6 +101,7 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    }
    =====
            System.out.println(initials); #distractor
+
 
 .. parsonsprob:: ch4ex8muc
    :numbered: left

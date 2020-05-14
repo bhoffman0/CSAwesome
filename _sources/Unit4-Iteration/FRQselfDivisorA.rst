@@ -1,15 +1,15 @@
 .. qnum::
-   :prefix: 4-10-
+   :prefix: 4-11-
    :start: 1
 
 Free Response - Self Divisor A
 -------------------------------
 
 ..	index::
-	  single: self divisor
+    single: self divisor
     single: free response
 
-The following is part a of a free response question from 2007.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+The following is part a of a free response question from 2007.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 1.**  A positive integer is called a "self-divisor" if every decimal digit of the number is a divisor of the number, that is, the number is evenly divisible by each and every one of its digits. For example, the number 128 is a self- divisor because it is evenly divisible by 1, 2, and 8. However, 26 is not a self-divisor because it is not evenly divisible by the digit 6. Note that 0 is not considered to be a divisor of any number, so any number containing a 0 digit is NOT a self-divisor. There are infinitely many self-divisors.
 

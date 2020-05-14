@@ -20,18 +20,18 @@ RandomStringChooser - Part B
         */
        public RandomLetterChooser (String str)
        { /* to be implemented in part (b) */ }
-       
+
        /** Returns an array of single-letter strings.
         *  Each of these strings consists of a single letter from str.  Element k
         *  of the returned array contains the single letter at position k of str.
-        *  For example, getSingleLetters("cat") return the 
+        *  For example, getSingleLetters("cat") return the
         *  array {"c", "a", "t" }.
         */
        public static String[] getSingleLetters(String str)
        {    /* implementation not shown */ }
-       
 
-The following code segment shows an example of using ``RandomLetterChooser``. 
+
+The following code segment shows an example of using ``RandomLetterChooser``.
 
 
 .. code-block:: java
@@ -41,16 +41,16 @@ The following code segment shows an example of using ``RandomLetterChooser``.
    {
        System.out.print(letterChooser.getNext());
    }
-   
+
 The code segment will print the three letters in ``"cat"`` in one of the possible orders.  Because there are only three letters in the original string, the code segment prints ``"NONE"`` the fourth time through the loop.  One posible output is shown below.
 
-   
+
 .. code-block:: java
- 
+
    actNONE
-   
-Assume that the ``RandomStringChooser`` class that you wrote in part (a) has been implemented correctly and that 
-``getSingleLetters`` works as specified.  You must use ``getSingleLetters`` appropriately to receive full credit. 
+
+Assume that the ``RandomStringChooser`` class that you wrote in part (a) has been implemented correctly and that
+``getSingleLetters`` works as specified.  You must use ``getSingleLetters`` appropriately to receive full credit.
 
 Complete the ``RandomLetterChooser`` constructor below.  The following code block shows the construtor declaration.
 
@@ -58,7 +58,7 @@ Complete the ``RandomLetterChooser`` constructor below.  The following code bloc
 
     /** Constructs a random letter chooser using the given string str.
      *  Precondition: str contains only letters.
-     */ 
+     */
     public RandomLetterChooser(String str)
 
 Try and Solve It
@@ -66,46 +66,49 @@ Try and Solve It
 
 Complete the ``RandomLetterChooser`` constructor below.
 
-The code below has a main method for testing.  Write the constructor for the ``RandomLetterChooser`` class and use the main method to test it.  
+The code below has a main method for testing.  Write the constructor for the ``RandomLetterChooser`` class and use the main method to test it.
 
 .. datafile:: RandomStringChooser.java
    :hide:
 
+   import java.util.List;
+   import java.util.ArrayList;
+   
    public class RandomStringChooser
    {
        /* field */
        private List<String> words;
-       
+
        /* constructor */
-       public RandomStringChooser(String[] wordArray) 
-       { 
+       public RandomStringChooser(String[] wordArray)
+       {
            words = new ArrayList<String>();
-           
+
            for (String singleWord : wordArray)
            {
                words.add(singleWord);
-           } 
+           }
        }
-       
+
        /* getNext method */
-       public String getNext() 
-       { 
+       public String getNext()
+       {
            int pos = 0;
-           
+
            if (words.size() > 0)
            {
                pos = (int) (Math.random() * words.size());
-               
+
                return words.remove(pos);
            }
-           return "NONE"; 
+           return "NONE";
         }
    }
 
 .. activecode:: RandomStrChooserB1
    :language: java
    :datafile: RandomStringChooser.java
-   
+
    import java.util.List;
    import java.util.ArrayList;
 
@@ -115,18 +118,18 @@ The code below has a main method for testing.  Write the constructor for the ``R
         *  Precondition: str contains only letters.
         */
        public RandomLetterChooser (String str)
-       {  
+       {
          //*** write the constructor here ***!
        }
-       
+
        /** Returns an array of single-letter strings.
         *  Each of these strings consists of a single letter from str.  Element k
         *  of the returned array contains the single letter at position k of str.
-        *  For example, getSingleLetters("cat") return the 
+        *  For example, getSingleLetters("cat") return the
         *  array {"c", "a", "t" }.
         */
        public static String[] getSingleLetters(String str)
-       {   
+       {
           String[] strArr = new String[str.length()];
           for (int i = 0; i < str.length(); i++)
           {
@@ -134,7 +137,7 @@ The code below has a main method for testing.  Write the constructor for the ``R
           }
           return strArr;
        }
-       
+
        public static void main(String[] args)
        {
            RandomLetterChooser letterChooser = new RandomLetterChooser("cat");
@@ -145,8 +148,3 @@ The code below has a main method for testing.  Write the constructor for the ``R
            }
         }
    }
-   
-   
-       
-
-

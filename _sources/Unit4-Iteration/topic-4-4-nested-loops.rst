@@ -39,7 +39,7 @@ A **nested loop** has one loop inside of another.  These are typically used for 
     
 .. |Java visualizer| raw:: html
 
-   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%200%3B%20row%20%3C%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%200%3B%20col%20%3C%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&cumulative=false&curInstr=64&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
+   <a href="http://www.pythontutor.com/visualize.html#code=public%20class%20NestedLoops%0A%7B%0A%20%20%20public%20static%20void%20main%28String%5B%5D%20args%29%0A%20%20%20%7B%0A%20%20%20%20%20%20%20for%20%28int%20row%20%3D%201%3B%20row%20%3C%3D%203%3B%20row%2B%2B%29%0A%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20for%20%28int%20col%20%3D%201%3B%20col%20%3C%3D%205%3B%20col%2B%2B%29%0A%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20System.out.print%28%22*%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%20%20%20System.out.println%28%29%3B%0A%20%20%20%20%20%20%20%7D%0A%20%20%20%7D%0A%7D&cumulative=false&heapPrimitives=nevernest&mode=display&origin=opt-frontend.js&py=java&rawInputLstJSON=%5B%5D&textReferences=false&curInstr=0" target="_blank"  style="text-decoration:underline">Java visualizer</a>
 
 
 |CodingEx| **Coding Exercises**
@@ -50,16 +50,16 @@ What does the following code print out? Watch the code run in this |Java visuali
    :language: java
    
    
-   Can you change the code to be a 5x5 square of stars? Can you change it to be a 10x8 rectangle? Try swapping in this print statement for line 9 to see the rows and columns: System.out.print(row + "-" + col + " ");  
+   Can you change the code to be a 5x5 square of stars? Can you change it to be a 10x8 rectangle? Try replacing line 10 with this print statement to see the rows and columns: System.out.print(row + "-" + col + " ");  
    ~~~~
    public class NestedLoops
    {
 
       public static void main(String[] args)
       {
-          for (int row = 0; row < 3; row++)
+          for (int row = 1; row <= 3; row++)
           {
-              for (int col = 0; col < 5; col++)
+              for (int col = 1; col <= 5; col++)
               {
                   System.out.print("*");
               }
@@ -133,15 +133,20 @@ What does the following code print out? Watch the code run in this |Java visuali
        public static void main(String[] args)
        {
    =====
-           for (int x = 0; x < 10; x++) {
+           for (int x = 0; x < 10; x++) 
+           {
    =====
-               for (int y = 0; y < 5; y++) {
+               for (int y = 0; y < 5; y++) 
+               {
    =====
-               for (int y = 0; y <= 5; y++) { #paired
+               for (int y = 0; y <= 5; y++) 
+               { #paired
    =====
-                   System.out.println("*");
+                   System.out.print("*");
    =====
                }
+   =====
+               System.out.println();
    =====
            }
    =====

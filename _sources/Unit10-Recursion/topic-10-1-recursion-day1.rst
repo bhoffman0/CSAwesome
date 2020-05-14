@@ -162,11 +162,13 @@ See the method `factorial` below that calculates the **factorial** of a number. 
 
 |CodingEx| **Coding Exercise**
 
-Run the code below to test the factorial method. What's the factorial of 6? Add another test to print out the factorial of 6. What's the factorial of 1? Add another test to print out the factorial of 1.
+
 
 .. activecode:: FactorialTest
    :language: java
 
+   Run the code below to test the factorial method. What's the factorial of 6? Add another test to print out the factorial of 6. What's the factorial of 1? Add another test to print out the factorial of 1.
+   ~~~~
    public class FactorialTest
    {
 

@@ -72,7 +72,7 @@ There are two types of variables in Java: **primitive variables** that hold prim
     
     -  boolean - which store Boolean values (either true or false). 
 
-``String`` is one of the object types on the exam and is the name of a class in Java.  A *string* object has a sequence of characters enclosed in a pair of double quotes - like "Hello".  You will learn more about ``String`` objects in another unit. 
+**String** is one of the object types on the exam and is the name of a class in Java.  A *string* object has a sequence of characters enclosed in a pair of double quotes - like "Hello".  You will learn more about ``String`` objects in Unit 2. 
 
 
 .. note:: 
@@ -202,15 +202,17 @@ Or you can set an initial value for the variable in the variable declaration. He
 .. code-block:: java
 
   int score = 4;  
-  
+
+When you are printing out variables, you can use the **string concatenation** operator + to add them to another string inside System.out.print. Never put variables inside quotes "" because that will print out the variable name letter by letter. You do not want to print out the variable name, but the value of the variable in memory. If you're not sure what this means, try putting quotes around the variable and see what happens. In the print out, if you want spaces between words and variables, you must put the space in the quotes. If you forget to add spaces, you will get smushed output like "HiJose" instead of "Hi Jose".  
 
 |CodingEx| **Coding Exercise:** 
-
-Run the following code to see what is printed. Then, change the values and run it again. Notice that variables are never put into quotes "" because you do not want to print out the variable name, but the value of the variable in memory. If you're not sure what this means, try putting quotes around the variable and see what happens.
+ 
  
 .. activecode:: lcdv2
    :language: java
    
+   Run the following code to see what is printed. Then, change the values and run it again. Try adding quotes to variables and removing spaces in the print out statements to see what happens.
+   ~~~~
    public class Test2
    {
       public static void main(String[] args)
@@ -219,12 +221,17 @@ Run the following code to see what is printed. Then, change the values and run i
         score = 0;
         System.out.print("The score is ");
         System.out.println(score);
+        
         double price = 23.25;
-        System.out.println(price);
+        System.out.println("The price is " + price);
+        
         boolean won = false;
         System.out.println(won);
         won = true;
         System.out.println(won);
+        
+        String name = "Jose";
+        System.out.println("Hi " + name);
       }
    }
    
@@ -309,11 +316,13 @@ Run the following code to see what is printed. Then, change the values and run i
 
 The equal sign here ``=`` doesn't mean the same as it does in a mathematical equation where it implies that the two sides are equal.  Here it means set the value in the memory location (box) associated with the name on the left to a *copy* of the value on the right. The first line above sets the value in the box called score to 4. Also note that the variable has to be on the left side of the ``=`` and the value on the right.  Switching the two is called **assignment dyslexia**.  
    
-|CodingEx| **Coding Exercise:** This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
+|CodingEx| **Coding Exercise:** 
 
 .. activecode:: lcdv3
    :language: java
    
+   This is an example of *assignment dyslexia*, when the student has put the value on the left and the declaration on the right side.  Try to fix the following code to compile and run.
+   ~~~~
    public class Test3
    {
       public static void main(String[] args)
@@ -379,11 +388,13 @@ The keyword **final** can be used in front of a variable declaration to make it 
 
   final double PI = 3.14
 
-|CodingEx| **Coding Exercise:** Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
+|CodingEx| **Coding Exercise:** 
 
 .. activecode:: Testfn
    :language: java
    
+   Try the following code and notice the syntax error when we try to change the constant PI. Put the comment symbols // in front of that line to remove the error and run it again.
+   ~~~~
    public class TestFinal
    {
       public static void main(String[] args)
@@ -421,11 +432,13 @@ your variables crazy things like ``thisIsAReallyLongName``, especially on the AP
 	
 The convention in Java and many programming languages is to always start a variable name with a lower case letter and then uppercase the first letter of each additional word. Variable names can not include spaces so uppercasing the first letter of each additional word makes it easier to read the name.  Uppercasing the first letter of each additional word is called **camel case**. Another option is to use underscore ``_`` to separate words, but you cannot have spaces in a variable name. 
 
-Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  Run the code below to see the difference.
+
   
 .. activecode:: lcnv1
    :language: java
 
+   Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same.  Run the code below to see the difference.
+   ~~~~
    public class Test
    {
       public static void main(String[] args)
@@ -466,12 +479,14 @@ Java is case sensitive so ``playerScore`` and ``playerscore`` are not the same. 
 |Groupwork| Debugging Challenge : Weather Report
 ------------------------------------------------
 
-Debug the following code. Can you find the all the bugs and get the code to run? 
+
 
 
 .. activecode:: challenge1-3
    :language: java
 
+   Debug the following code. Can you find the all the bugs and get the code to run? 
+   ~~~~
    public class Challenge1_3
    {
       public static void main(String[] args)

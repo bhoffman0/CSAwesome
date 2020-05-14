@@ -3,12 +3,14 @@
     :align: center
 
 ==========================================
-AP CS A Java Course - 2019
+AP CS A Java Course
 ==========================================
 
-Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. This course is adapted from the Runestone Java Review course to follow the 2019 College Board unit ordering and learning objectives. If you are a teacher using this curriculum, please join the |teaching CSAwesome group|.
+Welcome to CS Awesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this course is to type in the url: **course.csawesome.org**
 
-To make sure the site saves your answers on questions, please click on the person icon at the top to register or login. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the course!
+This course is adapted from the Runestone Java Review course to follow the 2019 College Board unit ordering and learning objectives.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
+
+To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the course!
 
 
 .. raw:: html
@@ -108,11 +110,15 @@ Index
 
    <a href="https://groups.google.com/forum/#!forum/teaching-csawesome" target="_blank" style="text-decoration:underline">teaching CSAwesome group</a>
 
-If you see errors or bugs, please report them with this |errata form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans.
+.. |csawesome| raw:: html
 
-(last revised 10/25/19)
+   <a href="http://csawesome.org" target="_blank" style="text-decoration:underline">csawesome.org</a>
 
-© Copyright 2015 Barb Ericson, 2019 revised by Beryl Hoffman (`Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.
+If you see errors or bugs, please report them with this |errata form|. If you are a teacher who is interested in CS Awesome PDs or community, please fill out this |interest form| and join the |teaching CSAwesome group| which will give you access to lesson plans at |csawesome|.
+
+(last revised 4/26/2020)
+
+© Copyright 2015 Barb Ericson, Univ. Michigan, 2019 revised by Beryl Hoffman (Elms College, `Mobile CSP Project <http://mobilecsp.org>`_). Created using `Runestone  <http://runestone.academy>`_.
 
 
 .. raw:: html

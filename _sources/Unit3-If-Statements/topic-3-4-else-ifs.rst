@@ -184,7 +184,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
 .. activecode:: lccbIfDebug
    :language: java
    
-   The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Then, fix the code by adding in 4 else's to connect the if statements and see if it works.
+   The else-if connection is necessary if you want to hook up conditionals together. In the following code, there are 4 separate if statements instead of the if-else-if pattern. Will this code print out the correct grade? First, trace through the code to see why it prints out the incorrect grade. Then, fix the code by adding in 3 else's to connect the if statements and see if it works.
    ~~~~
    public class IfDebug
    {
@@ -211,7 +211,7 @@ Here is a flowchart for a conditional with 3 options like in the code above.
         }
         else
         {
-          grade = "E";
+          grade = "F";
         }
         
         System.out.println(grade);
@@ -242,7 +242,24 @@ Here is a flowchart for a conditional with 3 options like in the code above.
      if (score >= 70) grade = "C";
      if (score >= 60) grade = "D";
      else grade = "E";
+
+
+.. activecode::  ifelseifBattery
+  :language: java
      
+  Finish the following code so that it prints "Plug in your phone!" if the battery is below 50, "Unplug your phone!" if it is above 100, and "All okay!" otherwise. Change the battery value to test all 3 conditions.
+  ~~~~
+  public class BatteryTest
+  {
+      public static void main(String[] args)
+      {
+          int battery = 60;
+          
+          System.out.println("All okay!");
+      }
+  }
+
+
 |Groupwork| Programming Challenge : Adventure
 ---------------------------------------------
 

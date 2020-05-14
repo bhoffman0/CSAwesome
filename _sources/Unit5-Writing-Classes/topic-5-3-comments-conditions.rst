@@ -240,9 +240,9 @@ Let's consider the substring method in Java. This method has a strong preconditi
 Software Validity and Use-Case Diagrams
 ----------------------------------------
 
-Preconditions and postconditions are covered on the AP CS A exam. Software validity, testing, and use-case diagrams which are discussed in this subsection are not covered on the AP CS A exam, but they use preconditions and postconditions and are used by professional programmers.
+Preconditions and postconditions are covered on the AP CS A exam. Software validity, testing, and use-case diagrams which are discussed in this subsection are not covered on the AP CS A exam, but they are described here because they use preconditions and postconditions and are used by professional programmers.
 
-Determining the preconditions and postconditions also help us to test our code and determine the **validity** of our software.  Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use. 
+Determining the preconditions and postconditions help us to test our code and determine the **validity** of our software.  Software validity tests whether the software does what it is supposed to do before it is released. This is sometimes very important. For example, if the code is part of a satellite going to outerspace or is going to be used in an emergency condition, we want to test it thoroughly and make sure it works and is valid before it is put into use. 
 
 Good software testers actually try to break the code! They try all kinds of input to see what the software will do because you never know what users will try or what conditions there will be. So, always think what the preconditions of your code are and see what happens when you break them, and then see if you can protect or warn against that.
 
@@ -263,10 +263,44 @@ After drawing a Use-Case Diagram, designers write down the preconditions and the
 - Preconditions for "Eat Food": Customer has already ordered food. Staff has delivered food.
 - Postcondition for "Eat Food": Customer eats the food.
 
+|Exercise| **Check your understanding**
+
 .. shortanswer:: payconditions
 
    What are the preconditions and postconditions of the use-case "Pay for food"? Remember that these are often related to the other use-case conditions "order food" and "eat food". 
 
+Agile Software Development
+----------------------------
+
+There are many different models for software development. The **waterfall model**, developed in the 1970s, is a step by step model where each phase is finished before the next phase begins. This model has recently been criticized because it is not very adaptable. The more recent **Agile** development model involves iterative, incremental development where  teams works in short 2-3 week **sprints** to completely develop, test, and release a component of the project to the customer for feedback. It is very adaptable as project requirements change because of early testing, immediate customer feedback and collaboration.
+
+
+.. figure:: Figures/waterfallVsAgile.png
+    :width: 500px
+    :align: center
+    :figclass: align-center
+
+    Figure 2: Waterfall vs Agile Models 
+
+One very popular type of agile development is called **Scrum**. The following short |video| describes software development  with Scrum.
+
+.. |video| raw:: html
+
+   <a href="https://www.youtube.com/watch?v=TRcReyRYIMg" target="_blank">video</a>
+
+
+.. youtube:: TRcReyRYIMg
+    :height: 315
+    :width: 560
+    :align: left
+
+|Groupwork| Group Exercise
+
+.. |pogil game| raw:: html
+
+   <a href="https://www.agilesparks.com/blog/wake-up-in-the-morning-game/" target="_blank">Wake Up In the Morning Game</a>
+
+Try the |pogil game| in groups to practice the iterative and incremental agile development process.
 
 
 |Groupwork| Programming Challenge : Comments and Conditions

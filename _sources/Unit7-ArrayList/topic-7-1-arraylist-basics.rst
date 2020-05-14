@@ -115,7 +115,9 @@ Another option is to import everything at the same level in a package using ``im
 Declaring and Creating ArrayLists
 ----------------------------------
 
-To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList like ``String`` to hold strings as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what you allow in your ArrayList.  The generic type ArrayList<Type> is preferred over ArrayList because it allows the compiler to find errors that would otherwise be found at run-time. 
+To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be whatever type of objects you want to store in the ArrayList, for example ``String`` as shown in the code below.  You don't have to specify the **generic type** ``<Type>``, since it will default to ``Object``, but it is good practice to specify it to restrict what you allow in your ArrayList.  The generic type ArrayList<Type> is preferred over ArrayList because it allows the compiler to find errors that would otherwise be found at run-time. 
+
+
 
 .. code-block:: java 
 
@@ -123,15 +125,18 @@ To declare a ArrayList use ``ArrayList<Type> name``  Change the *Type* to be wha
     // An ArrayList of Strings:
     ArrayList<String> shoppingList = new ArrayList<String>();
 
+.. note::
+
+    ArrayLists can only hold objects like String and the wrapper classes Integer and Double. They cannot hold primitive types like int, double, etc.
 
 |CodingEx| **Coding Exercise**
-
-In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
 
 
 .. activecode:: ArrayListDeclare
    :language: java
 
+   In the code below we are declaring a variable called ``nameList`` that can refer to a ArrayList of strings, but currently doesn't refer to any ArrayList yet (it's set to ``null``). Can you guess what it will print out when you run it?
+   ~~~~
    import java.util.*; // import everything at this level
    public class Test
    {
@@ -152,6 +157,8 @@ You can get the number of items in a ArrayList using the ``size()`` method.  Not
 .. activecode:: ArrayListCreateStr
    :language: java
 
+   Demonstrating a NullPointerException.
+   ~~~~
    import java.util.*; // import everything at this level
    public class Test
    {
@@ -187,12 +194,12 @@ Here's an example of a Integer ArrayList:
 
 .. mchoice:: qArrayListInteger
    :answer_a: ArrayList[int] numbers = new ArrayList();
-   :answer_b: ArrayList&lt;Integer&gt; numbers = new ArrayList();
-   :answer_c: ArrayList&lt;int> numbers = new ArrayList&lt;int&gt;();
+   :answer_b: ArrayList&lt;String&gt; numbers = new ArrayList();
+   :answer_c: ArrayList&lt;int&gt; numbers = new ArrayList&lt;int&gt;();
    :answer_d: ArrayList&lt;Integer&gt; numbers = new ArrayList&lt;Integer&gt;();
    :correct: d
    :feedback_a: The square brackets [] are only used with arrays, not ArrayLists.
-   :feedback_b: Although the left side of the declaration is right, you must also specify the type on the right side when creating the ArrayList.
+   :feedback_b: String is not the correct type since this is for an array of integers, and the type should be next to ArrayList on both sides.
    :feedback_c: ArrayLists cannot hold primitive types like int. You must use the wrapper class Integer.   
    :feedback_d: The wrapper class Integer is used to hold integers in an ArrayList.
    
@@ -219,11 +226,13 @@ Although it is not on the AP exam, you can convert arrays to ArrayLists using it
             
 |CodingEx| **Coding Exercise**
 
-You can add values to an ArrayList by using its **add** method, described in detail in the next lesson. Try the code below. Can you add another item to the shopping list? Note that the type of the ArrayList, String or Integer, also determines the type of parameters and return types for all of its methods, so add and print work for any type of ArrayList. 
+You can add values to an ArrayList by using its **add** method, described in detail in the next lesson. Try the code below. Note that the type of the ArrayList, String or Integer, also determines the type of parameters and return types for all of its methods, so add and print work for any type of ArrayList. 
 
 .. activecode:: listAdd
    :language: java
 
+   Can you add another item to the shopping list? 
+   ~~~~
    import java.util.*;  // import all classes in this package.
    public class Shopping
    {
@@ -262,6 +271,8 @@ First, let's discuss how to break up a number into its digits. Try the code belo
 .. activecode:: divideby10
    :language: java
 
+   Set number to a different number and guess what number / and % will return. Which operator gives you a digit in number?
+   ~~~~
    public class DivideBy10
    {
       public static void main(String[] args)
@@ -284,6 +295,8 @@ Now, let's write a constructor for the Digits class that uses this loop and adds
 .. activecode:: challenge-7-1-digits
    :language: java
 
+   Complete the challenge below to put the digits of a number in an ArrayList.
+   ~~~~
    import java.util.*;
    
    public class Digits

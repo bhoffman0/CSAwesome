@@ -113,7 +113,7 @@ Multiple Choice Exercises
    :feedback_c: You might think that this would be caught at compile time, but it isn't.  
    :feedback_d: This would be true if it was System.out.println(5 / 1) 
 
-   What does the follow code do when it is executed?
+   What does the following code do when it is executed?
    
     .. code-block:: java 
 
@@ -146,7 +146,7 @@ Multiple Choice Exercises
    :answer_d: x = 4, y = 4, z = 9
    :correct: b
    :feedback_a: This would be true if the x++ wasn't there.
-   :feedback_b: Fist x is set to 3, then y is also set to 3, and next z is set to 3 * 3 = 9.  Finally x is incremented to 4.  
+   :feedback_b: First x is set to 3, then y is also set to 3, and next z is set to 3 * 3 = 9.  Finally x is incremented to 4.  
    :feedback_c: You might think that y = x means that y takes x's value, but y is set to a copy of x's value.
    :feedback_d: You might think that y = x means that if x is incremented that y will also be incremented, but y = x only sets y to a copy of x's value and doesn't keep them in sync.  
 

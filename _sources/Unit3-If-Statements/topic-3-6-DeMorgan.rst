@@ -162,7 +162,7 @@ Often, you can simplify boolean expressions to create equivalent expressions. Fo
 
 .. |this worksheet| raw:: html
 
-   <a href="https://docs.google.com/document/d/1KI95bHluw3UkloFxlSih_1ed0QGaW9NZ1anEzqQ_RZY/edit?usp=sharing" target="_blank" style="text-decoration:underline">this worksheet</a>
+   <a href="https://docs.google.com/document/d/1Oa_hlzjunYMoRRiMX0A0nFjk7JiTh7EGfIVM9bQ_BIo/edit?usp=sharing" target="_blank" style="text-decoration:underline">this worksheet</a>
    
 We encourage you to do this activity as a |POGIL| (Process Oriented Guided Inquiry Learning) group activity. POGIL groups are self-managed teams of up to 4 students where everyone has a |pogil role| and works together to solve the problems, making sure that everyone in the team participates and learns. 
 

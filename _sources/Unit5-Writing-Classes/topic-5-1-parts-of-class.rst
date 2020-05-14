@@ -36,7 +36,7 @@ Remember that a **class** in programming defines a new **abstract data type**. W
    <a href="https://www.youtube.com/watch?v=1JJL0YszYik" target="_blank">video</a>
 
 
-Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. 
+Here is a fun |video| demonstrating the difference between the class House which is a blueprint of a house and the objects which are individual houses built from that blueprint. You can't live on a blueprint although it describes a house! But you can use it to build houses and live in those. You can think of a class as like a blueprint or a cookie cutter or a factory that produces objects. 
 
 
 .. youtube:: 1JJL0YszYik
@@ -64,15 +64,15 @@ Remember that objects have attributes and behaviors. These correspond to **insta
 
 Let's create a class called Person. What would we want to know about a person?  What we want to know depends on what problem we are trying to solve.  In one situation, perhaps when creating an address book, we might want to know the person's name and phone number and email. Here's a possible Person class with instance variables, constructor, and methods.
 
-.. figure:: Figures/PersonClassDefn.png
-    :width: 450px
+.. figure:: Figures/personClassDefn.png
+    :width: 500px
     :align: center
     :alt: Person 
     :figclass: align-center
 
     Figure 1: Person class
 
-Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in that method for that object. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
+Run the code below to see how it constructs 2 Person objects and fills in their data. We will explain all parts of this class in the next sections, but notice that execution always starts in the main method. When a method like the print() method is called, we run the code in the print method for that object. After a method is done, the control returns back to the next line of code in the main method. You can also see this in the |Java visualizer| (click on the link and then Forward at the bottom to run the code step by step).
 
 
 .. |Java visualizer| raw:: html
@@ -133,24 +133,26 @@ Instance Variables
 
 **Instance Variables** hold the data for an object.  They record what an object needs to know to do work in the program.  Instance Variables are also called **attributes**, **fields**, or **properties**. 
 
-All instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
+Instance variables in general and on the AP CS A exam should be declared **private**.  Think of ``private`` as like your diary.  Only you should have direct access to it.  In this case ``private`` means that only the code in this class can directly access the instance  variable values.
 
 .. note::
  
-   Instance variables are declared right after the class declaration.  They start with ``private`` then the *type* of the variable and then a *name* for the variable. Private means only the code in this class has access to it.
+   Instance variables are declared right after the class declaration.  They usually start with ``private`` then the *type* of the variable and then a *name* for the variable. Private means only the code in this class has access to it.
 
-The ``Person`` class above declares 3 instance variables: name, email, and phoneNumber. These are things that you might need to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
+The ``Person`` class declares 3 private instance variables: name, email, and phoneNumber. These are things that you might want to know about a person.  They are declared at the top of the class and they exist inside the { } of the class. The methods of the class share the instance variables. They can access and use them. 
 
-**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables. Each time you create a Person object, a new object like the following is created with its own copy of the data and methods. 
+Once we have created a class like Person, we can have many objects declared of the class.  The class is like a blueprint or cookie cutter that defines the variables and methods for that class. Each object will have their own copies of the same instance variables but with possibly different values in them (as seen in the cookie decorations below). 
 
-.. figure:: Figures/PersonClass.png
-    :width: 450px
+
+.. figure:: Figures/PersonClassWithCookies.png
+    :width: 100%
     :align: center
     :alt: Person data encapsulation
     :figclass: align-center
 
-    Figure 2: Data encapsulation in Person 
+    Figure 2: Person Class and Objects
 
+**Object-oriented Programming** stresses **data encapsulation** where  the data (instance variables) and the code acting on the data (methods) are wrapped together into a single unit and the implementation details are hidden. The data is protected from harm by being kept private. Anything outside the class can only interact with the public methods and cannot interact directly with the private instance variables (encapsulated in the pink box above).  
 
 When designing a class, programmers make decisions about what data to make accessible and/or modifiable from an external class. The private access modifier is used to encapsulate and protect the data from external access. Private instance variables can only be accessed by methods within the class in which they are defined.
 
@@ -197,7 +199,7 @@ Methods
 
    Methods define what the object can do.  They typically start with ``public`` then a type, then the name of the method followed by parentheses for optional parameters. Methods defined for an object can access and use its instance variables!  
 
-The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** and **mutator** methods in the next lessons which allow get and set access to the instance variables.  
+The ``Person`` class above has a constructor called Person() which we will discuss in the next lesson,  a print() method for output, and a main method which runs the whole program. We will also discuss **accessor** (also called getters) and **mutator** (also called setters or modifier) methods in the next lessons which allow get and set access to the instance variables.  
 
 Here is an example of the print() method that prints out all the data stored for a person object. Notice that it starts with public and then the return type.
 The **void** return type is used to indicate that the method does not return anything. Then it has the method name followed by parentheses for possible parameters. The body of the method is in curly brackets. Notice that the method can access and use the instance variables in the class: name, email, and phoneNumber. The instance variables are shared by all the methods of the class.
@@ -269,7 +271,7 @@ In **Object-Oriented Design** (OOD), programmers first spend time to decide whic
     :alt: Turtle class diagram
     :figclass: align-center
 
-    Figure 2: Turtle Class Diagram
+    Figure 3: Turtle Class Diagram
     
 When you are given a problem specification, look for the **nouns** to identify what classes you need to create. For an example, try the problem below.
 
@@ -319,7 +321,7 @@ In this project, you will create a class that can tell riddles like the followin
 
   public class Riddle
   {
-     // 2 instance variables: private type variableName;
+     // 2 instance variables for Riddle's question and answer: private type variableName;
      
      
      // constructor

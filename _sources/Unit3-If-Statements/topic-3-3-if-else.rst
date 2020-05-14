@@ -131,6 +131,39 @@ If/else statements can also be used with relational operators and numbers like b
    } 
 
 
+.. parsonsprob:: ifelseevenOdd
+   :numbered: left
+   :practice: T
+   :adaptive:
+   :noindent:
+   
+   The following program should print out "x is even" if the remainder of x divided by 2 is 0 and "x is odd" otherwise, but the code is mixed up.   Drag the blocks from the left and place them in the correct order on the right.  Click on <i>Check Me</i> to see if you are right. 
+   -----
+   public class EvenOrOdd
+   {
+   =====
+      public static void main(String[] args)
+      {
+      =====
+        int x = 92;
+        =====
+        if (x % 2 == 0) 
+        =====
+        {
+            System.out.println("x is even");
+        }
+            =====    
+        else
+        =====
+        {
+            System.out.println("x is odd");
+        }
+            =====
+       }
+       =====
+    }
+
+
 |CodingEx| **Coding Exercise**
 
 
@@ -153,33 +186,6 @@ If/else statements can also be used with relational operators and numbers like b
    } 
 
 
-.. .. parsonsprob:: ifelseevenOdd
-   :numbered: left
-   :practice: T
-   :adaptive:
-   :noindent:
-   
-   The following program should print out "x is even" if the remainder of x divided by 2 is 0 and "x is odd" otherwise, but the code is mixed up.   Drag the blocks from the left and place them in the correct order on the right.  Click on <i>Check Me</i> to see if you are right. 
-   -----
-   public class EvenOrOdd
-   {
-   =====
-      public static void main(String[] args)
-      {
-      =====
-        int x = 92;
-        =====
-        if (x % 2 == 0) 
-        =====
-            System.out.println("x is even");
-            =====    
-        else
-        =====
-            System.out.println("x is odd");
-            =====
-       }
-       =====
-    }
 
 Nested Ifs and Dangling Else
 ----------------------------
@@ -325,7 +331,7 @@ Summary
 
 - A two way selection (if/else) is written when there are two sets of statements: one to be executed when the Boolean condition is true, and another set for when the Boolean condition is false. 
 
-- The body of the “if” statement is executed when the Boolean condition is true, and the body of the “else” is executed when the Boolean condition is false.
+- The body of the "if" statement is executed when the Boolean condition is true, and the body of the "else" is executed when the Boolean condition is false.
 
 - Use 2 test-cases to find errors or validate results to try both branches of an if/else statement.
 

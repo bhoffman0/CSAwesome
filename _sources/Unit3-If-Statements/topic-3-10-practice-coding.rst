@@ -7,14 +7,14 @@ Coding Practice
 
 .. tabbed:: ch5Ex1
 
-        .. tab:: Question
-
-           
-           The following code should print ``X is greater than 0``.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question 
            
            .. activecode::  ch5Ex1q
               :language: java
    
+              
+              The following code should print ``X is greater than 0``.  However, the code has errors.  Fix the code so that it compiles and runs correctly. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -35,6 +35,8 @@ Coding Practice
            .. activecode::  ch5Ex1a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -55,14 +57,13 @@ Coding Practice
                 
 .. tabbed:: ch5Ex2
 
-        .. tab:: Question
-
-           
-           The following code should check your guess against the answer and print that it is too low, correct, or too high.  However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+        .. tab:: Question  
            
            .. activecode::  ch5Ex2q
               :language: java
    
+              The following code should check your guess against the answer and print that it is too low, correct, or too high.  However, the code has errors.  Fix the code so that it compiles and runs correctly.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -86,6 +87,8 @@ Coding Practice
            .. activecode::  ch5Ex2a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -110,13 +113,12 @@ Coding Practice
 .. tabbed:: ch5Ex3
 
         .. tab:: Question
-
-           
-           The following code should print if you can go out or not.  You can go out if you have done your homework and cleaned your room. However, the code has errors.  Fix the code so that it compiles and runs correctly.  
            
            .. activecode::  ch5Ex3q
               :language: java
-   
+                         
+              The following code should print if you can go out or not.  You can go out if you have done your homework and cleaned your room. However, the code has errors.  Fix the code so that it compiles and runs correctly.  
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -138,6 +140,8 @@ Coding Practice
            .. activecode::  ch5Ex3a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~   
               public class Test1
               {
                   public static void main(String[] args)
@@ -160,13 +164,12 @@ Coding Practice
 .. tabbed:: ch5Ex4
 
         .. tab:: Question
-
-           
-           The following code should print if x is in the range of 0 to 10 (including 0 and 10). However, the code has errors.  Fix the errors so that the code runs as intended.
            
            .. activecode::  ch5Ex4q
               :language: java
-   
+                         
+              The following code should print if x is in the range of 0 to 10 (including 0 and 10). However, the code has errors.  Fix the errors so that the code runs as intended.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -187,8 +190,10 @@ Coding Practice
            .. activecode::  ch5Ex4a
               :language: java
    
-               public class Test1
-               {
+              This is the answer to the previous question.
+              ~~~~               
+              public class Test1
+              {
                   public static void main(String[] args)
                   {
                       int x = 3;
@@ -208,14 +213,13 @@ Coding Practice
                 
 .. tabbed:: ch5Ex5
 
-        .. tab:: Question
-
-           
-           The following code should print if x is less than 0, equal to 0, or greater than 0.  Finish it to work correctly.  
+        .. tab:: Question 
            
            .. activecode::  ch5Ex5q
               :language: java
-   
+                         
+              The following code should print if x is less than 0, equal to 0, or greater than 0.  Finish it to work correctly. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -236,6 +240,8 @@ Coding Practice
            .. activecode::  ch5Ex5a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -261,13 +267,12 @@ Coding Practice
 .. tabbed:: ch5Ex6
 
         .. tab:: Question
-
-           
-           Finish the code below so that it prints ``You can go out`` if you have a ride or if you can walk and otherwise prints ``You can't go out``.  Use a logical or to create a complex conditional.
            
            .. activecode::  ch5Ex6q
               :language: java
    
+              Finish the code below so that it prints ``You can go out`` if you have a ride or if you can walk and otherwise prints ``You can't go out``.  Use a logical or to create a complex conditional.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -286,6 +291,8 @@ Coding Practice
            .. activecode::  ch5Ex6a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -307,13 +314,13 @@ Coding Practice
                 
 .. tabbed:: ch5Ex7
 
-        .. tab:: Question
-  
-           Finish the code below to print you can go out if you don't have homework and you have done the dishes.  
+        .. tab:: Question  
            
            .. activecode::  ch5Ex7q
               :language: java
    
+              Finish the code below to print you can go out if you don't have homework and you have done the dishes.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -332,6 +339,8 @@ Coding Practice
            .. activecode::  ch5Ex7a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -355,12 +364,12 @@ Coding Practice
 .. tabbed:: ch5Ex8
 
         .. tab:: Question
-  
-           Finish the following code so that it prints ``You have a fever`` if your temperature is above 100 and otherwise prints ``You don't have a fever``.
            
            .. activecode::  ch5Ex8q
               :language: java
-   
+     
+              Finish the following code so that it prints ``You have a fever`` if your temperature is above 100 and otherwise prints ``You don't have a fever``.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -377,6 +386,8 @@ Coding Practice
            .. activecode::  ch5Ex8a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -399,12 +410,12 @@ Coding Practice
 .. tabbed:: ch5Ex9
 
         .. tab:: Question
-  
-           Finish the code to print ``It is freezing`` if the temperature is below 30, ``It is cold`` if it is below 50, ``It is nice out`` if it is below 90, or ``It is hot``. 
            
            .. activecode::  ch5Ex9q
               :language: java
    
+              Finish the code to print ``It is freezing`` if the temperature is below 30, ``It is cold`` if it is below 50, ``It is nice out`` if it is below 90, or ``It is hot``. 
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -422,6 +433,8 @@ Coding Practice
            .. activecode::  ch5Ex9a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~              
               public class Test1
               {
                   public static void main(String[] args)
@@ -446,13 +459,14 @@ Coding Practice
                 
 .. tabbed:: ch5Ex10
 
-        .. tab:: Question
-  
-           Finish the code below to print your grade based on your score.  The score is an A if you scored 92 or higher, a B if you scored 82 to 91, a C if you scored 72 to 81, a D if you scored a 62 to 71, or an E. 
+        .. tab:: Question 
            
            .. activecode::  ch5Ex10q
               :language: java
    
+                
+              Finish the code below to print your grade based on your score.  The score is an A if you scored 92 or higher, a B if you scored 82 to 91, a C if you scored 72 to 81, a D if you scored a 62 to 71, or an E.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)
@@ -470,6 +484,8 @@ Coding Practice
            .. activecode::  ch5Ex10a
               :language: java
    
+              This is the answer to the previous question.
+              ~~~~
               public class Test1
               {
                   public static void main(String[] args)

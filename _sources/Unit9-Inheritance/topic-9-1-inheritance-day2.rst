@@ -72,7 +72,9 @@ We can represent the diagram in Figure 4 in the code below. The Course class has
 .. activecode:: apclass
   :language: java
     
-    import java.util.*;
+  What do you think the following code will print out?
+  ~~~~
+  import java.util.*;
     
     class Student
     {
@@ -137,7 +139,7 @@ If you aren't sure if a class should inherit from another class ask yourself if 
    :feedback_b: Is a Book a type of Author?  Or, does a Book have an Author associated with it?
    :feedback_c: A Book has an Author associated with it. Note that you could also say that an Author has many Books associated with it.
 
-    An online site shows information about Books and Authors. What kind of relationship do these two classes?
+    An online site shows information about Books and Authors. What kind of relationship do these two classes have?
 
 .. This one was confusing to teachers .. mchoice:: qoo_2
    :answer_a: The MovieShowing class should be a subclass of the Movie class.
@@ -185,28 +187,30 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
 .. activecode:: challenge-9-1-online-store
   :language: java
   
-    class ItemForSale
-    {
+  Declare 3 instance variables for each of the classes below. Create an inheritance or association relationship for some of them. 
+  ~~~~
+  class ItemForSale
+  {
        
-    }
+  }
 
-    class Movie
-    {
+  class Movie
+  {
     
-    }
+  }
     
-    class Book
-    {
+  class Book
+  {
     
-    }
+  }
     
-    class Author
-    {
+  class Author
+  {
     
-    }
+  }
     
-    public class Store 
-    {
+  public class Store 
+  {
        // instance variables
 
        public static void main(String[] args)
@@ -215,7 +219,7 @@ Working in pairs or groups, design an online store with classes for Store, ItemF
           Book b = new Book();
           System.out.println(b instanceof ItemForSale);
        }
-    }
+  }
 
 Summary
 --------

@@ -42,7 +42,15 @@
 Objects - Instances of Classes
 ==============================
 
-In this unit, you will learn to use objects created from classes that have been defined by other programmers. Later on, in Unit 5, you will learn to define your own classes.
+.. image:: Figures/turtleOOD.png
+    :width: 200
+    :align: left
+
+Java is an **object-oriented programming** language.  In object-oriented programming, we group the data attributes and the behaviors/methods that use them together into objects, like the Turtle object on the left. 
+
+
+
+**Objects** are created from a **class** definition in the code, and they are **instances** of a class. In this unit, you will learn to use objects created from classes like Turtle and String that were written by other programmers. Later on, in Unit 5, you will learn to write code to create your own classes.
 
 .. |runbutton| image:: Figures/run-button.png
     :height: 30px
@@ -131,7 +139,7 @@ created and then a turtle.  Turtles need to be created in a world.
 
 
 A computer doesn't automatically know what we mean by a robot turtle or world.  We have to write Java classes to define what we
-mean.  The class defines the data that every turtle knows about itself (called **fields** or **attributes**) like where it is in the world and which way it is facing.  The class also defines
+mean.  The class defines the data that every turtle knows about itself (called **attributes** or **fields**) like where it is in the world and which way it is facing.  The class also defines
 what objects of the class can do (called **methods** or **behaviors**) like ``turnRight`` and move ``forward``.
 
 You can think of a **class** as a classification. A class defines the type of the objects created from it and creates objects of that type.

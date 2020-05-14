@@ -22,7 +22,7 @@
 Sorting Algorithms
 ==================
 
-There are many sorting algorithms to put an array or list elements in alphabetic or numerical order. The three that you need to know for the AP CS A exam are:
+There are many sorting algorithms to put an array or ArrayList elements in alphabetic or numerical order. We will show these algorithms below for arrays. The three sorting algorithms that you need to know for the AP CS A exam are:
 
 ..	index::
 	single: selection sort
@@ -87,6 +87,8 @@ The code for ``selectionSort`` below is from the AP CS A course description.
 .. activecode:: selSort
   :language: java
 
+  Demonstration of selection sort.
+  ~~~~
   import java.util.Arrays;
 
   public class SortTest
@@ -210,6 +212,8 @@ The code for ``insertionSort`` below is from the AP CS A course description.
 .. activecode:: insertionSort
   :language: java
 
+  Demonstration of insertion sort.
+  ~~~~
   import java.util.Arrays;
 
   public class SortTest
@@ -285,7 +289,7 @@ To see this executing using the Java Visualizer click on the following `Insertio
         }
       }
 
-You can step through the code above by clicking on the following `Ex-12-5-2 <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+insertionSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++for+(int+j+%3D+1%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)+++++++++++++++++++++++//+line+1%0A++++++++%7B%0A+++++++++++int+temp+%3D+elements%5Bj%5D%3B++++++++++++++++++++++++++++++++++++++++++//+line+2%0A+++++++++++int+possibleIndex+%3D+j%3B+++++++++++++++++++++++++++++++++++++++++++//+line+3%0A+++++++++++while+(possibleIndex+%3E+0+%26%26+temp+%3C+elements%5BpossibleIndex+-+1%5D)++//+line+4%0A+++++++++++%7B%0A++++++++++++++elements%5BpossibleIndex%5D+%3D+elements%5BpossibleIndex+-+1%5D%3B++++++++//+line+5%0A++++++++++++++possibleIndex--%3B+%0A+++++++++++%7D%0A+++++++++++elements%5BpossibleIndex%5D+%3D+temp%3B%0A++++++++%7D%0A+++++%7D%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++insertionSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_.
+You can step through the code above by clicking on the following `Visualization <http://cscircles.cemc.uwaterloo.ca/java_visualize/#code=import+java.util.Arrays%3B%0A++%0A++public+class+SortTest%0A++%7B%0A+++++public+static+void+insertionSort(int%5B%5D+elements)+%0A+++++%7B%0A++++++++for+(int+j+%3D+1%3B+j+%3C+elements.length+-+1%3B+j%2B%2B)+++++++++++++++++++++++//+line+1%0A++++++++%7B%0A+++++++++++int+temp+%3D+elements%5Bj%5D%3B++++++++++++++++++++++++++++++++++++++++++//+line+2%0A+++++++++++int+possibleIndex+%3D+j%3B+++++++++++++++++++++++++++++++++++++++++++//+line+3%0A+++++++++++while+(possibleIndex+%3E+0+%26%26+temp+%3C+elements%5BpossibleIndex+-+1%5D)++//+line+4%0A+++++++++++%7B%0A++++++++++++++elements%5BpossibleIndex%5D+%3D+elements%5BpossibleIndex+-+1%5D%3B++++++++//+line+5%0A++++++++++++++possibleIndex--%3B+%0A+++++++++++%7D%0A+++++++++++elements%5BpossibleIndex%5D+%3D+temp%3B%0A++++++++%7D%0A+++++%7D%0A++++++%0A+++++public+static+void+main(String%5B%5D+args)%0A+++++%7B%0A++++++++int%5B%5D+arr1+%3D+%7B3,+86,+-20,+14,+40%7D%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A++++++++insertionSort(arr1)%3B%0A++++++++System.out.println(Arrays.toString(arr1))%3B%0A+++++%7D%0A++%7D&mode=display&curInstr=0>`_.
 
 
 
@@ -306,8 +310,7 @@ In the Active code windows for Selection sort and Insertion sort above, add in a
 
 .. shortanswer:: challenge7-6-sorting
 
-   Compare the runtimes of selection and insertion sort on the same data. There should be some data on which one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.
-   
+   Compare the runtimes of selection and insertion sort on the same data. There should be some data where one performed better than the other. Can you explain why this is? Trace through the code to figure out why. Discuss in pairs or groups.  Using the space provided below, summarize the key discussion points and include a link to your Google document with the table of runtimes.   
 
 Summary
 ---------

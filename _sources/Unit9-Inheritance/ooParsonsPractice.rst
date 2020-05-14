@@ -53,7 +53,15 @@ Try to solve each of the following. Click the *Check Me* button to check each so
 
    The following program should overload a void method talk with no parameters. But, the blocks have been mixed up and may include extra blocks that are not needed in a correct solution. Drag the needed blocks from the left and put them in the correct order on the right.  Click the <i>Check Me</i> button to check your solution.</p>
    -----
-   public class Person {
+   public class GenericPerson
+   {
+      public void talk()
+      {
+         System.out.println("Hello!");  
+      }
+   }
+   
+   public class Person extends GenericPerson {
    =====
    	public void talk(String name) {
    		System.out.println("Hello" + name);

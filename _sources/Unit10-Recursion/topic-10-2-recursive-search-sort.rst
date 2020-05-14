@@ -89,11 +89,13 @@ Here is the Java code for a recursive binary search:
 
 |CodingEx| **Coding Exercise**
 
-Run the code below. Try searching for the element 3 and then the element 2 which is not in the array. What would happen if we removed the second base case checking if end < start? Try it and see.
+
 
 .. activecode:: recursiveBinarySearch
   :language: java
   
+  Run the code below. Try searching for the element 3 and then the element 2 which is not in the array. What would happen if we removed the second base case checking if end < start? Try it and see.
+  ~~~~
   public class RecursiveBinarySearch
   {
     public static int recursiveBinarySearch(int[] array, int target, int start, int end)

@@ -68,11 +68,13 @@ Here are two common array traversal loops that can be used for these algorithms:
    
 |CodingEx| **Coding Exercise**
 
-Here is an example that finds the minimum element in an array. Try it in the |Java visualizer|. Can you change it to find the maximum element instead? Can you also compute the average of the elements?
+
 
 .. activecode:: minmax
    :language: java
    
+   The code below finds the minimum (smallest element) in an array. Try it in the |Java visualizer|. Can you change it to find the maximum element instead? Can you also compute the average of the elements?
+   ~~~~
    public class MinMax
    {      
       public static void main(String[] args)
@@ -94,11 +96,13 @@ Here is an example that finds the minimum element in an array. Try it in the |Ja
    
 |CodingEx| **Coding Exercise**
 
-Here is another example that rotates the elements to the left. Note that you need to use an indexed loop for this because you need to change the array and access two elements at different indices. Try it in the |visualizer|. Can you change it to rotate the elements to the right instead?  
+ 
 
 .. activecode:: rotate
    :language: java
    
+   The code below rotates array elements to the left. Note that you need to use an indexed loop for this because you need to change the array and access two elements at different indices. Try it in the |visualizer|. Can you change it to rotate the elements to the right instead? 
+   ~~~~
    public class Rotate
    {      
       public static void main(String[] args)

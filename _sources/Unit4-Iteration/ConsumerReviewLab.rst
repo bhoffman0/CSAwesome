@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 4-12-
+   :prefix: 4-13-
    :start: 1
    
 Consumer Review Lab
@@ -21,6 +21,9 @@ Consumer Review Lab
 
    <a href="https://repl.it/@BerylHoffman/AP-CSA-Consumer-Review-Lab-Student-Files" target="_blank" style="text-decoration:underline">repl student files</a>
 
+.. |Lesson 4.3 Loops and Strings| raw:: html
+
+   <a href="https://runestone.academy/runestone/books/published/csawesome/Unit4-Iteration/topic-4-3-strings-loops.html#while-find-and-replace-loop" target="_blank" style="text-decoration:underline">Lesson 4.3 Loops and Strings</a>
 
   
 The Consumer Review Lab is a new AP CS A Lab released in 2019 to practice loops and calling methods to prepare for the free response question on control structures and methods. Here is a link to the |student guide|. The teacher guide and the code files are available in the AP Course Audit Portal. The code files are also below.
@@ -102,7 +105,7 @@ Here are some hints to write the totalSentiment() method:
 
 2. You can use a loop to go through each word in the file contents and add up their sentiment values. The total sentiment value will be returned.
 
-3. How do you get each word in the file contents? Look for the spaces! You may want to review Lesson 4.3 Loops with Strings. Remember how we looped to find all the 1's in a String? Here we're looking for all the spaces (" "). You will need to use indexOf to find the spaces and substring to get each word. To make it simpler, after finding a word, you could set the file contents to the rest of the review without that word.
+3. How do you get each word in the file contents? Look for the spaces! You may want to review |Lesson 4.3 Loops and Strings|. Remember how we looped to find all the 1's in a String? Here we're looking for all the spaces (" "). You will need to use indexOf to find the spaces and substring to get each word. To make it simpler, after finding a word, you could set the file contents to the rest of the review without that word.
 
 4. To test the method, call it from the main method in Main.java and give it one of the review filenames like "SimpleReview.txt". Print out what it returns. You could also put a print statement in the loop of the method to see what words it finds and the running total.
 

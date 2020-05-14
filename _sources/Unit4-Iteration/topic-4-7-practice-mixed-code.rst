@@ -155,9 +155,12 @@ Try to solve each of the following. Click the *Check Me* button to check each so
    =====
                for (int y = 0; y <= 6; y++) { #paired
    =====
-                   System.out.println("*");
+                   System.out.print("*");
    =====
                }
+   =====
+               System.out.println();
+   =====
            }   
        }
    }

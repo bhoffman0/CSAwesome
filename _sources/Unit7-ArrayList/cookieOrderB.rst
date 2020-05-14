@@ -9,7 +9,7 @@ Free Response - CookieOrder B
 	single: cookieorder
     single: free response
 
-The following is a free response question from 2010.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.
+The following is a free response question from 2010.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.
 
 **Question 1.**  An organization raises money by selling boxes of cookies. A cookie order specifies the variety of cookie and the number of boxes ordered. The declaration of the ``CookieOrder`` class is shown below.
 
@@ -94,9 +94,11 @@ The method call ``goodies.removeVariety("Brownie")`` returns `0` and does not ch
 
 How to Solve This
 --------------------
-1. Remember that you cannot change the master order.
-2. How will you check to see if a certain cookie order's variety matches the given variety?
-3. You will need to check the variety of each cookie order. What type of loop will you use?
+1. How will you keep track of the number of boxes of cookies that were removed?
+2. You will need to check the variety of each cookie order in the list of orders. What type of loop will you use?
+3. How will you handle the fact that you may be removing items from the list as you are processing it?  Removing an item will change the length of the list and which item is at which index.
+4. How will you check to see if a certain cookie order's variety matches the given variety?
+5. How do you remove an item from a list?
 
 The Algorithm
 -------------------
@@ -104,16 +106,20 @@ The Algorithm
    :numbered: left
    :adaptive:
 
-   The method removeVariety below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.
+   The method removeVariety below contains the correct code for one solution to this problem, but it is mixed up.  Drag the needed code from the left to the right and put them in order with the correct indention so that the code would work correctly.  There may be extra blocks that are not needed in a correct solution.
    -----
    private int removeVariety(String cookieVar) {
        int numBoxesRemoved = 0;
    =====
        for (int i = this.orders.size() - 1; i >= 0; i--) {
    =====
+       for (int i = 0; i < this.orders.size(); i++) { #paired
+   =====
            String thisOrder = this.orders.get(i);
    =====
            if(cookieVar.equals(thisOrder.getVariety())) {
+   =====
+           if(cookieVar == thisOrder.getVariety()) { #paired
    =====
                numBoxesRemoved += thisOrder.getNumBoxes();
                this.orders.remove(i);

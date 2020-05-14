@@ -63,11 +63,7 @@ The int type in Java can be used to represent any whole number from -2147483648 
 
 What do the last two lines print out?  Did this surprise you?  Java will actually return the maximum integer value if you try to subtract one from the minimum value. This is called **underflow**. And, Java will return the minimum integer value if you try to add one to the maximum.  This is called **overflow**.  It is similar to how odometers work -- in a really old car that reaches the maximum miles possible on the odometer, the odometer rolls over back to 0, the minimum value. In Java, any int value that surpasses 32 bits gets rolled over, so that  the Integer.MAX_VALUE 2147483647 incremented (+1) returns -2147483648 which is the Integer.MIN_VALUE.
 
-When would you ever use Integer.MIN_VALUE or Integer.MAX_VALUE?  They are handy if you want to initialize a variable to the smallest possible value and then search a sequence of values for a larger value.  
-
-.. note::
-
-   People sometimes set the initial value to 0 when looking for the smallest item in a sequence of integers, but if all of the values in your sequence are negative then this won't work correctly (since all negative numbers are smaller than zero). So use Integer.MIN_VALUE instead!   
+When would you ever use Integer.MIN_VALUE or Integer.MAX_VALUE?  They are handy if you want to initialize a variable to the smallest possible value and then search a sequence of values for a larger value.     
  
 **Autoboxing** is the automatic conversion that the Java compiler makes between primitive types and their corresponding object wrapper classes. This includes converting an int to an Integer and a double to a Double. The Java compiler applies autoboxing when a primitive value is passed as a parameter to a method that expects an object of the corresponding wrapper class or assigned to a variable of the corresponding wrapper class. Here's an example of autoboxing.
 

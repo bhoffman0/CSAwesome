@@ -87,12 +87,14 @@ Another way to look at scope is that a variable's scope is where it lives and ex
 
 |CodingEx| **Coding Exercise**
 
-Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope. 
+
 
 
 .. activecode:: PersonScope
   :language: java
 
+  Try the following code to see that you cannot access the variables outside of their scope levels in the toString() method. Explain to someone sitting next to you why you can't access these. Try to fix the errors by either using variables that are in scope or moving the variable declarations so that the variables have larger scope. 
+  ~~~~
   public class Person 
   {
      private String name;
@@ -110,7 +112,7 @@ Try the following code to see that you cannot access the variables outside of th
           int id = i;
        } 
        // Can you access the blockScope variables i or id?
-       System.out.prtinln("i at the end of the loop is " + i);
+       System.out.println("i at the end of the loop is " + i);
        System.out.println("The last id is " + id);
        
        // Can toString() access parameter variables in Person()?
@@ -162,11 +164,13 @@ If there is a local variable with the same name as an instance variable, the var
 |Groupwork| Programming Challenge : Debugging
 ------------------------------------------------------------
 
-Debug the following program that has scope violations. Then, add comments that label the variable declarations as class, method, or block scope.
+
 
 .. activecode:: challenge-5-8-Debug
   :language: java
 
+  Debug the following program that has scope violations. Then, add comments that label the variable declarations as class, method, or block scope.
+  ~~~~
   public class TesterClass 
   {
      public static void main(String[] args)
@@ -221,5 +225,102 @@ Summary
 
 - Formal parameters and variables declared in a method or constructor can only be used within that method or constructor.
 
+
+
+AP Practice
+------------
+
+.. mchoice:: AP5-8-1
+   :practice: T
+   :answer_a: The class is missing an accessor method.
+   :answer_b: The instance variables boxesOfFood and numOfPeople should be designated public instead of private.
+   :answer_c: The return type for the Party constructor is missing.
+   :answer_d: The variable updatedAmountOfFood is not defined in eatFoodBoxes method.
+   :answer_e: The Party class is missing a constructor
+   :feedback_a: There is a scope violation.
+   :feedback_b: There is a scope violation. Instance variables are usually private.
+   :feedback_c: There is a scope violation. Constructors do not have return types.
+   :feedback_d: There is a scope violation. The updatedAmountOfFood variable is a local variable in another method.
+   :feedback_e: There is a scope violation.
+   :correct: d
+
+   Consider the following class definitions. Which of the following best explains why the class will not compile?
+    
+   .. code-block:: java
+ 
+        public class Party
+        {
+            private int boxesOfFood;
+            private int numOfPeople;
+
+            public Party(int people, int foodBoxes)
+            {
+                numOfPeople = people;
+                boxesOfFood = foodBoxes;
+            }
+
+            public void orderMoreFood(int additionalFoodBoxes)
+            {
+                int updatedAmountOfFood = boxesOfFood + additionalFoodBoxes;
+                boxesOfFood = updatedAmountOfFood;
+            }
+
+            public void eatFoodBoxes(int eatenBoxes) 
+            {
+                boxesOfFood = updatedAmountOfFood - eatenBoxes;
+            }
+        }
+        
+.. mchoice:: AP5-8-2
+    :practice: T
+
+    Consider the following class definition.
+    
+    .. code-block:: java
+
+        public class Movie
+        {
+            private int currentPrice;
+            private int movieRating;
+
+            public Movie(int p, int r)
+            {
+                currentPrice = p;
+                movieRating = r;
+            }
+
+            public int getCurrentPrice()
+            {
+                int currentPrice = 16;
+                return currentPrice;
+            }
+
+            public void printPrice()
+            {
+                System.out.println(getCurrentPrice());
+            }
+        }
+
+    Which of the following reasons explains why the printPrice method is "broken" and only ever prints out a value of 16?
+
+    - The private variables currentPrice and movieRating are not properly initialized.
+	
+      - The constructor will initialize them.
+
+    - The private variables currentPrice and movieRating should have been declared public.
+	
+      - Instance variables should be private.
+
+    - The printPrice method should have been declared as private.
+	
+      - Methods are usually public.
+
+    - currentPrice is declared as a local variable in the getCurrentPrice method and set to 16, and will be used instead of the instance variable currentPrice.
+	
+      + Correct!
+
+    - The currentPrice instance variable does not have a value.
+	
+      - Accessor methods are usually public.
 
 

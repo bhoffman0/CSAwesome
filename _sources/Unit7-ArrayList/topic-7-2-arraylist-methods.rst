@@ -83,11 +83,13 @@ You can add values to an ArrayList by using the method ``add(obj)`` which will a
 |CodingEx| **Coding Exercise**
 
 
-Run the code below to see how the list changes as each object is added to the end.  Notice that we added the same string to the list more than once.  Lists can hold duplicate objects. Can you add your name to the list and then print out the list?
+
 
 .. activecode:: listAdd1
    :language: java
 
+   Run the code below to see how the list changes as each object is added to the end.  Notice that we added the same string to the list more than once.  Lists can hold duplicate objects. Can you add your name to the list and then print out the list?
+   ~~~~
    import java.util.*;  // import all classes in this package.
    public class Test
    {
@@ -121,6 +123,8 @@ You can put any kind of Objects into an ArrayList. Even objects for a class that
 .. activecode:: StudentArrayList
   :language: java
 
+  An example of an ArrayList of Student objects.
+  ~~~~
   import java.util.*;
   
   public class StudentList 
@@ -164,11 +168,13 @@ There are actually two different ``add`` methods in the ``ArrayList`` class.  Th
 
 |CodingEx| **Coding Exercise**
 
-What will the code below print out? Try figuring it out before running it. Remember that ArrayLists start at index 0 and that the add(index,obj) always has the index as the first argument.
+
 
 .. activecode:: listAddInt2
    :language: java
 
+   What will the code below print out? Try figuring it out before running it. Remember that ArrayLists start at index 0 and that the add(index,obj) always has the index as the first argument.
+   ~~~~    
    import java.util.*;  // import all classes in this package.
    public class Test
    {
@@ -310,11 +316,13 @@ You can also remove values from an ArrayList by using **remove(index)** to remov
 
 |CodingEx| **Coding Exercise**
 
-What will the following code print out? Try to guess before you run it. Were you surprised? Read the note below.
+
 
 .. activecode:: listRem
    :language: java
 
+   What will the following code print out? Try to guess before you run it. Were you surprised? Read the note below.
+   ~~~~
    import java.util.*;  // import all classes in this package.
    public class Test
    {
@@ -393,11 +401,13 @@ Notice that ArrayLists use set/get methods instead of using the square brackets 
 
 |CodingEx| **Coding Exercise**
  
-Try to guess what the code below will print before running it. Can you get the last element in the nameList to print it out? Can you set the first element in the list to your name and print out the list?
+
 
 .. activecode:: listGetSet
    :language: java
 
+   Try to guess what the code below will print before running it. Can you get the last element in the nameList to print it out? Can you set the first element in the list to your name and print out the list?
+   ~~~~
    import java.util.*;  // import all classes in this package.
    public class Test
    {
@@ -508,11 +518,13 @@ Note that the ArrayList methods add and remove do not have a simple equivalent i
 |Groupwork| Programming Challenge : Array to ArrayList
 -------------------------------------------------------
 
-Rewrite the following code that uses an array to use an ArrayList instead. In the comments write why you think an ArrayList is a better data structure to use than an array for this problem.
+
 
 .. activecode:: challenge-7-2-array-to-arraylist
    :language: java
 
+   Rewrite the following code that uses an array to use an ArrayList instead. In the comments write why you think an ArrayList is a better data structure to use than an array for this problem.
+   ~~~~
    import java.util.*;  
    
    public class ToDoList
@@ -532,7 +544,7 @@ Rewrite the following code that uses an array to use an ArrayList instead. In th
          System.out.println("Here's the first thing to do: " 
               + toDoList[0] );
          
-         // remove item 0 and move everything up 
+         // remove item 0 and move everything down 
          //  (this can be done in 1 command with ArrayList)
          toDoList[0] = toDoList[1];
          toDoList[1] = toDoList[2];

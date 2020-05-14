@@ -25,7 +25,7 @@ Concept Summary
 
 - **methods** - define the behaviors or functions for objects. 
 
-- **dot (.) operator** - used to acces an object's methods.  
+- **dot (.) operator** - used to access an object's methods.  
 
 - **parameters (arguments)** - the values or data passed to an object's method inside the parentheses in the method call to help the method do its job.
 

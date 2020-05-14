@@ -31,11 +31,13 @@ A subclass inherits all public methods from its superclass, and these methods re
 
 |CodingEx| **Coding Exercise**
 
-In the following example the ``MeanGreeter`` inherits the ``greet()`` method from ``Greeter``, but then overrides it. Run the program to see. Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return "Hola!" (or hi in another language) instead of "Hi!". Create an object to test it out.
+In the following example the ``MeanGreeter`` inherits the ``greet()`` method from ``Greeter``, but then overrides it. Run the program to see. 
 
 .. activecode:: GreeterEx
    :language: java
 
+   Add another subclass called SpanishGreeter (or another language that you know) that extends Greeter and override the greet() method to return "Hola!" (or hi in another language) instead of "Hi!". Create an object to test it out.
+   ~~~~
    public class Greeter
    {
       public String greet()
@@ -88,11 +90,13 @@ Don't get **overriding** a method confused with **overloading** a method!
     
 |CodingEx| **Coding Exercise**
 
-In the example below the ``greet(String who)`` method overloads the ``greet()`` method of ``Greeter``.  Notice that ``MeanGreeter`` inherits this method and it isn't overriden. After running the code, try overriding the greet(String) method in the MeanGreeter class to return "Go away" + the who String. 
+In the example below the ``greet(String who)`` method overloads the ``greet()`` method of ``Greeter``.  Notice that ``MeanGreeter`` inherits this method and it isn't overriden. 
    
 .. activecode:: GreeterOverride
    :language: java
 
+   After running the code, try overriding the greet(String) method in the MeanGreeter class to return "Go away" + the who String. 
+   ~~~~
    public class Greeter
    {
       public String greet()
@@ -242,7 +246,7 @@ Inherited Get/Set Methods
 ..	index::
     pair: inheritance; access to private fields
 
-Inheritance means that an object of the child class automatically includes the object instance variables and methods defined in the parent class.  But, if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called **getters**) which are methods that get instance variable values and public **modifiers** (also called **mutators** and **setters**) which set their values.  
+Inheritance means that an object of the child class automatically includes the object instance variables and methods defined in the parent class.  But, if the inherited instance variables are private, which they should be, the child class can not directly access the them using dot notation.  The child class can use public **accessors** (also called getters or get methods) which are methods that get instance variable values and public **mutators**  (also called modifier methods or setters or set methods) which set their values.  
 
 For example, if a parent has a private instance variables, ``name``, then the parent typically provides a public ``getName`` method and a public ``setName`` method as shown below.  In the ``setName`` method below, the code checks if the passed string is null before it sets it and returns true if the set was successful or false otherwise.  The ``Employee`` class inherits the ``name`` field but must use the public method ``getName`` and ``setName`` to access it.
 
@@ -250,6 +254,8 @@ For example, if a parent has a private instance variables, ``name``, then the pa
 .. activecode:: InheritedGetSet
   :language: java
 
+  Demonstrated inherited get/set methods.
+  ~~~~
   class Person 
   {
      private String name; 
@@ -366,8 +372,10 @@ The following Pet class keeps track of a pet's name and type and has a construct
 .. activecode:: challenge-9-3-Pet-Sounds
    :language: java
    
-    public class Pet
-    {
+   Complete the Dog and Cat classes below to inherit from Pet with a constructor and a method speak() that prints out "Woof!" or "Meow!".
+   ~~~~
+   public class Pet
+   {
        private String name;
        private String type;
 

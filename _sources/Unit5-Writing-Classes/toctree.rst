@@ -26,6 +26,7 @@ AP CS A Exam Weighting: 5-7.5%
    topic-5-10-social-impacts.rst
    topic-5-11-summary.rst
    Exercises.rst
+   FRQstepTracker.rst
    timeFRQ.rst
    APLine.rst
    CBLabs.rst

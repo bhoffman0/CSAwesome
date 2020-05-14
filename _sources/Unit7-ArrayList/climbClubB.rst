@@ -9,7 +9,7 @@ Free Response - Climbing Club B
 	single: ClimbingClub
     single: free response
     
-The following is part b of a free response question from 2012.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudent.collegeboard.org/apcourse/ap-computer-science-a/exam-practice.  
+The following is part b of a free response question from 2012.  It was question 1 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.  
 
 **Question 1.**  A mountain climbing club maintains a record of the climbs that its members have made. Information about a
 climb includes the name of the mountain peak and the amount of time it took to reach the top. The information is
