@@ -8,9 +8,9 @@ Preface
 ..	index::
 	single: license
 	
-This AP CS A Java 2019 course was adapted from the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. 
+CSAwesome is a free AP CS A curriculum that was created in 2019 by adapting the AP CS A Java Review e-book written by Dr. Barbara Ericson, while she was a senior research scientist at Georgia Tech, currently Assistant Professor of Information at University of Michigan. She published this book using a modified BSD license to encourage people to use it, change it, and modify it for their own purposes. 
 
-The 2019 version of this book is being modified by Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, Beth Simon, John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, and Kyle Gillette for feedback, edits, and ideas. We hope that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
+CSAwesome is an official College Board CS A curriculum and PD provider as of 2020. Dr. Beryl Hoffman, Associate Professor of Computer Science at Elms College, MA, created and adapted the CSAwesome curriculum to follow the College Board CS A 2019 guidelines with the support of a 2019 Google CS-ER grant and the Mobile CSP project (https://www.mobile-csp.org).  Special thanks to Barb Ericson, Beth Simon, John Figliulo, Pauline Lake, Jennifer Rosato, Kim Evelti, Becky Stacey, Art Lopez, and Kyle Gillette for feedback, edits, and ideas. In the summer 2020, we are very grateful to CSA teacher extraordinaire Kate McDonnell who created JUnit test helper code for our Java server, and many volunteers who are helping to add junit tests to each active code to make them auto-gradable. Our hopes are that CSP teachers and students can use this interactive book to help transition from AP CSP to AP CS A.
 
 .. |form| raw:: html
 

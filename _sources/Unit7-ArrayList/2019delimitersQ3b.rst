@@ -109,7 +109,7 @@ This section contains a plain English explanation of one way to solve this probl
 
       Which loop would be best for this situation?
 
-.. reveal:: delim_solveb_mc_2
+.. reveal:: delim_rev_solveb_mc_2
    :showtitle: Reveal Problem
    :hidetitle: Hide problem
 

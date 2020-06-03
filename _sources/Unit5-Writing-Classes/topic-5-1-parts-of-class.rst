@@ -82,7 +82,10 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
 
 .. activecode:: PersonClass
   :language: java
-
+  :autograde: unittest
+  
+  Run the following class. Try changing the Person p2 object in main to your name. 
+  ~~~~
   public class Person 
   {
      // instance variables 
@@ -117,6 +120,24 @@ Run the code below to see how it constructs 2 Person objects and fills in their 
         p2.print();
      }
   }
+  
+  ====
+  // Test for Lesson 5.1.0 - Person class - should pass if/when they run code
+  import static org.junit.Assert.*;
+  import org.junit.*;;
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        @Test
+        public void testMain() throws IOException
+        {
+            String output = getMethodOutput("Person", "main");
+            boolean passed = getResults(output, output, "Expected output from main");
+            assertTrue(passed);
+        }
+  }
+  
   
 .. changed to just 1 constructor using initName as arguments and toString. No getters and setters to begin with.
 
@@ -312,16 +333,19 @@ In this project, you will create a class that can tell riddles like the followin
 
 2. Using the Person class above as a guide, write a Riddle class in the Active Code template below that has 2 instance variables for the riddle's question and answer, a constructor that initializes the riddle, and 2 methods to ask the riddle and answer the riddle. Hint:  Don't name your instance variables initQuestion and initAnswer -- we'll explain why shortly. If you came up with other instance variables and methods for this class, you can add those too! Don't forget to specify the private or public access modifiers. Use the outline in the Active Code below. You will learn how to write constructors and other methods in detail in the next lessons.
 
-3. Add a main method that constructs at least 3 Riddle objects and calls their methods to ask and answer the riddle. You can look up some good riddles online.
+3. Complete the main method to construct at least 2 Riddle objects and call their printQuestion() and printAnswer() methods to ask and answer the riddle. You can look up some good riddles online.
 
 
 
 .. activecode:: challenge-5-1-Riddle-Class
   :language: java
+  :autograde: unittest
 
+  Complete the Riddle class below and complete the main method to construct 2 Riddle objects and call their printQuestion() and printAnswer() methods.  
+  ~~~~
   public class Riddle
   {
-     // 2 instance variables for Riddle's question and answer: private type variableName;
+     // write 2 instance variables for Riddle's question and answer: private type variableName;
      
      
      // constructor
@@ -348,12 +372,113 @@ In this project, you will create a class that can tell riddles like the followin
      // main method for testing
      public static void main(String[] args)
      {
-        // call the constructor to create 3 new Riddle objects
+        // call the constructor to create 2 new Riddle objects
         
         // call their printQuestion() and printAnswer methods
        
      }
   }
+  
+  ====
+  // Test Code for Lesson 5.1.5 - Riddle
+  // @author Kate McDonnell
+  // Test Code for Lesson 5.1.5 - Riddle
+  import static org.junit.Assert.*;
+  import org.junit.*;
+
+  import java.io.*;
+
+  public class RunestoneTests extends CodeTestHelper
+  {
+        public RunestoneTests()
+        {
+            super("Riddle"); // class name / location of main
+
+            Object[] values = new Object[]{"Question", "Answer"};
+            setDefaultValues(values);
+        }
+
+        @Test
+        public void testPrintQuestion()
+        {
+            String output = getMethodOutput("printQuestion");
+            String expect = "Question";
+
+            boolean passed = getResults(expect, output, "Checking method printQuestion()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrintAnswer()
+        {
+            String output = getMethodOutput("printAnswer");
+            String expect = "Answer";
+
+            boolean passed = getResults(expect, output, "Checking method printAnswer()");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testDefaultConstructor()
+        {
+            String[] args = {"Question 1", "Answer 1"};
+            String output = checkDefaultConstructor();
+            String expect = "fail";
+
+            boolean passed = getResults(expect, output, "Checking default constructor");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testConstructor()
+        {
+            String[] args = {"Question 1", "Answer 1"};
+            String output = checkConstructor(args);
+            String expect = "pass";
+
+            boolean passed = getResults(expect, output, "Checking constructor with parameters");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testVariableTypes()
+        {
+            String varTypes = "String String";
+            String output = testInstanceVariableTypes(varTypes.split(" "));
+
+            boolean passed = getResults(varTypes, output, "Checking Instance Variable Type(s)");
+            assertTrue(passed);
+        }
+
+        @Test
+        public void testPrivateVariables()
+        {
+            String expect = "2 Private";
+            String output = testPrivateInstanceVariables();
+
+            boolean passed = getResults(expect, output, "Checking Private Instance Variable(s)");
+            assertTrue(passed);
+        }
+
+
+        @Test
+        public void testMain()
+        {
+            String output = getMethodOutput("main");
+
+            String expect = "6 line(s) of text";
+            String actual = " line(s) of text";
+
+            if (output.length() > 0) {
+                actual = output.split("\n").length + actual;
+            } else {
+                actual = output.length() + actual;
+            }
+            boolean passed = getResults(expect, actual, "Checking main method");
+            assertTrue(passed);
+        }
+    }
+
 
 Summary
 ----------

@@ -40,20 +40,13 @@ Why Programming? Why Java?
     :width: 500
     :align: center
 
-What do Minecraft, Android phones, and Netflix have in common? They're all programmed in Java! Here is a |video of Notch|, the creator of the popular game Minecraft, programming in Java.  Many of the apps you use in an Android phone or tablet are also written in Java. If you've used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is used worldwide to create software that we all use.
+What do Minecraft, Android phones, and Netflix have in common? They're all programmed in Java! Here is a |video of Notch|, the creator of the popular game Minecraft, programming in Java.  Many of the apps you use in an Android phone or tablet are also written in Java. If you've used App Inventor before, those apps are translated to Java before they are run on a phone or tablet. Netflix uses Java for some of its software too. Java is a **programming language** that is used worldwide to create software that we all use.
 
-.. Java was invented in 1991 at Sun Microsystems by James Gosling and his team. They based the new language on current languages like C and C++, but improved on many of the features. For example, Java follows the "Write once, run anywhere" philosophy. Java code can be run on almost any computer with any operating system. 
+The following `video <https://www.youtube.com/watch?v=Fc-BQzPbJmU>`_ introduces this first lesson in CSAwesome.
 
-Java is a **programming language**, which means that we can use Java to tell a computer what to do. Computers don't actually speak Java so we have to **compile** (translate) Java source files (they end in .java) into class files (they end in .class).  The source file is something humans can read and edit, and the class file is code that a computer can understand and can run.
-
-.. figure:: Figures/compile.png
-    :width: 300px
+.. youtube:: Fc-BQzPbJmU
+    :width: 800
     :align: center
-    :figclass: align-center
-
-    Figure 1: Compiling Java source (Person.java) into a class file (Person.class) 
-    
-In this book, the Java code is actually being sent to a server to compile and run, and the output will be shown on the same book page, so you won't actually create a source file or class file.  But if you have a Java development environment on your local computer, you can use the Java command ``javac`` to compile your Java source code at a command line.  You can use ``java ClassName`` to execute the ``main`` method in a Java class. You can also use an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs) that run Java code with the click of a button.  
 
 
 .. |runbutton| image:: Figures/run-button.png
@@ -61,17 +54,8 @@ In this book, the Java code is actually being sent to a server to compile and ru
     :align: top
     :alt: run button
     
-.. |audiotour| image:: Figures/start-audio-tour.png
-    :height: 20px
-    :align: top
-    :alt: audio tour button
     
-.. |checkme| image:: Figures/checkMe.png
-    :height: 20px
-    :align: top
-    :alt: check me button
-    
-First Example Class
+First Java Program
 -------------------
 
 
@@ -83,39 +67,30 @@ First Example Class
 	pair: class; method
 	pair: class; main method
 	
-To define a class in Java use the **keywords** (words that Java already understands) ``public class`` followed by a *ClassName*.  Then the body of the class is enclosed in a starting ``{`` and ending ``}`` as shown below.
+Every program in Java is written as a **class**. Java is an **object-oriented language** and we'll learn more about classes and objects in Unit 2. Inside the class, there can be a **main method** that starts the program. When you ask the Java run-time to *run* a class, it will always start execution in the main method. Here is the template for a simple Java program with a main method:
 
 .. code-block:: java 
 
-   public class ClassName
+   public class MyClass
    {
+      public static void main(String[] args)
+      {
+         // Put your code here!
+      }
    }
    
 .. note::
 
-   In Java every open curly brace ``{`` must have a matched close curly brace ``}``.  These are used to start and end class definitions and method definitions.   
-   
-The following is an example class in Java.  A class in Java can have **instance variables** (attributes), **constructors** (ways to initialize the instance variables), **methods** (behaviors), and a **main method** for testing the class. It does 
-not have to have *any* of these items.  The following would compile, but what do you think would happen if you tried to have a computer execute it?
-   
-.. code-block:: java 
+   In Java every open curly brace ``{`` must have a matched close curly brace ``}``.  These are used to start and end class definitions and method definitions.       
 
-   public class FirstClass
-   {
-   }
-
-The class ``FirstClass`` doesn't have anything inside of it, so the computer wouldn't know what to do if we asked it to execute the class.    
-
-|CodingEx| **Coding Exercise**: Click on the |runbutton| button below to have the computer execute the ``main`` method (starts with ``public static void main(String[] args)``) in the following class.  When you ask the Java run-time to *run* a class (java ClassName) it will always start execution in the ``main`` method. You can also click on the |audiotour| button below to listen to a line by line description of the code.  Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code. If you revisit this page later and login, all your code changes are saved and can be seen by clicking on Load History and moving the bar above it to replay your changes.
+|CodingEx| **Coding Exercise**: Click on the |runbutton| button below to have the computer execute the ``main`` method in the following class. Then, change the code  to print your name.  Be sure to keep the starting ``"`` and ending ``"``.  Click on the |runbutton| button to run the modified code. If you revisit this page later and login, click on Load History and move the bar above it to see your previous code changes.
  
-
 .. activecode:: lcfc1
    :language: java
-   :tour_1: "Line-by-line Tour"; 1: scline1; 2: scline2; 3: scline3; 4: scline4; 5: scline5; 6: scline6; 7: scline7;
 
-   Run this code to see the output below it. Then change the code to print your name and run again. 
+   Run this code to see the output below it. Then change the code to print your name, for example "Hi Pat!", and run again. 
    ~~~~    
-   public class SecondClass
+   public class MyClass
    {
       public static void main(String[] args)
       {
@@ -126,19 +101,71 @@ The class ``FirstClass`` doesn't have anything inside of it, so the computer wou
 
 
 
-You can copy the Java source code shown in this book into a file and save it if you want to run it locally on your computer.  Be sure to name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be part of a **class** (defined inside a class) in a source file and the name of the class must match the file name. 
+You can copy the Java source code shown in this book into a file and save it if you want to run it locally in an integrated development environment (IDE) on your local computer (see section 1.1. for different IDEs).  You must name the file the same name as the class name with ".java" as the extension.  All code (programs) in Java must be defined inside a class in a source file, and the name of the class must match the file name. 
+
+
+   
+Print Commands
+-------------------
 
 ..	index::
 	single: String
 	single: String literal
+
+Java has two different print commands to print output to the screen:
+
+- **System.out.println(value)** : prints the value followed by a new line (ln) 
+- **System.out.print(value)** : prints the value without advancing to the next line
+
+
+``System.out.println("Hi there!");`` prints out the characters between the first ``"`` and the second ``"`` followed by a new line.  The ``"Hi there!"`` is called a **string literal**, and it can have zero to many characters enclosed in starting and ending double quotes. 
+
+.. activecode:: printCommands
+   :language: java
+
+   Run this code to see the output below it. How would you change it to print the ! on the same line as Hi there?
+   ~~~~    
+   public class MyClass
+   {
+      public static void main(String[] args)
+      {
+         System.out.print("Hi ");
+         System.out.println("there");
+         System.out.print("!");
+      }
+   }
    
+Most command keywords in Java must be in lowercase, but class names such as System and String are capitalized. Commands in Java must end with a semicolon (;). Think of the semicolon (;) in Java like a period (.) in English. You use a semicolon (``;``) to show the end of a Java **statement**, just the way you use a period (.) to show the end of an English sentence.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
 
+Syntax Errors
+---------------
 
-.. note::
+Computers don't actually speak Java so we have to **compile** (translate) Java source files that we write into class files which is code that a computer can understand and run. In this e-book, the Java code is actually being sent to a Java server to compile and run, and the output is sent back to show on the same page. 
 
-   ``System.out.println`` is just the way that you ask Java to print out the value of something followed by a new line (ln).  In the case above we are just printing the characters between the first ``"`` and the second ``"``.  The ``"Hi there!"`` is called a **string literal** and it can have zero to many characters enclosed in starting and ending double quotes in Java. ``System.out.print`` without the ln will print out something without advancing to the next new line. The "System" in System.out.println must be capitalized. And the command line must end with a semicolon (;).
+.. |Grace Hopper| raw:: html
+
+   <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>
    
+.. |Rubber duck debugging| raw:: html
 
+   <a href="https://rubberduckdebugging.com/" target="_blank">Rubber duck debugging</a>
+   
+   
+**Syntax errors** are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon ``;`` missing or if the code has a open curly brace ``{`` or open quote ``"``, but no close curly brace ``}`` or close quote ``"``. Informally, a syntax error is called a **bug**, and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
+
+.. figure:: https://upload.wikimedia.org/wikipedia/commons/8/8a/H96566k.jpg
+    :width: 300px
+    :align: center
+    :figclass: align-center
+
+    Figure 2: Grace Hopper's log showing a real bug, 1947.
+
+
+The compiler tries to make sense of your code, but if your code has **syntax errors**, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem. Debugging can be frustrating but you will get better at it with practice! Sometimes another pair of eyes really helps, so ask a friend if you get stuck or try explaining your code line by line to someone or even a rubber duck. |Rubber duck debugging| is a lot of fun!
+
+Let's practice debugging some code! 
+
+   
 
 |Exercise| **Check Your Understanding: Mixed up programs**
 
@@ -188,44 +215,20 @@ You can copy the Java source code shown in this book into a file and save it if 
       }
       =====
    }
-   
-.. This was in compileTimeErrors.rst
-
-Compiler Errors
----------------
-
-  
-
-.. |Grace Hopper| raw:: html
-
-   <a href="https://en.wikipedia.org/wiki/Grace_Hopper" target="_blank">Grace Hopper</a>
-   
-**Syntax errors** are reported to you by the compiler if your Java code is not correctly written. Examples of syntax errors are a semicolon ``;`` missing or if the code has a open curly brace ``{``, but no close curly brace ``}``. Informally, it is called a **bug** and the process of removing errors is called **debugging**. An early computer science pioneer |Grace Hopper| documented a real bug, a moth that flew into a computer in 1947!
-
-.. figure:: https://upload.wikimedia.org/wikipedia/commons/8/8a/H96566k.jpg
-    :width: 300px
-    :align: center
-    :figclass: align-center
-
-    Figure 2: Grace Hopper's log showing a real bug, 1947.
-
-
-Remember that the Java source file has to be translated into a class file before it can be run.  The compiler tries to make sense of your code, but if your code has **syntax errors**, you will see error messages displayed below the code. Compiler error messages will tell the line number that the compiler found the error and the type of error.  The error messages are not always easy to understand and sometimes the actual error is before the line that the compiler says is the problem.  This section has code that causes compiler errors to show you the types of error messages you might see and help you learn how debug your programs. 
-
-
+    
 
 |CodingEx| **Coding Exercise: Compile Time Error 1**
 
 Click on the |runbutton| button below to try and run the following code.  Look for an error message after the code.  This is called a **compile time error** because it is an error detected by the compiler.  
 
-What is wrong?  Can you fix it?  The error message will tell you the line number that it thinks is causing the error (``SecondClass.java:5: error: unclosed string literal``).  Check line 5 to make sure that everything looks correct.  One good thing to check is that all ``{`` have a matching ``}`` and all ``(`` have a matching ``)`` and all starting ``"`` have a ending ``"`` as well. Try putting in the missing symbol and run again. This is called **debugging**.
+What is wrong?  Can you fix it?  The error message will tell you the line number that it thinks is causing the error (``FirstClass.java:5: error: unclosed string literal``).  Check line 5 to make sure that everything looks correct.  One good thing to check is that all ``{`` have a matching ``}`` and all ``(`` have a matching ``)`` and all starting ``"`` have a ending ``"`` as well. Try putting in the missing symbol and run again. This is called **debugging**.
 
 .. activecode:: sc2error1
    :language: java
 
    Fix the code below.
    ~~~~
-   public class SecondClass
+   public class FirstClass
    {
       public static void main(String[] args)
       {
@@ -265,7 +268,7 @@ Click on the |runbutton| button below to try and run the following code.  What i
 
    Fix the code below.
    ~~~~    
-   public class SecondClass
+   public class ThirdClass
    {
       public static void main(String[] args)
       {
@@ -274,7 +277,7 @@ Click on the |runbutton| button below to try and run the following code.  What i
    }
 
 
-Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon? Think of the semicolon (;) in Java like a period (.) in English.  It is how you show the end of a sentence.  You use a semicolon (``;``) to show the end of a Java statement.  You will not be penalized on the exam if you forget the semicolon.  However, your programs won't run without it.
+Did you remember that System is capitalized in System.out.println? Did you find the missing semicolon? 
    
    
 Comments
@@ -295,6 +298,11 @@ In Java and many text-based coding languages, // is used to mark the beginning o
 |Groupwork| Debugging Challenge
 -----------------------------------
 
+.. image:: Figures/rubberduck.jpg
+    :width: 150
+    :align: left
+    :alt: Rubber Duck
+    
 In this course, you are encouraged to work together in pairs to complete the programming challenges. Pair programming is a successful software development technique where two programmers work together at one computer. One, the driver, types in code while the other, the navigator, gives ideas and feedback. The two coders switch roles frequently.
 
 Working in pairs, debug the following code. Can you find the all the bugs and get the code to run? 

@@ -227,7 +227,7 @@ Scroll down to the bottom of the following code and take a look at the switchCol
 
 .. activecode:: challenge-8-2-picture
     :language: java
-    :datafile: pictureClasses, arch.jpg
+    :datafile: pictureClasses.jar, arch.jpg
 
     Picture Lab
     ~~~~
@@ -402,9 +402,9 @@ Summary
 
 
 
-.. raw:: html
-    
-      <pre id="pictureClasses" class="javaFiles" style="display:none;">
+.. datafile:: pictureClasses.jar
+        :hide:    
+      
         import java.awt.Image;
         import java.awt.image.BufferedImage;
 
@@ -1502,7 +1502,7 @@ Summary
          }
 
         } // end of SimplePicture class
-        </pre>
+
 
 
 

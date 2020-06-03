@@ -6,7 +6,7 @@ ArrayTester - Part A
 ===============================
 
 ..	index::
-	  single: ArrayTester
+    single: ArrayTester
     single: free response
 
 The following is a free response question from 2018.  It was question 4 on the exam.  You can see all the free response questions from past exams at https://apstudents.collegeboard.org/courses/ap-computer-science-a/free-response-questions-by-year.

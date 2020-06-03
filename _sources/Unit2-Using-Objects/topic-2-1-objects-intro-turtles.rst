@@ -19,6 +19,8 @@
     :align: middle
     :alt: groupwork
 
+
+
 .. |repl| raw:: html
 
    <a href="https://repl.it" target="_blank" style="text-decoration:underline">repl.it</a>
@@ -31,13 +33,6 @@
 
    <a href="https://github.com/bhoffman0/APCSA-2019/tree/master/_sources/Unit2-Using-Objects/TurtleJavaSwingCode.zip" target="_blank" style="text-decoration:underline">here</a>
 
-..  Copyright (C)  Mark Guzdial, Barbara Ericson, Briana Morrison
-    Permission is granted to copy, distribute and/or modify this document
-    under the terms of the GNU Free Documentation License, Version 1.3 or
-    any later version published by the Free Software Foundation; with
-    Invariant Sections being Forward, Prefaces, and Contributor List,
-    no Front-Cover Texts, and no Back-Cover Texts.  A copy of the license
-    is included in the section entitled "GNU Free Documentation License".
 
 Objects - Instances of Classes
 ==============================
@@ -90,7 +85,7 @@ Today, we can play with virtual turtles in a graphical world. Below is a sample 
 
 .. activecode:: TurtleTest
     :language: java
-    :datafile: turtleClasses
+    :datafile: turtleClasses.jar
 
     Try clicking the |runbutton| button below to see what the following program does.
     (If the code below does not work for you, you can also see the ``Turtle`` code in action at this |repl link| (refresh page after forking and if it gets stuck) or download the files |github| to use in your own IDE.)
@@ -298,7 +293,7 @@ Classes can **inherit** attributes and methods from another class in Java, just 
 
 .. activecode:: TurtleTest2
     :language: java
-    :datafile: turtleClasses
+    :datafile: turtleClasses.jar
 
     In the code below, ``yertle`` goes forward and then turns left. Can you change the code to make ``yertle`` go ``forward`` twice and then ``turnRight``?
     ~~~~
@@ -333,7 +328,7 @@ two turtle objects are created: ``yertle`` and ``myrtle``.  You can name your tu
 
 .. activecode:: TurtleTest3
     :language: java
-    :datafile: turtleClasses
+    :datafile: turtleClasses.jar
 
     Can you add another turtle object to the code below?
     ~~~~
@@ -466,7 +461,7 @@ After writing your code below, if you'd like your own copy, you can open this |r
 
 .. activecode:: challenge2-1-TurtleDraw
     :language: java
-    :datafile: turtleClasses
+    :datafile: turtleClasses.jar
 
     import java.util.*;
     import java.awt.*;
@@ -557,9 +552,10 @@ AP Practice
     The object ``myParty`` is declared as type Party. Which of the following descriptions is accurate?
 
 
-.. raw:: html
 
-      <pre id="turtleClasses" class="javaFiles" style="display:none;">
+.. datafile:: turtleClasses.jar
+    :hide:
+
       import java.awt.Image;
       import java.awt.image.BufferedImage;
 
