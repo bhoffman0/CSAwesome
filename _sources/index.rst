@@ -58,6 +58,7 @@ Table of Contents
    :numbered:
    :maxdepth: 3
 
+   Unit0/toctree.rst
    Unit1-Getting-Started/toctree.rst
    Unit2-Using-Objects/toctree.rst
    Unit3-If-Statements/toctree.rst
