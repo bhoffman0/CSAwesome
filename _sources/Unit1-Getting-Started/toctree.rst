@@ -3,7 +3,7 @@
     :align: center
 
 
-Getting Started and Primitive Types
+Primitive Types
 :::::::::::::::::::::::::::::::::::::::::::
 
 
