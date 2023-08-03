@@ -1,5 +1,5 @@
 .. qnum::
-   :prefix: 1-2-
+   :prefix: 1-1-
    :start: 1
 
 .. |CodingEx| image:: ../../_static/codingExercise.png
