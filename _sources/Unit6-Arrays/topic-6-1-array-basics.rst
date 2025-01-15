@@ -847,7 +847,7 @@ community.  In this unit, you will create an array to hold objects of your class
       @Test
       public void testprint()
       {
-          boolean passed = checkCodeContains("call to print() of array element 0", "[0].print");
+          boolean passed = checkCodeContains("call to .print of array element 0", "[0].print");
           assertTrue(passed);
       }
 

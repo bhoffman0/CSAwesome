@@ -1305,7 +1305,7 @@ traverse your array to print out each object.
       public void testprint()
       {
           boolean passed =
-                  checkCodeContains("call to print() using index [i] in the loop", "[i].print();");
+                  checkCodeContains("call to .print using index [i] in the loop", "[i].print");
           assertTrue(passed);
       }
 
