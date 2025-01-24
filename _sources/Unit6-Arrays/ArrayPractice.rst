@@ -858,7 +858,6 @@ Code Practice with Arrays
                   {
                       int[] arr = {20, 3, 18, 55, 4};
                       System.out.println(getAverage(arr));
-                      ;
                   }
               }
 
