@@ -433,7 +433,7 @@ In the last lesson, the coding challenge involved finding pairs. You should be a
          if (a[i] == a[j])
          {    #paired
     =====
-              return true;
+            return true;
     =====
           } // end if
     =====
@@ -598,10 +598,10 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
         {
             // instantiate ArrayList and fill with Integers
             ArrayList<Integer> values = new ArrayList<Integer>();
-            int[] nums = {1, 5, 7};
-            for (int i = 0; i < nums.length; i++)
+            int[] arrnums = {1, 5, 7};
+            for (int i = 0; i < arrnums.length; i++)
             {
-                values.add(nums[i]);
+                values.add(arrnums[i]);
             }
             rotateLeft(values);
             System.out.println("Expected Result: [5, 7, 1]");
@@ -642,19 +642,20 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
             assertTrue(passed);
         }
         @Test
-            public void test2()
-            {
+        public void test2()
+        {
                 ArrayList<Integer> list = new ArrayList<Integer>();
                 list.add(2);
                 list.add(4);
                 list.add(0);
                 list.add(-2);
                 String expect = "[4, 0, -2, 2]";
-                String output = "" + TestRotate.rotateLeft(list);
+                TestRotate.rotateLeft(list);
+                String output = "" + list;
                 boolean passed = getResults(expect, output, "rotateLeft with list 2,4,0,-2");
                 assertTrue(passed);
-            }
-    }
+            } 
+        }
 
 Reversing an ``ArrayList``
 -----------------------------
