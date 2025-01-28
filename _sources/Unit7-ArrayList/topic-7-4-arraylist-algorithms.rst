@@ -618,7 +618,6 @@ We can write code that shifts or rotates elements left or right in an ``ArrayLis
 
     public class RunestoneTests extends CodeTestHelper
     {
-        @Test
         public RunestoneTests()
         {
             super("TestRotate");
