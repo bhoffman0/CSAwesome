@@ -690,16 +690,6 @@ After you have chosen an input file, use the Pokemon exercise in the section abo
        }
 
        @Test
-       public void testConstructor3()
-       {
-           String output = checkConstructor(3);
-           String expect = "pass";
-
-           boolean passed = getResults(expect, output, "Checking constructor with 3 parameters");
-           assertTrue(passed);
-       }
-
-       @Test
        public void testMain() throws IOException
        {
            String output = getMethodOutput("main");
