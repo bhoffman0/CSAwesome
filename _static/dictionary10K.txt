@@ -258,6 +258,7 @@ alarm
 alaska
 albania
 albany
+albatross
 albert
 alberta
 album
@@ -9981,6 +9982,8 @@ za
 zambia
 zdnet
 zealand
+zebra
+zebras
 zen
 zero
 zimbabwe
