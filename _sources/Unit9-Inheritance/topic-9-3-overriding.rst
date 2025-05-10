@@ -437,7 +437,7 @@ For example, if a parent class has a private instance variable, ``name``, then t
    :feedback_a: The object currItem is an EnhancedItem object and it will inherit the public setX method from Item.
    :feedback_b: The object currItem is an EnhancedItem object and that class has a public setY method.
    :feedback_c: Even though an EnhancedItem object will have a x field the subclass does not have direct access to a private field.  Use the public setX method instead.
-   :feedback_d: All code in the same class has direct access to all object fields.
+   :feedback_d: The instance variable y is in the same class and set to public so it can be directly accessed. 
 
    Given the following class definitions which of the following would not compile if it was used in place of the missing code in the main method?
 
@@ -456,7 +456,7 @@ For example, if a parent class has a private instance variable, ``name``, then t
 
       public class EnhancedItem extends Item
       {
-          private int y;
+          public int y;
 
           public void setY(int theY)
           {
