@@ -3,11 +3,12 @@
     :align: center
 
 ==========================================
-AP CSA Java Course
+AP CSA Java Course 2019-2025
 ==========================================
 
-Welcome to CSAwesome! It's time to start your journey to learn how to program with Java. A shortcut way to get to this site is to type in the url: **course.csawesome.org**
+CSAwesome has a new version available following the 2025-2026 AP CSA curriculum framework. If you are looking for the new version, please go to https://runestone.academy/runestone/books/published/csawesome2/index.html?mode=browsing.
 
+Welcome to CSAwesome! It's time to start your journey to learn how to program with Java. 
 CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java.  If you are a teacher using this curriculum, please join the |teaching CSAwesome group| which will give you access to teacher resources at |csawesome|.
 
 To make sure the site saves your answers on questions, please click on the person icon at the top to register or login to your Runestone course. As you complete lessons, click the "Mark as completed" button at the bottom. Enjoy the journey!
@@ -17,9 +18,9 @@ To make sure the site saves your answers on questions, please click on the perso
    <a href="https://drive.google.com/file/d/11MDPfpb3sjzfCR-6zeUe79WNgBbfZbqN/view?usp=sharing" target="_blank" style="text-decoration:underline">flyer</a>
 
 
-ATTENTION high school women of color taking AP CSA or CSP: if you identify as female and as Black, Hispanic/Latina, and/or Native American, apply to participate in **Sisters Rise Up**. The goal of Sisters Rise Up is to help you succeed in your AP Computer Science course and on the exam. They offer one-hour help sessions several times a week and once a month special help sessions often with guest speakers from computing.  If you enroll in Sisters Rise Up and send in your AP CS exam score by the end of August, you will be sent a gift card for $100. See the |flyer| and apply at https://tinyurl.com/55z7tyb9.
+.. ATTENTION high school women of color taking AP CSA or CSP: if you identify as female and as Black, Hispanic/Latina, and/or Native American, apply to participate in **Sisters Rise Up**. The goal of Sisters Rise Up is to help you succeed in your AP Computer Science course and on the exam. They offer one-hour help sessions several times a week and once a month special help sessions often with guest speakers from computing.  If you enroll in Sisters Rise Up and send in your AP CS exam score by the end of August, you will be sent a gift card for $100. See the |flyer| and apply at https://tinyurl.com/55z7tyb9.
 
-ATTENTION high school women, genderqueer, and non-binary technologists: Apply Sept. 1st until Oct. 29th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. 
+.. ATTENTION high school women, genderqueer, and non-binary technologists: Apply Sept. 1st until Oct. 29th for the **NCWIT Award for Aspirations in Computing** to be recognized for all that you do (or want to do) in technology. Visit http://www.aspirations.org/AiCHSAward for details. 
 
 .. ATTENTION high school seniors: apply for the https://www.amazonfutureengineer.com/scholarships until Dec. 15th for college scholarships and Amazon summer internships for students with financial need.
 
