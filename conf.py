@@ -30,7 +30,7 @@ import pkg_resources
 #html_defer_js = True
 
 # new for title page
-course_description = "CSAwesome is a College Board endorsed curriculum for AP Computer Science A, an introductory college-level computer programming course in Java, by Barbara Ericson, University of Michigan; Beryl Hoffman, Elms College; and Peter Seibel, Berkeley High School."
+course_description = "CSAwesome v.1 is the 2019-2025 College Board endorsed Java curriculum for AP CS A. There is a newer version CSAwesome2 for the 2025+ AP CSA requirements."
 key_words = "AP CSA Java"
 shelf_section = "AP Computer Science"
 
