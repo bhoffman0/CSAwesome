@@ -30,7 +30,7 @@ import pkg_resources
 #html_defer_js = True
 
 # new for title page
-course_description = "CSAwesome v.1 is the 2019-2025 College Board endorsed Java curriculum for AP CS A. There is a newer version CSAwesome2 for the 2025+ AP CSA requirements."
+course_description = "This is the old version of CSAwesome meeting the 2019-2025 College Board requirements for AP CSA in Java. Look below for the newer version, CSAwesome2, for the 2025+ AP CSA requirements."
 key_words = "AP CSA Java"
 shelf_section = "AP Computer Science"
 
@@ -129,7 +129,7 @@ html_theme = 'sphinx_bootstrap'
 #html_theme_options = {'nosidebar': 'true'}
 html_theme_options = {
     # Navigation bar title. (Default: ``project`` value)
-    'navbar_title': "AP CSAwesome",
+    'navbar_title': "CSAwesome v1",
 
     # Tab name for entire site. (Default: "Site")
     'navbar_site_name': "Units",
@@ -177,10 +177,10 @@ html_theme_path = [pkg_resources.resource_filename('runestone', 'common/project_
 
 # The name for this set of Sphinx documents.  If None, it defaults to
 # "<project> v<release> documentation".
-html_title = 'AP CSAwesome'
+html_title = 'CSAwesome v1'
 
 # A shorter title for the navigation bar.  Default is the same as html_title.
-html_short_title ='AP CSAwesome'
+html_short_title ='CSAwesome v1'
 
 # The name of an image file (relative to this directory) to place at the top
 # of the sidebar.
