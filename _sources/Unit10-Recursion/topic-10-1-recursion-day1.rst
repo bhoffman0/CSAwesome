@@ -135,7 +135,7 @@ loop will do.
 
 On the other hand, recursion is more powerful than simple loops, especially when
 dealing with branching structures like the file folder example. Computer
-scientists call such structures “trees” and they incredibly common in computer
+scientists call such structures “trees” and they are incredibly common in computer
 programs.
 
 Recursive procedures that operate on trees often cannot be easily translated

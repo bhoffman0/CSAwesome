@@ -342,7 +342,7 @@ Use the Code Lens button or this |Java Visualizer| to step through the code.
     ====
     // Test for 2.4.4 Song
       import static org.junit.Assert.*;
-      import org.junit.*;;
+      import org.junit.*;
       import java.io.*;
       
       public class RunestoneTests extends CodeTestHelper
