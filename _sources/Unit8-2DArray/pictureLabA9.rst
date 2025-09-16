@@ -679,6 +679,6 @@ Steganography Lab
 
 .. |Steganography lab| raw:: html
 
-   <a href= "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-steganography-lab-student-guide.pdf" style="text-decoration:underline" target="_blank" >Steganography Lab</a>
+   <a href= "https://drive.google.com/file/d/1pa5-KLRRE-5awoqnbPQd1yhqCaoPv_n4/view?usp=sharing" style="text-decoration:underline" target="_blank" >Steganography Lab</a>
 
 If you enjoyed this lab and have time, continue on with the |Steganography lab| that explores hiding messages in images.

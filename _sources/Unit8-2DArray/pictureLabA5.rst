@@ -775,7 +775,7 @@ divide by 3).  Be sure to call the new test method in the main method.
     :align: left
 
 4. Challenge — Explore the water.jpg picture. Write a method
-fixUnderwater() to modify the pixel colors to make the fish easier to see. There are many ways to do this, but you could try increasing one of the colors by a certain factor. Here are some more complex algorithms for increasing the brightness and contrast of images https://ie.nitk.ac.in/blog/2020/01/19/algorithms-for-adjusting-brightness-and-contrast-of-an-image/.
+fixUnderwater() to modify the pixel colors to make the fish easier to see. There are many ways to do this, but you could try increasing one of the colors by a certain factor. Here are some more complex algorithms for increasing the brightness and contrast of images https://web.archive.org/web/20240911001714/https://ie.nitk.ac.in/blog/2020/01/19/algorithms-for-adjusting-brightness-and-contrast-of-an-image/.
 
 .. activecode:: picture-lab-A5-fix-underwater
     :language: java

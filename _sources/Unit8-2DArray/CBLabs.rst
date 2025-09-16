@@ -8,7 +8,7 @@ College Board Picture Lab and Steganography Lab for 2D Arrays
 
 .. |Steganography lab| raw:: html
 
-   <a href= "https://apcentral.collegeboard.org/pdf/ap-computer-science-a-steganography-lab-student-guide.pdf" style="text-decoration:underline" target="_blank" >Steganography Lab</a>
+   <a href= "https://drive.google.com/file/d/1pa5-KLRRE-5awoqnbPQd1yhqCaoPv_n4/view?usp=sharing" style="text-decoration:underline" target="_blank" >Steganography Lab</a>
 
 The |Picture Lab| is a fun lab that you may have started in 8.2 and can finish in the next pages:
 

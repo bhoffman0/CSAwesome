@@ -7,7 +7,7 @@ Consumer Review Lab
 
 .. |student guide| raw:: html
 
-   <a href="https://apcentral.collegeboard.org/pdf/ap-computer-science-a-consumer-review-lab-student-guide.pdf" target="_blank" style="text-decoration:underline">student guide</a>
+   <a href="https://drive.google.com/file/d/1IXwiFHJs1UGFAYILrLigQ92sAjPxv05u/view?usp=sharing" target="_blank" style="text-decoration:underline">student guide</a>
 
 .. |cleansentiment.csv| raw:: html
 
